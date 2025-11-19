@@ -57,6 +57,8 @@
 	<haxelib name="hscript-iris" if="SCRIPTS_ALLOWED"/>
 	<haxelib name="hscript" if="debug" /> <!-- for debugging -->
 
+	<haxelib name="extension-androidtools" if="android" />
+
 	<!-- miscellaneous -->
 
 

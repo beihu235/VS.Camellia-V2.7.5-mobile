@@ -4,9 +4,9 @@ import funkin.backend.audio.FlxAudio;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import lime.utils.ArrayBufferView;
 
-#if desktop
+//#if desktop
 @:allow(funkin.backend.audio._backends.FlxOpenALSource)
-#end
+//#end
 @:allow(funkin.backend.audio.FlxAudio)
 class FlxAudioHandler
 {

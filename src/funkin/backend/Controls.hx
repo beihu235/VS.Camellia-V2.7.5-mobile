@@ -10,7 +10,6 @@ import lime.ui.KeyCode;
 import flixel.input.gamepad.FlxGamepad;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.FlxG;
-import funkin.backend.MobileInputAdapter;
 
 class Controls {
 	// Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx
@@ -58,26 +57,21 @@ class Controls {
 	];
 	public static var gamepad_binds:Map<String, Array<FlxGamepadInputID>> = default_gamepad_binds;
 
-	public static var mobileInput:MobileInputAdapter = null;
-
 	static var _save:FlxSave;
 
 	public static function justPressed(name:String):Bool {
 		var k = _getKeyStatus(name, JUST_PRESSED);
-		var m = mobileInput != null ? mobileInput.justPressed(name) : false;
-		return k || m;
+		return k;
 	}
 
 	public static function pressed(name:String):Bool {
 		var k = _getKeyStatus(name, PRESSED);
-		var m = mobileInput != null ? mobileInput.pressed(name) : false;
-		return k || m;
+		return k;
 	}
 
 	public static function released(name:String):Bool {
 		var k = _getKeyStatus(name, JUST_RELEASED);
-		var m = mobileInput != null ? mobileInput.justReleased(name) : false;
-		return k || m;
+		return k;
 	}
 
 	// backend functions to reduce repetitive code

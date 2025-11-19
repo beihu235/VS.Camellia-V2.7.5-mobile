@@ -11,6 +11,14 @@ import openfl.Lib;
 import openfl.display.Sprite;
 import openfl.events.UncaughtErrorEvent;
 
+import lime.app.Application;
+
+#if android
+import funkin.backend.AppData;
+//import states.backend.PirateState;
+import sys.io.File;
+#end
+
 #if (linux && !debug)
 @:cppInclude('../../../../src/_external/gamemode_client.h') // i don't care enough to properly point back to the src folder whatever it works fuck you
 @:cppFileCode('#define GAMEMODE_AUTO')
@@ -33,6 +41,8 @@ class Main extends Sprite {
 		SUtil.doPermissionsShit();
 		#end
 
+		funkin.mobile.backend.CrashHandler.init();
+
 		#if mobile
 		#if android
 		if (!FileSystem.exists(AndroidEnvironment.getExternalStorageDirectory() + '/.' + Application.current.meta.get('file')))
@@ -50,12 +60,12 @@ class Main extends Sprite {
 					&& AppData.getPackageName() != 'com.antutu.ABenchMark' // 超频测试 安兔兔
 					&& AppData.getPackageName() != 'com.ludashi.benchmark' // 超频测试 鲁大师
 				)) {
-					FlxG.switchState(new PirateState());
+					//FlxG.switchState(new PirateState());
 					return;
 				}
 		#end
 
-		funkin.mobile.backend.CrashHandler.init();
+		trace('Main.new()');
 		//Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 
 		addChild(new FlxGame(InitState, 0, 0, 60, true));

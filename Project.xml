@@ -2,7 +2,7 @@
 <project>
 
 	<!-- application stuff -->
-	<app title="Friday Night Funkin': Vs. Camellia" file="Camellia" main="Main" version="3.0.0" company="Camellia" />
+	<app title="Friday Night Funkin': Vs. Camellia" file="VS.Camellia V2.7.5" packageName="com.VS.Camellia" package="com.VS.Camellia" main="Main" version="3.0.0" company="Camellia"/>
 
 	<window width="1280" height="720" fps="120" background="#000000" hardware="true" vsync="false" />
 	<window orientation="landscape" fullscreen="false" resizable="true"/>
@@ -29,9 +29,14 @@
 	<source path="src" />
 	
 	<!-- use templates for assets -->
-	<section unless="mac">
+	<section unless="mac || android">
 		<assets path="assets" type="template"/>
 		<assets path="addons" type="template" if="ADDONS_ALLOWED"/>
+	</section>
+
+	<section if="android">
+		<assets path="assets"/>
+		<assets path="addons" if="ADDONS_ALLOWED"/>
 	</section>
 	
 	<!--
@@ -60,6 +65,8 @@
 	<haxelib name="extension-androidtools" if="android" />
 
 	<!-- miscellaneous -->
+
+	 <certificate path="key.keystore" password="novaFlare" alias="psychport" alias-password="novaFlare" if="android" unless="debug" />
 
 
 	<!--define name="FLX_NO_TOUCH" unless="mobile" /-->
@@ -99,4 +106,17 @@
 	<icon path="icons/iconOG.png" />
 
 	<haxeflag name="--macro" value="allowPackage('flash')" />
+
+
+	<architecture name="arm64" exclude="armv7" if="android" />
+
+	<config>
+		<android gradle-version="8.7" />
+		<android gradle-plugin="8.6.0" />
+		<android minimum-sdk-version="24" />
+		<android target-sdk-version= "35" />
+		<!--Fuck you xcode-->
+		<ios deployment="13.6"/>
+	</config>
+
 </project>

@@ -1,0 +1,101 @@
+osu file format v14
+
+[General]
+AudioFilename: audio.mp3
+AudioLeadIn: 0
+PreviewTime: 54260
+Countdown: 0
+SampleSet: Normal
+StackLeniency: 0.7
+Mode: 3
+LetterboxInBreaks: 0
+SpecialStyle: 0
+WidescreenStoryboard: 1
+
+[Editor]
+Bookmarks: 20869,37565,54260,75130,91826,108521,125217,141913,158608,175304,183652,200347,219130,235826,242086,250434,252521
+DistanceSpacing: 2
+BeatDivisor: 1
+GridSize: 16
+TimelineZoom: 2.399999
+
+[Metadata]
+Title:GHOUL
+TitleUnicode:GHOUL
+Artist:Camellia
+ArtistUnicode:かめりあ
+Creator:SOKI-STAXX
+Version:gf
+Source:Vs. Camellia
+Tags:fnf friday night funkin funking kienoob foxeru fox roko100789 lno literallynoone cametek electronic instrumental
+BeatmapID:0
+BeatmapSetID:1889722
+
+[Difficulty]
+HPDrainRate:8
+CircleSize:4
+OverallDifficulty:8
+ApproachRate:5
+SliderMultiplier:1.4
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+0,0,"FhcOJWQVQAEidoy.jpg",0,0
+//Break Periods
+2,28895,35843
+2,37243,69952
+2,74547,148539
+2,149939,156886
+2,158286,173582
+2,200026,206973
+2,208373,217408
+2,218808,225756
+2,227156,234104
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Layer 4 (Overlay)
+//Storyboard Sound Samples
+
+[TimingPoints]
+0,260.869565217391,4,1,0,100,1,0
+
+
+[HitObjects]
+320,192,28695,1,4,0:0:0:0:
+320,192,37043,5,4,0:0:0:0:
+320,192,62086,1,4,0:0:0:0:
+320,192,70434,5,4,0:0:0:0:
+192,192,71152,5,0,0:0:0:0:
+448,192,71282,1,0,0:0:0:0:
+320,192,71478,1,0,0:0:0:0:
+64,192,71869,1,0,0:0:0:0:
+448,192,71978,1,0,0:0:0:0:
+192,192,72108,1,0,0:0:0:0:
+320,192,72304,1,0,0:0:0:0:
+64,192,72499,1,0,0:0:0:0:
+448,192,72652,1,0,0:0:0:0:
+192,192,72804,1,0,0:0:0:0:
+64,192,73826,1,0,0:0:0:0:
+320,192,73956,1,0,0:0:0:0:
+192,192,74086,1,0,0:0:0:0:
+448,192,74217,1,0,0:0:0:0:
+64,192,74347,1,0,0:0:0:0:
+320,192,78782,1,4,0:0:0:0:
+320,192,82956,1,4,0:0:0:0:
+320,192,87130,1,4,0:0:0:0:
+320,192,149739,5,4,0:0:0:0:
+320,192,158086,5,4,0:0:0:0:
+320,192,174782,5,4,0:0:0:0:
+320,192,178956,1,4,0:0:0:0:
+320,192,183130,1,4,0:0:0:0:
+320,192,187304,1,4,0:0:0:0:
+320,192,191478,1,4,0:0:0:0:
+320,192,195652,1,4,0:0:0:0:
+320,192,199826,1,4,0:0:0:0:
+320,192,208173,5,4,0:0:0:0:
+320,192,218608,5,4,0:0:0:0:
+320,192,226956,5,4,0:0:0:0:
+320,192,235304,5,4,0:0:0:0:

@@ -1,0 +1,12 @@
+{
+	'name': 'boom',
+	'image': 'mine',
+	'scale': [1.0, 1.0],
+	'framerate': 24,
+	// Other properties *do* exist, but default data is ok here, though I will list them here for example's sake
+	/*
+	animations: Array<Array<String>>,
+	framerate: Float,
+	offset: Array<Float>
+	*/
+}

@@ -1,0 +1,60 @@
+osu file format v14
+
+[General]
+AudioFilename: audio.ogg
+AudioLeadIn: 0
+PreviewTime: -1
+Countdown: 0
+SampleSet: Normal
+StackLeniency: 0.7
+Mode: 3
+LetterboxInBreaks: 0
+SpecialStyle: 0
+WidescreenStoryboard: 1
+
+[Editor]
+Bookmarks: 10399,27854,45308,54035,62762,80217,88944,106399,123853,141308,158762,176217,184944,193671,211126,228580,237308,246035,263489,272217,280944,298399,307126,315853
+DistanceSpacing: 0.3
+BeatDivisor: 1
+GridSize: 4
+TimelineZoom: 4.000004
+
+[Metadata]
+Title:GHOST
+TitleUnicode:GHOST
+Artist:Camellia
+ArtistUnicode:Camellia
+Creator:Ragnarok VII
+Version:gf
+Source:
+Tags:
+BeatmapID:0
+BeatmapSetID:-1
+
+[Difficulty]
+HPDrainRate:0
+CircleSize:1
+OverallDifficulty:8
+ApproachRate:5
+SliderMultiplier:1.4
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+//Break Periods
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Layer 4 (Overlay)
+//Storyboard Sound Samples
+
+[TimingPoints]
+0,272.727272727273,4,1,0,100,1,0
+
+
+[HitObjects]
+256,192,231818,1,4,0:0:0:0:
+256,192,240545,1,4,0:0:0:0:
+256,192,301636,1,4,0:0:0:0:
+256,192,310363,1,4,0:0:0:0:

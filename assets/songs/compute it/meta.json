@@ -1,0 +1,29 @@
+{
+	"songName": "Compute It",
+	"subtitle": "With Some Devilish Alcoholic Steampunk Engines",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "PhilliaEsaya",
+	"album": "TERA I/O",
+	"genre": "Hardcoreswing",
+	"charter": {
+		"Maniac": "Alumence",
+		"Hard": "Rudyrue",
+		"Normal": "Foxeru"
+	},
+	"rating": {
+		"Maniac": [15.5, 15.5],
+		"Hard": [9.5, 10.5],
+		"Normal": [8, 9.5]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 165
+		}
+	]
+}

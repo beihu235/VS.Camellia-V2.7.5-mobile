@@ -1,0 +1,28 @@
+{
+	"songName": "Racemization",
+	"album": "PLANET//SHAPER",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "HARDLOVE/Kodai Endo",
+	"charter": {
+		"Maniac": "Alumence, Lumin",
+		"Hard": "Rudyrue, Flootena",
+		"Normal": "Lumin"
+	},
+	"rating": {
+		"Maniac": [10.5, 16.5],
+		"Hard": [9.5, 11.5],
+		"Normal": [7.5, 10.5]
+	},
+	"genre": "Electronic",
+	"stage": "studio",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 202
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	name: 'Girlfriend',
+	sprite: 'dialogue/gf',
+	sound: 'gf',
+	offset: [0, -45],
+	expressions: [
+		{
+			name: "confused",
+			offsets: [0, 0]
+		},
+		{
+			name: "disgusted",
+			offsets: [0, 0]
+		},
+		{
+			name: "excited",
+			offsets: [0, 0]
+		},
+		{
+			name: "grinning",
+			offsets: [0, 0]
+		},
+		{
+			name: "idle",
+			offsets: [0, 0]
+		},
+		{
+			name: "shocked",
+			offsets: [0, 0]
+		},
+		{
+			name: "tired",
+			offsets: [0, 0]
+		}
+	]
+}

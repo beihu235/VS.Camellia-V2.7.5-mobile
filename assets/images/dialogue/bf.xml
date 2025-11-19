@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="bf.png" width="2190" height="392">
+	<SubTexture name="confused" x="1201" y="2" width="332" height="387" frameX="-0" frameY="-0" frameWidth="332" frameHeight="387"/>
+	<SubTexture name="disgusted" x="629" y="2" width="271" height="383" frameX="-0" frameY="-0" frameWidth="271" frameHeight="383"/>
+	<SubTexture name="excited" x="1856" y="2" width="332" height="388" frameX="-0" frameY="-0" frameWidth="332" frameHeight="388"/>
+	<SubTexture name="grinning" x="301" y="2" width="325" height="381" frameX="-0" frameY="-0" frameWidth="325" frameHeight="381"/>
+	<SubTexture name="idle" x="1536" y="2" width="317" height="387" frameX="-0" frameY="-0" frameWidth="317" frameHeight="387"/>
+	<SubTexture name="shocked" x="903" y="2" width="295" height="383" frameX="-0" frameY="-0" frameWidth="295" frameHeight="383"/>
+	<SubTexture name="tired" x="2" y="2" width="296" height="364" frameX="-0" frameY="-0" frameWidth="296" frameHeight="364"/>
+</TextureAtlas>

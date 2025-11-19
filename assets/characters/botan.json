@@ -1,0 +1,149 @@
+{
+	animations: [
+		{
+			offsets: [
+				0,
+				0,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico Idle Dance',
+			name: 'idle',
+		},
+		{
+			offsets: [
+				46,
+				-11,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico Note Right0',
+			name: 'singLEFT',
+		},
+		{
+			offsets: [
+				236,
+				-43,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico Down Note0',
+			name: 'singDOWN',
+		},
+		{
+			offsets: [
+				5,
+				20,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'pico Up note0',
+			name: 'singUP',
+		},
+		{
+			offsets: [
+				-24,
+				-11,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico NOTE LEFT0',
+			name: 'singRIGHT',
+		},
+		{
+			offsets: [
+				-23,
+				-13,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico NOTE LEFT miss',
+			name: 'missRIGHT',
+		},
+		{
+			offsets: [
+				12,
+				18,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'pico Up note miss',
+			name: 'missUP',
+		},
+		{
+			offsets: [
+				242,
+				-33,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico Down Note MISS',
+			name: 'missDOWN',
+		},
+		{
+			offsets: [
+				46,
+				-9,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Pico Note Right Miss',
+			name: 'missLEFT',
+		},
+		{
+			offsets: [
+				42,
+				105,
+			],
+			framerate: 24,
+			name: 'firstDeath',
+			indices: [],
+			id: 'botan GameOver START',
+			looped: false,
+		},
+		{
+			offsets: [
+				1,
+				71,
+			],
+			framerate: 24,
+			name: 'death-loop',
+			indices: [],
+			id: 'botan GameOver LOOP',
+			looped: true,
+		},
+		{
+			offsets: [
+				1,
+				165,
+			],
+			framerate: 24,
+			name: 'confirm',
+			indices: [],
+			id: 'botan GameOver RETRYCONFIRM0',
+			looped: false,
+		}
+	],
+	healthColor: -4076826,
+	singDuration: 4,
+	reflectionOffset: 20,
+	flipX: true,
+	sheets: 'characters/botan',
+	danceInterval: 2,
+	icon: 'botan',
+	antialiasing: true,
+	offset: [
+		45,
+		-285,
+	],
+	scale: 1,
+}

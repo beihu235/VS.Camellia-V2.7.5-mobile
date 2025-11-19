@@ -1,0 +1,230 @@
+name: MobileBuild
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'docs/'
+      - 'example_mods/'
+      - 'hmm.json'
+      - 'README.md'
+  pull_request:
+    branches: [ main ]
+    
+  workflow_dispatch:
+    inputs:
+      dependencies_to_update:
+        description: '输入 "all" 更新所有haxelib, 也可以输入单个或多个haxelib单独更新他们(e.g. "lime openfl flixel"),不输入即不给haxelib做任何更新'
+        required: false
+        default: ''
+        
+jobs:
+  installHaxelib:
+    uses: ./.github/workflows/InstallHaxelib.yml
+    with:
+      dependencies_to_update: ${{ github.event.inputs.dependencies_to_update }}
+      
+
+  Android:
+    runs-on: macos-14
+    
+    concurrency:
+      group: ${{ github.workflow }}-Android-${{ github.ref }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@main
+        id: setup-ndk
+        with:
+          ndk-version: r28c
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@main
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+              
+      - name: List available caches
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const caches = await github.rest.actions.getActionsCacheList({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            console.log("Available caches:", caches.data.actions_caches);
+            
+      - name: cache Build
+        id: cache
+        if: github.event.inputs.dependencies_to_update != 'all' || github.event.inputs.dependencies_to_update != 'android'
+        uses: actions/cache/restore@v4
+        with:
+          key: cache-build-Android
+          restore-keys: |
+            cache-build-Android
+          path: |
+            .haxelib/
+            export/release/android/
+            ~/.gradle
+              
+      - name: Install Libraries
+        run: |
+          haxelib setup ~/haxelib
+          if [ "${{ github.event.inputs.dependencies_to_update }}" == "all" ] || [ "${{ github.event.inputs.dependencies_to_update }}" == "android" ]; then
+            echo "Installing all dependencies..."
+            haxelib install hmm 
+            haxelib run hmm install
+          elif [ -n "${{ github.event.inputs.dependencies_to_update }}" ] && [ "${{ github.event.inputs.dependencies_to_update }}" != "ios" ]; then
+            echo "Updating specified dependencies: ${{ github.event.inputs.dependencies_to_update }}"
+            haxelib install hmm
+            haxelib run hmm reinstall --force $(echo "${{ github.event.inputs.dependencies_to_update }}")
+          else
+            echo "No dependencies specified, only setting up haxelib"
+          fi
+
+      - name: Configure Android
+        run: |
+          haxelib run lime config ANDROID_SDK $ANDROID_HOME
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_HOME
+          haxelib run lime config JAVA_HOME $JAVA_HOME
+          haxelib run lime config ANDROID_SETUP true
+            
+      - name: Compile
+        run: haxelib run lime build android
+        
+      - name: Upload Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: androidBuild
+          path: export/release/android/bin/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
+      - name: Clearing already existing cache
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const caches = await github.rest.actions.getActionsCacheList({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            for (const cache of caches.data.actions_caches) {
+              if (cache.key == "cache-build-Android") {
+                console.log('Clearing ' + cache.key + '...')
+                await github.rest.actions.deleteActionsCacheById({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  cache_id: cache.id,
+                })
+                console.log("Cache cleared.")
+              }
+            }
+          
+      - name: Uploading new cache
+        uses: actions/cache/save@v4
+        with:
+          key: cache-build-Android
+          path: |
+            .haxelib/
+            export/release/android/
+            ~/.gradle
+          
+  iOS:
+    runs-on: macos-15
+    concurrency:
+      group: ${{ github.workflow }}-iOS-${{ github.ref }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        
+      - name: Select Xcode 16.4
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '16.4'
+  
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+   
+      - name: cache Build
+        id: cache
+        if: github.event.inputs.dependencies_to_update != 'all' || github.event.inputs.dependencies_to_update != 'ios'
+        uses: actions/cache/restore@v4
+        with:
+          enableCrossOsArchive: true
+          key: cache-build-iOS
+          restore-keys: |
+            cache-build-iOS
+          path: |
+            .haxelib/
+            export/release/ios/
+                
+      - name: Install Libraries
+        run: |
+          haxelib setup ~/haxelib
+          if [ "${{ github.event.inputs.dependencies_to_update }}" == "all" ] || [ "${{ github.event.inputs.dependencies_to_update }}" == "ios" ]; then
+            echo "Installing all dependencies..."
+            haxelib install hmm 
+            haxelib run hmm install
+          elif [ -n "${{ github.event.inputs.dependencies_to_update }}" ] && [ "${{ github.event.inputs.dependencies_to_update }}" != "android" ]; then
+              echo "Updating specified dependencies: ${{ github.event.inputs.dependencies_to_update }}"
+            haxelib install hmm
+            haxelib run hmm reinstall --force $(echo "${{ github.event.inputs.dependencies_to_update }}")
+          else
+            echo "No dependencies specified, only setting up haxelib"
+          fi
+    
+      - name: Compile
+        run: haxelib run lime build ios -arm64 -nosign
+        
+      - name: Make IPA And iOS Zip
+        run: |
+          cd export/release/ios/build/Release-iphoneos
+          rm -rf Payload
+          mkdir Payload
+          mv *.app Payload
+          zip -r NovaFlareEngine.ipa Payload
+          zip -r iOSBuild.zip NovaFlareEngine.ipa
+    
+      - name: Upload Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: iOSBuild
+          path: export/release/ios/build/Release-iphoneos/*.ipa
+          if-no-files-found: error
+
+      - name: Clearing already existing cache
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const caches = await github.rest.actions.getActionsCacheList({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            for (const cache of caches.data.actions_caches) {
+              if (cache.key == "cache-build-iOS") {
+                console.log('Clearing ' + cache.key + '...')
+                await github.rest.actions.deleteActionsCacheById({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  cache_id: cache.id,
+                })
+                console.log("Cache cleared.")
+              }
+            }
+          
+      - name: Save build cache
+        uses: actions/cache/save@v4
+        with:
+          key: cache-build-iOS
+          path: |
+            .haxelib/
+            export/release/ios/

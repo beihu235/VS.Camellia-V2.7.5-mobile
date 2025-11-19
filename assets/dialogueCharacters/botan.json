@@ -1,0 +1,20 @@
+{
+	name: 'Shishiro Botan',
+	sprite: 'dialogue/botan',
+	sound: 'botan',
+	offset: [0, 10],
+	expressions: [
+		{
+			name: "idle",
+			offsets: [0, 0]
+		},
+		{
+			name: "grinning",
+			offsets: [0, 0]
+		},
+		{
+			name: "excited",
+			offsets: [0, 0]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"songName": "crystallized",
+	"instComposer": "Camellia",
+	"vocalComposer": "tictacto",
+	"album": "crystallized",
+	"jacket": "PhilliaEsaya",
+	"genre": "Drum & Bass",
+	"charter": {
+		"Maniac": "Ragi, Kafkell, Jian Awesome",
+		"Hard": "Polarin, Foxeru",
+		"Normal": "Foxeru, Kafkell"
+	},
+	"rating": {
+		"Maniac": [10, 14],
+		"Hard": [7.5, 13],
+		"Normal": [4.5, 8.5]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 174
+		}
+	]
+}

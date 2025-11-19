@@ -1,0 +1,149 @@
+{
+	animations: [
+		{
+			offsets: [
+				104,
+				-1,
+			],
+			framerate: 24,
+			name: 'singLEFT',
+			looped: false,
+			id: 'Camellia_Halloween/Camellia_Left_H',
+			indices: [],
+		},
+		{
+			offsets: [
+				0,
+				36,
+			],
+			framerate: 24,
+			name: 'singDOWN',
+			looped: false,
+			id: 'Camellia_Halloween/Camellia_Down_H',
+			indices: [],
+		},
+		{
+			offsets: [
+				5,
+				44,
+			],
+			framerate: 24,
+			name: 'singUP',
+			looped: false,
+			id: 'Camellia_Halloween/Camellia_Up_H',
+			indices: [],
+		},
+		{
+			offsets: [
+				0,
+				-52,
+			],
+			framerate: 24,
+			name: 'singRIGHT',
+			looped: false,
+			id: 'Camellia_Halloween/Camellia_Right_H',
+			indices: [],
+		},
+		{
+			offsets: [
+				0,
+				0,
+			],
+			framerate: 24,
+			name: 'idle',
+			looped: true,
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_Idle_H',
+		},
+		{
+			offsets: [
+				103,
+				-13,
+			],
+			framerate: 24,
+			name: 'missLEFT',
+			looped: false,
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_Left_MISS_H',
+		},
+		{
+			offsets: [
+				4,
+				32,
+			],
+			framerate: 24,
+			name: 'missDOWN',
+			looped: false,
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_Down_MISS_H',
+		},
+		{
+			offsets: [
+				46,
+				75,
+			],
+			framerate: 24,
+			name: 'missUP',
+			looped: false,
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_Up_MISS_H',
+		},
+		{
+			offsets: [
+				1,
+				-13,
+			],
+			framerate: 24,
+			name: 'missRIGHT',
+			looped: false,
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_Right_MISS_H',
+		},
+		{
+			offsets: [
+				25,
+				-66,
+			],
+			framerate: 24,
+			name: 'firstDeath',
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_DEATH',
+			looped: false,
+		},
+		{
+			offsets: [
+				2,
+				-66,
+			],
+			framerate: 12,
+			name: 'death-loop',
+			indices: [],
+			id: 'Camellia/Camellia_DEATHLoop',
+			looped: true,
+		},
+		{
+			offsets: [
+				5,
+				44,
+			],
+			framerate: 12,
+			name: 'confirm',
+			indices: [],
+			id: 'Camellia_Halloween/Camellia_Up_H',
+			looped: false,
+		}
+	],
+	healthColor: -2793642,
+	singDuration: 10.8,
+	flipX: false,
+	sheets: 'characters/cam-halloween',
+	danceInterval: 0,
+	reflectionOffset: 100,
+	icon: 'camellia',
+	antialiasing: true,
+	offset: [
+		340,
+		60,
+	],
+	scale: 0.8,
+}

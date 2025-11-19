@@ -1,0 +1,21 @@
+you need haxe and git before doing anything on here
+
+we use 4.2.5 for haxe at least but 4.3.0 works too
+
+4.2.5: https://haxe.org/download/version/4.2.5/
+4.3.0 or later (i use 4.3.1): https://haxe.org/download/version/4.3.0/
+
+for git just get it from https://git-scm.com
+kind of confusing process but i basically just
+clicked ok on everything
+
+windows only
+after installing those you run `msvs-dependency.bat`
+and then `libraries-windows.bat`
+
+for unix (mac/linux) you don't need `msvs-dependency.bat` but can just run `libraries-unix.sh`
+
+after everything is installed
+open a command prompt window in the project's directory 
+(should be `C:/Users/User/Desktop/Vs-Camellia` for example mine's `C:/Users/Rudyrue/Desktop/nuhuh/Vs-Camellia`)
+and type `lime test cpp`

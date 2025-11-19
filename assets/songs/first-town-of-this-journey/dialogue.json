@@ -1,0 +1,61 @@
+{
+	list: [
+		{
+			text: "Oh! So you're the boy who's been getting popular these days, right?",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "beep!",
+			expression: 'grinning',
+			side: 2,
+		},
+		{
+			text: "I didn't know Miku had a younger brother up until that concert…",
+			expression: 'thinking',
+			side: 0,
+		},
+		{
+			text: "He gets that a lot.",
+			expression: 'tired',
+			side: 1,
+		},
+		{
+			text: "bop?",
+			expression: 'confused',
+			side: 2,
+		},
+		{
+			text: "Anyway, if you need introductions, I'm Camellia! I'm always looking for new collabs, but first…",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "Let's see if you can keep up the pace!",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "bap!",
+			expression: 'excited',
+			side: 2,
+		}
+	],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

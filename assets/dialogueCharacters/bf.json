@@ -1,0 +1,36 @@
+{
+	name: 'Boyfriend',
+	sprite: 'dialogue/bf',
+	sound: 'bf',
+	offset: [-50, -105],
+	expressions: [
+		{
+			name: "confused",
+			offsets: [0, 0]
+		},
+		{
+			name: "disgusted",
+			offsets: [-31, -4]
+		},
+		{
+			name: "excited",
+			offsets: [-25, 0]
+		},
+		{
+			name: "grinning",
+			offsets: [13, -6]
+		},
+		{
+			name: "idle",
+			offsets: [0, 0]
+		},
+		{
+			name: "shocked",
+			offsets: [-7, -4]
+		},
+		{
+			name: "tired",
+			offsets: [24, -23]
+		}
+	]
+}

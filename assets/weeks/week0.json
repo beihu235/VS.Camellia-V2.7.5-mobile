@@ -1,0 +1,17 @@
+{
+  	songs: [
+    	{
+      		id: 'tutorial',
+      		colors: [0xFF79e6fc, 0xFF00267a],
+			icons: ['bf', 'gf']
+    	}
+  	],
+	diffs: [
+		{
+			name: "Maniac",
+			color: 0xFFb609f8
+		}
+	],
+  	name: 'Tutorial',
+  	hideStory: true
+}

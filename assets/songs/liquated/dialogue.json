@@ -1,0 +1,46 @@
+{
+	list: [
+		{
+			text: "Okay, so this is why you've been making the rounds… Impressive!",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "haah...",
+			expression: 'tired',
+			side: 1,
+		},
+		{
+			text: "Well, I have a couple more songs that I need someone just like you to finish…",
+			expression: 'thinking',
+			side: 0,
+		},
+		{
+			text: "Would you mind helping me with them?",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "...beep!",
+			expression: 'idle',
+			side: 1,
+		},
+		{
+			text: "Let's do this!",
+			expression: 'point',
+			side: 0,
+		}
+	],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

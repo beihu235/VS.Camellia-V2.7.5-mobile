@@ -1,0 +1,43 @@
+{
+	"songName": "Song Name Goes Here",
+	"subtitle": "Displayed in Freeplay",
+	"instComposer": "",
+	"vocalComposer": "",
+	"album": "",
+	"jacket": "Jacket Artist",
+	"charter": {
+		"Camellia": "", // if there's no middle camellia then just don't add this one
+		"Maniac": "",
+		"Hard": "",
+		"Normal": ""
+	},
+	"rating": {
+		// [BF-DIFF, OPP-DIFF]
+		"Camellia": [15.5, 15.5], // for +, make it a decimal, it'll become a whole number.
+		"Maniac": [12, 13.5], 
+		"Hard": [9, 11],
+		"Normal": [6, 7]
+	},
+	"stage": "stage",
+	"player": "bf",
+	"opponent": "dad",
+	"spectator": "gf",
+
+	"hasVocals": true,
+	"offset": 0.0,
+	"timingPoints": [
+		{
+			// time in milliseconds
+			"time": 0.0, 
+
+			// at least one of these should be added for the point to work
+			// but they're both optional
+			"bpm": 120, 
+			"beatsPerMeasure": 4
+		}
+	],
+
+	// OPTIONAL
+	"randomName": "Name displayed for comedic purposes",
+	"rngChange": 0.0
+}

@@ -1,0 +1,32 @@
+name: Reformatter
+
+#警告⚠️：误用
+on: workflow_dispatch
+
+jobs:
+  FormatJob:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Setup-haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+
+      - name: Checkout Commit
+        uses: actions/checkout@v4
+
+      - name: Initialized Libraries
+        run: |
+          haxelib install formatter --quiet
+
+      - name: Reformating
+        run: |
+          haxelib run formatter -s source
+
+      - name: Commit The Change
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Code Formatting'

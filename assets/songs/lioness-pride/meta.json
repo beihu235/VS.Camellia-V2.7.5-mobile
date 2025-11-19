@@ -1,0 +1,30 @@
+{
+	"songName": "Lioness' Pride",
+	"instComposer": "Shishiro Botan, Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "Shiroboom",
+	"genre": "Melodic Dubstep",
+	"charter": {
+		"Camellia": "Guise",
+		"Maniac": "Somf",
+		"Hard": "Foxeru",
+		"Normal": "Foxeru"
+	},
+	"rating": {
+		"Camellia": [12.5],
+		"Maniac": [8, 6.5],
+		"Hard": [6.5, 6],
+		"Normal": [5, 5]
+	},
+	"stage": "concert-lioness",
+	"enemy": "botan",
+	"player": "bf",
+	"spectator": "camellia-middle",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 152
+		}
+	]
+}

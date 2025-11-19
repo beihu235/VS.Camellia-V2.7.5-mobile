@@ -1,0 +1,160 @@
+{
+	animations: [
+		{
+			offsets: [
+				0,
+				0,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'idle',
+			id: 'Boyfriend Idle',
+			indices: [],
+		},
+		{
+			offsets: [
+				11,
+				-7,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'singLEFT',
+			id: 'Boyfriend Sing Left',
+			indices: [],
+		},
+		{
+			offsets: [
+				-13,
+				-52,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'singDOWN',
+			id: 'Boyfriend Sing Down',
+			indices: [],
+		},
+		{
+			offsets: [
+				-41,
+				28,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'singUP',
+			id: 'Boyfriend Sing Up',
+			indices: [],
+		},
+		{
+			offsets: [
+				-45,
+				-6,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'singRIGHT',
+			id: 'Boyfriend Sing Right',
+			indices: [],
+		},
+		{
+			offsets: [
+				8,
+				18,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'missLEFT',
+			id: 'Boyfriend Miss Left',
+			indices: [],
+		},
+		{
+			offsets: [
+				-13,
+				-22,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'missDOWN',
+			id: 'Boyfriend Miss Down',
+			indices: [],
+		},
+		{
+			offsets: [
+				-38,
+				24,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'missUP',
+			id: 'Boyfriend Miss Up',
+			indices: [],
+		},
+		{
+			offsets: [
+				-40,
+				21,
+			],
+			framerate: 24,
+			looped: false,
+			name: 'missRIGHT',
+			id: 'Boyfriend Miss Right',
+			indices: [],
+		},
+		{
+			offsets: [
+				3,
+				5,
+			],
+			framerate: 24,
+			indices: [],
+			id: 'Boyfriend Hey',
+			looped: false,
+			name: 'cheer',
+		},
+		{
+			offsets: [
+				0,
+				0,
+			],
+			framerate: 24,
+			name: 'firstDeath',
+			indices: [],
+			id: 'Boyfriend Death Start',
+			looped: false,
+		},
+		{
+			offsets: [
+				0,
+				-6,
+			],
+			framerate: 24,
+			name: 'death-loop',
+			indices: [],
+			id: 'Boyfriend Death Loop',
+			looped: true,
+		},
+		{
+			offsets: [
+				0,
+				58,
+			],
+			framerate: 24,
+			name: 'confirm',
+			indices: [],
+			id: 'Boyfriend Death Confirm',
+			looped: false,
+		}
+	],
+	healthColor: -13520687,
+	singDuration: 4,
+	flipX: false,
+	sheets: 'characters/bfOld,characters/bf-dead',
+	danceInterval: 2,
+	reflectionOffset: 35,
+	icon: 'bf',
+	antialiasing: true,
+	offset: [
+		50,
+		-375,
+	],
+	scale: 1,
+}

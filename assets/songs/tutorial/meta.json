@@ -1,0 +1,33 @@
+{
+  	"songName": "Tutorial...?",
+	"instComposer": "KawaiSprite",
+	"vocalComposer": "tictacto???",
+	"album": "FNF OST Vol. 1",
+	"jacket": "PhantomArcade",
+	"genre": "Dubstep",
+	"charter": {
+		"Maniac": "Foxeru"
+	},
+	"rating": {
+		"Maniac": [8, 13.5]
+	},
+	"stage": "studio",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+	"hasModchart": true,
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 100
+		},
+		{
+			"time": 2250,
+			"bpm": 135.75
+		},
+		{
+			"time": 10095,
+			"bpm": 138
+		}
+	]
+}

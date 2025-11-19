@@ -1,0 +1,29 @@
+{
+	"songName": "Dance With Silence",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "NoodNutz_",
+	"album": "TERA I/O",
+	"genre": "Complextro",
+	"charter": {
+		"Maniac": "Anonymous",
+		"Hard": "Foxeru, Cloverderus",
+		"Normal": "Garacide"
+	},
+	"rating": {
+		"Maniac": [10.5, 12.5],
+		"Hard": [8, 8.5],
+		"Normal": [6, 7.5]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 128
+		}
+	]
+}

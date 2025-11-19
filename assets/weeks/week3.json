@@ -1,0 +1,14 @@
+{
+  	songs: [
+    	{
+      		id: 'lioness-pride',
+      		colors: [0xFFEFF8FC, 0xFF8DA9BD],
+			icons: ['bf', 'botan']
+    	}
+  	],
+
+	weekNum: 'HF',
+  	name: 'Holofunk',
+	subtitle: 'Collaboration Week',
+  	background: 'holofunk'
+}

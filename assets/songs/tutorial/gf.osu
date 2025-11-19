@@ -1,0 +1,76 @@
+osu file format v14
+
+[General]
+AudioFilename: audio.mp3
+AudioLeadIn: 0
+PreviewTime: -1
+Countdown: 0
+SampleSet: Normal
+StackLeniency: 0.7
+Mode: 3
+LetterboxInBreaks: 0
+SpecialStyle: 0
+WidescreenStoryboard: 1
+
+[Editor]
+DistanceSpacing: 0.8
+BeatDivisor: 4
+GridSize: 32
+TimelineZoom: 2.5
+
+[Metadata]
+Title:haha
+TitleUnicode:haha
+Artist:funny
+ArtistUnicode:funny
+Creator:Foxeru
+Version:gf
+Source:
+Tags:
+BeatmapID:0
+BeatmapSetID:-1
+
+[Difficulty]
+HPDrainRate:5
+CircleSize:8
+OverallDifficulty:8
+ApproachRate:5
+SliderMultiplier:1.4
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+0,0,"transgoblin.jpg",0,0
+//Break Periods
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Layer 4 (Overlay)
+//Storyboard Sound Samples
+
+[TimingPoints]
+0,600,4,1,0,100,1,0
+2250,441.98895,4,1,0,100,1,0
+10095,434.782609,4,1,0,100,1,0
+
+
+[HitObjects]
+160,192,0,5,0,0:0:0:0:
+224,192,0,1,0,0:0:0:0:
+96,192,300,1,0,0:0:0:0:
+224,192,600,1,0,0:0:0:0:
+160,192,600,1,0,0:0:0:0:
+32,192,600,1,0,0:0:0:0:
+96,192,900,1,0,0:0:0:0:
+160,192,1050,1,0,0:0:0:0:
+32,192,1050,1,0,0:0:0:0:
+224,192,1200,1,0,0:0:0:0:
+160,192,1350,1,0,0:0:0:0:
+96,192,1350,1,0,0:0:0:0:
+32,192,1500,1,0,0:0:0:0:
+224,192,1650,1,0,0:0:0:0:
+160,192,1800,1,0,0:0:0:0:
+96,192,1800,1,0,0:0:0:0:
+32,192,1800,1,0,0:0:0:0:
+32,192,2100,1,0,0:0:0:0:

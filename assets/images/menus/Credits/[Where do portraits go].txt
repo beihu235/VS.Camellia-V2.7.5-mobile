@@ -1,0 +1,1 @@
+Due to the lack of non-portrait files, I'd say just put all the portraits in this folder itself.

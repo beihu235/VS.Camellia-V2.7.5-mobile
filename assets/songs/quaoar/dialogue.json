@@ -1,0 +1,56 @@
+{
+	list: [
+		{
+			text: "Hello, everyone! Thanks for coming out today!",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "To round off the set, I've brought some special guests on stage for a little bit of friendly competition!",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "Bap skeebep!",
+			expression: 'grinning',
+			side: 2,
+		},
+		{
+			text: "Hi, everyone! We're excited to be here!",
+			expression: 'grinning',
+			side: 1,
+		},
+		{
+			text: "Does Boyfriend have what it takes to keep up with me?",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "Only one way to find out…",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "bap!",
+			expression: 'excited',
+			side: 2,
+		}
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

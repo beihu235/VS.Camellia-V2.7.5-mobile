@@ -1,0 +1,39 @@
+name: WindowsBuild
+on: workflow_dispatch
+jobs:
+  installHaxelib:
+     uses: ./.github/workflows/InstallHaxelib.yml
+     
+  Windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+
+      - name: Install Libraries
+        run: |
+          haxelib setup C:\haxelib
+          haxelib install hmm --quiet
+          haxelib run hmm install --quiet
+
+      - name: Compile
+        run: haxelib run lime build windows
+
+      - name: Make zip for release
+        shell: pwsh
+        run: | 
+          cd export\release\windows\bin
+          Compress-Archive -Path . -DestinationPath windows.zip
+
+      - name: Upload Artifact
+        if: ${{ success() }}
+        uses: actions/upload-artifact@main
+        with:
+          name: windowsBuild
+          path: export\release\windows\bin\*.zip
+          if-no-files-found: error      

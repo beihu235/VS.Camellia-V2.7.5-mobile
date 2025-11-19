@@ -1,0 +1,26 @@
+{
+	"songName": "Kisaragi",
+	"enemy": "camellia",
+	"spectator": "gf",
+	"stage": "concert",
+	"vocalComposer": "tictacto",
+	"jacket": "Kyaretto_",
+	"album": "U.U.F.O.",
+	"genre": "Artcore",
+	"charter": {
+		"Maniac": "Lumin, Rudyrue",
+		"Hard": "Alumence, RalseiMania",
+		"Normal": "Foxeru"
+	},
+	"rating": {
+		"Maniac": [14, 18],
+		"Hard": [10.5, 15],
+		"Normal": [8.5, 10]
+	},
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 230
+		}
+	]
+}

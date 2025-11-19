@@ -1,0 +1,69 @@
+{
+	animations: [
+		{
+			offsets: [
+				0,
+				0,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Middle_Cam/camellia idle',
+			name: 'idle',
+		},
+		{
+			offsets: [
+				0,
+				-6,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Middle_Cam/camellia left',
+			name: 'singLEFT',
+		},
+		{
+			offsets: [
+				0,
+				-68,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Middle_Cam/camellia down',
+			name: 'singDOWN',
+		},
+		{
+			offsets: [
+				0,
+				22,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Middle_Cam/camellia up',
+			name: 'singUP',
+		},
+		{
+			offsets: [
+				0,
+				-13,
+			],
+			framerate: 24,
+			looped: false,
+			indices: [],
+			id: 'Middle_Cam/camellia right',
+			name: 'singRIGHT',
+		},
+	],
+	healthColor: -6184543,
+	singDuration: 4,
+	flipX: false,
+	sheets: 'characters/cam-middle',
+	danceInterval: 2,
+	reflectionOffset: 0,
+	icon: 'face',
+	antialiasing: true,
+	offset: [350, 0],
+	scale: 0.8,
+}

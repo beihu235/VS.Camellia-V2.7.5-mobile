@@ -1,0 +1,118 @@
+{
+	animations: [
+		{
+			name: 'idle',
+			id: 'idle',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'singLEFT',
+			id: 'left0',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'singDOWN',
+			id: 'down0',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'singUP',
+			id: 'up0',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'singRIGHT',
+			id: 'right0',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'missLEFT',
+			id: 'left',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'missDOWN',
+			id: 'downMiss',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'missUP',
+			id: 'upMiss',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'missRIGHT',
+			id: 'rightMiss',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			name: 'cheer',
+			id: 'hey',
+			framerate: 12,
+			offsets: [0, 0],
+			indices: [],
+			looped: false
+		},
+		{
+			offsets: [0, 0],
+			framerate: 24,
+			name: 'firstDeath',
+			indices: [],
+			id: 'downMiss',
+			looped: false,
+		},
+		{
+			offsets: [0, 0],
+			framerate: 24,
+			name: 'death-loop',
+			indices: [3],
+			id: 'downMiss',
+			looped: false,
+		},
+		{
+			offsets: [0, 0],
+			framerate: 12,
+			name: 'confirm',
+			indices: [],
+			id: 'hey',
+			looped: false,
+		}
+	],
+	healthColor: -13520687,
+	singDuration: 4,
+	flipX: false,
+	sheets: 'characters/bf',
+	danceInterval: 2,
+	reflectionOffset: 90,
+	icon: 'bf',
+	antialiasing: true,
+	offset: [850, 50],
+	scale: 0.5
+}

@@ -1,0 +1,29 @@
+{
+	"songName": "First Town of This Journey",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"album": "crystallized",
+	"genre": "Future Bass",
+	"jacket": "PhilliaEsaya",
+	"charter": {
+		"Maniac": "Foxeru",
+		"Hard": "Foxeru",
+		"Normal": "Foxeru"
+	},
+	"rating": {
+		"Maniac": [7, 11],
+		"Hard": [5, 8.5],
+		"Normal": [4.5, 6]
+	},
+	"stage": "studio",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 170
+		}
+	]
+}

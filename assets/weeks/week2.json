@@ -1,0 +1,26 @@
+{
+  	songs: [
+    	{
+      		id: 'quaoar',
+      		colors: [0xFFDFBCE7, 0xFF362751],
+			icons: ['bf', 'camellia']
+    	},
+    	{
+      		id: 'crystallized',
+      		colors: [0xFF79e6fc, 0xFF00267a],
+			icons: ['bf', 'camellia']
+    	},
+    	{
+      		id: 'nacreous-snowmelt',
+      		colors: [0xFFFFE586, 0xFF5266B1],
+			icons: ['bf', 'camellia']
+    	}
+  	],
+
+  	name: 'The Grand Show',
+	subtitle: 'Camellia and Boyfriend go head to head in an intense battle!',
+	weekNum: '2',
+  	background: 'week2',
+	unselectedClipY: 105,
+	selectedClipY: -45
+}

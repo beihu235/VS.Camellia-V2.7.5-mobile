@@ -1,0 +1,168 @@
+{
+	"songName": "TremENDouS",
+	"instComposer": "GTS Sound Team, Camellia",
+	"vocalComposer": "tictacto",
+	"album": "BespokE: GTS 2021",
+	"jacket": "POCARI SWEAT",
+	"genre": "Full Flavor",
+	"charter": {
+		"Maniac": "The Maniac Crew",
+		"Hard": "Polarin, Anonymous, Foxeru",
+		"Normal": "Anonymous, Foxeru, roko100789"
+	},
+	"rating": {
+		"Maniac": [15.5, 20],
+		"Hard": [10, 16.5],
+		"Normal": [9, 12.5]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 150
+		},
+
+		// pre-drop
+		{
+			"time": 28800,
+			"bpm": 160
+		},
+		{
+			"time": 30300,
+			"bpm": 175
+		},
+		{
+			"time": 31671,
+			"bpm": 185
+		},
+		{
+			"time": 32968,
+			"bpm": 200
+		},
+		{
+			"time": 34169,
+			"bpm": 230
+		},
+
+		// slowdown
+		{
+			"time": 127039,
+			"bpm": 215
+		},
+		{
+			"time": 129272,
+			"bpm": 200
+		},
+		{
+			"time": 131672,
+			"bpm": 190
+		},
+		{
+			"time": 134198,
+			"bpm": 180
+		},
+		{
+			"time": 136865,
+			"bpm": 170
+		},
+		{
+			"time": 139688,
+			"bpm": 165
+		},
+		{
+			"time": 142597,
+			"bpm": 160
+		},
+
+		// slowdown again
+		{
+			"time": 199597,
+			"bpm": 150
+		},
+		{
+			"time": 202797,
+			"bpm": 140
+		},
+		{
+			"time": 206226,
+			"bpm": 135
+		},
+
+		// slowndown again again
+		{
+			"time": 240004,
+			"bpm": 130
+		},
+		{
+			"time": 241850,
+			"bpm": 120
+		},
+
+		// buildup/pre-drop 2
+		{
+			"time": 257850,
+			"bpm": 130
+		},
+		{
+			"time": 259696,
+			"bpm": 140
+		},
+		{
+			"time": 261410,
+			"bpm": 150
+		},
+		{
+			"time": 263010,
+			"bpm": 160
+		},
+		{
+			"time": 264510,
+			"bpm": 170
+		},
+		{
+			"time": 265922,
+			"bpm": 180
+		},
+		{
+			"time": 267255,
+			"bpm": 190
+		},
+		{
+			"time": 268518,
+			"bpm": 205
+		},
+		{
+			"time": 269689,
+			"bpm": 220
+		},
+		{
+			"time": 270780,
+			"bpm": 235
+		},
+		{
+			"time": 271801,
+			"bpm": 250
+		},
+
+		// final stretch
+		{
+			"time": 380281,
+			"bpm": 260
+		},
+		{
+			"time": 382128,
+			"bpm": 270
+		},
+		{
+			"time": 383905,
+			"bpm": 280
+		},
+		{
+			"time": 385619,
+			"bpm": 285
+		}
+	]
+}

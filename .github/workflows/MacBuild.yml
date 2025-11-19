@@ -1,0 +1,41 @@
+name: MacBuild
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: macOS
+    runs-on: macos-${{matrix.version}}
+    strategy:
+      matrix:
+        version: [14, 15]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+
+      - name: Install Libraries
+        run: |
+          haxelib setup ~/haxelib
+          haxelib install hmm --quiet
+          haxelib run hmm install --quiet
+
+      - name: Compile
+        run: haxelib run lime build mac
+
+      - name: Make tar for relese
+        run: |
+          cd export/release/macos/bin
+          tar czf macOS${{matrix.version}}.tar .
+
+      - name: Upload Artifact
+        if: ${{ success() }}
+        uses: actions/upload-artifact@main
+        with:
+          name: macOSBuild-${{matrix.version}}
+          path: export/release/macos/bin/*.tar
+          if-no-files-found: error

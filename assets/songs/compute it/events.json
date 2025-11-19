@@ -1,0 +1,114 @@
+{
+	"list": [
+		{
+			"name": "camelliazoom",
+			"time": 2909,
+			"args": [1, 0.5]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 4000,
+			"args": [2, 8]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 37700,
+			"args": [3,0.85]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 58545,
+			"args": [2,3]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 60890,
+			"args": [1,0.85]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 73290,
+			"args": [3,4]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 85090,
+			"args": [2,7]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 107436,
+			"args": [1,0.85]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 131636,
+			"args": [2, 8]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 141663,
+			"args": [1, 2.3]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 143900,
+			"args": [2, 0.15]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 144354,
+			"args": [3, 7]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 155345,
+			"args": [2, 0.5]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 168527,
+			"args": [1,0.85]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 178809,
+			"args": [2, 0.2]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 180103,
+			"args": [1,0.65]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 188890,
+			"args": [2,2.5]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 191800,
+			"args": [1,0.65]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 215072,
+			"args": [2,3]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 225254,
+			"args": [3,0.85]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 237090,
+			"args": [2,4]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 251427,
+			"args": [1,6]
+		}
+	]
+}

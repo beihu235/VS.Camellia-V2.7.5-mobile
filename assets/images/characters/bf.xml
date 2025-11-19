@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+But i ordered the frames bc it kinda drives me crazy
+-->
+<TextureAtlas imagePath="texture.png" width="7957" height="2979">
+  <SubTexture name="hey0000" x="1448" y="1066"  width="781" height="949" frameX="-253" frameY="-163" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="hey0001" x="3773" y="4"  width="729" height="913" frameX="-253" frameY="-199" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="hey0002" x="2963" y="4"  width="739" height="924" frameX="-251" frameY="-188" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="hey0003" x="2963" y="4"  width="739" height="924" frameX="-251" frameY="-188" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="hey0004" x="2963" y="4"  width="739" height="924" frameX="-251" frameY="-188" frameWidth="1200" frameHeight="1112"/>
+
+  <SubTexture name="idle0000" x="6404" y="920"  width="789" height="858" frameX="-200" frameY="-249" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="idle0001" x="6235" y="1807"  width="787" height="873" frameX="-200" frameY="-234" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="idle0002" x="5427" y="1813"  width="800" height="879" frameX="-209" frameY="-228" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="idle0003" x="3916" y="925"  width="814" height="886" frameX="-215" frameY="-221" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="idle0004" x="3773" y="1862"  width="823" height="891" frameX="-217" frameY="-216" frameWidth="1200" frameHeight="1112"/>
+
+  <SubTexture name="left0000" x="5561" y="920"  width="835" height="879" frameX="-2" frameY="-229" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="left0001" x="4604" y="1819"  width="815" height="881" frameX="-26" frameY="-227" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="left0002" x="4738" y="924"  width="815" height="881" frameX="-26" frameY="-227" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="leftMiss0000" x="5561" y="920"  width="835" height="879" frameX="-2" frameY="-229" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="leftMiss0001" x="2237" y="942"  width="824" height="926" frameX="-15" frameY="-182" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="leftMiss0002" x="2140" y="4"  width="815" height="930" frameX="-26" frameY="-178" frameWidth="1200" frameHeight="1112"/>
+
+  <SubTexture name="down0000" x="7201" y="836"  width="752" height="812" frameX="-155" frameY="-296" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="down0001" x="1418" y="2151"  width="746" height="824" frameX="-166" frameY="-284" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="down0002" x="2172" y="2151"  width="746" height="824" frameX="-166" frameY="-284" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="downMiss0000" x="7201" y="836"  width="752" height="812" frameX="-155" frameY="-296" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="downMiss0001" x="7030" y="1786"  width="765" height="816" frameX="-156" frameY="-292" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="downMiss0002" x="7069" y="4"  width="746" height="824" frameX="-166" frameY="-284" frameWidth="1200" frameHeight="1112"/>
+
+  <SubTexture name="up0000" x="708" y="4"  width="702" height="1077" frameX="-266" frameY="-32" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="up0001" x="726" y="1089"  width="714" height="1054" frameX="-250" frameY="-55" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="up0002" x="1418" y="4"  width="714" height="1054" frameX="-250" frameY="-55" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="upMiss0000" x="708" y="4"  width="702" height="1077" frameX="-266" frameY="-32" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="upMiss0001" x="4" y="4"  width="696" height="1109" frameX="-259" frameY="-0" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="upMiss0002" x="4" y="1121"  width="714" height="1104" frameX="-250" frameY="-5" frameWidth="1200" frameHeight="1112"/>
+
+  <SubTexture name="right0000" x="2926" y="1876"  width="839" height="922" frameX="-292" frameY="-188" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="right0001" x="5375" y="4"  width="839" height="908" frameX="-284" frameY="-202" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="right0002" x="6222" y="4"  width="839" height="908" frameX="-284" frameY="-202" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="rightMiss0000" x="2926" y="1876"  width="839" height="922" frameX="-292" frameY="-188" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="rightMiss0001" x="4510" y="4"  width="857" height="912" frameX="-289" frameY="-198" frameWidth="1200" frameHeight="1112"/>
+  <SubTexture name="rightMiss0002" x="3069" y="936"  width="839" height="918" frameX="-284" frameY="-192" frameWidth="1200" frameHeight="1112"/>
+</TextureAtlas>

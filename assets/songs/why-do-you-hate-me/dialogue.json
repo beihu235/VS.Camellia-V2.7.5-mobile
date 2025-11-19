@@ -1,0 +1,91 @@
+{
+	list: [
+		{
+			text: "You're amazing!",
+			expression: 'shocked',
+			side: 0,
+		},
+		{
+			text: "pain",
+			expression: 'disgusted',
+			side: 2,
+		},
+		{
+			text: "Hmm… I had an idea-",
+			expression: 'thinkglow',
+			side: 0,
+		},
+		{
+			text: "We should put on a little spectacle for my concert next week! My audience will most likely eat this up! Would you guys be interested?",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "Really!? That sounds like so much fun!! Right babe?",
+			expression: 'shocked',
+			side: 1,
+		},
+		{
+			text: "Bidibap!!",
+			expression: 'grinning',
+			side: 2,
+		},
+		{
+			text: "Well, I have to attend to some personal business, so I should be going soon…",
+			expression: 'thinking',
+			side: 0,
+		},
+		{
+			text: "...But I also don't really want to lose this opportunity…",
+			expression: 'flustered',
+			side: 0,
+		},
+		{
+			text: "Do you still have energy for one last song?",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "You still got one more in you, right, Boyfriend?",
+			expression: 'idle',
+			side: 1,
+		},
+		{
+			text: "skebop!",
+			expression: 'excited',
+			side: 2,
+		},
+		{
+			text: "Alright! One more, then I gotta run.",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "I’ll be in contact with you guys with the details of next week’s concert later! But for now…",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "Don't hold back!",
+			expression: 'point',
+			side: 0,
+		}
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

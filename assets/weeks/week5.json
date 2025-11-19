@@ -1,0 +1,43 @@
+{
+  	songs: [
+		{
+			id: 'dance-with-silence',
+			colors: [0xFFFEA8FF, 0xFF0c1e5c],
+			icons: ['bf', 'camellia']
+		},
+		{
+			id: 'burning-aquamarine',
+			colors: [0xFF5676DB, 0xFF04074D],
+			icons: ['bf', 'camellia']
+		},
+		{
+			id: 'tremendous',
+			colors: [0xFF0C0A0D, 0xFF000A4F],
+			icons: ['bf', 'camellia']
+		},
+		{
+			id: 'racemization',
+			colors: [0xFF33915C, 0xFF1A3225],
+			icons: ['bf', 'camellia']
+		},
+		{
+			id: 'kisaragi',
+			colors: [0xF0F2051, 0xFFF4FC1],
+			icons: ['bf', 'camellia'],
+			pauseMusic: 'cicada'
+		},
+		{
+			id: 'compute it',
+			colors: [0xFF814D48, 0xFFE2D394],
+			icons: ['bf', 'camellia']
+		},
+		{
+			id: "exit-this-earth's-atomosphere",
+			colors: [0xFFB40057, 0xFFE6006D],
+			icons: ['bf', 'camellia']
+		}
+  	],
+
+  	name: 'Extras',
+  	hideStory: true
+}

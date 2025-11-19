@@ -1,0 +1,136 @@
+{
+	list: [
+		{
+			text: "Once again, thank you all for coming out to the show!! Let's make this last one go out with a bang, everyone!!",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "*loud cheering*",
+			expression: 'grinning',
+			speed: 0.02,
+			volume: 0.1,
+			side: 1,
+		},
+		{
+			text: "Hm…",
+			expression: 'worried',
+			speed: 0.06,
+			side: 0,
+		},
+		{
+			text: "Huh? Is something on your mind, Camellia?",
+			expression: 'confused',
+			side: 2,
+		},
+		{
+			text: "I was hoping to save this one until the special arrangements were completed…",
+			expression: 'thinkglow',
+			side: 0,
+		},
+		{
+			text: "but with the current momentum of the show, I think we should just go on with the finale and save the specialties for another show…",
+			expression: 'flustered',
+			side: 0,
+		},
+		{
+			text: "Beep Bo!",
+			expression: 'default',
+			side: 3,
+		},
+		{
+			text: "Oh! BF, that's a great idea!",
+			expression: 'shocked',
+			side: 2,
+		},
+		{
+			text: "Camellia, may I ask what you were planning to do?",
+			expression: 'idle',
+			side: 2,
+		},
+		{
+			text: "Well…",
+			expression: 'worried',
+			side: 0,
+		},
+		{
+			text: "*whisper mumble whisper whisper*",
+			expression: 'thinkglow',
+			color: 0xFFB7B7B7,
+			volume: 0.1,
+			speed: 0.025,
+			side: 0,
+		},
+		{
+			text: "Say no more, I can handle it from here!",
+			expression: 'grinning',
+			side: 2,
+		},
+		//*blinding flash, halloween outfits revealed*
+		{
+			text: "Whoa!",
+			expression: 'shocked',
+			side: 0,
+		},
+		{
+			text: "What do you boys think?",
+			expression: 'idle',
+			side: 2,
+		},
+		{
+			text: "Unsure exactly HOW you pulled that off, but this is amazing! Nice going, GF!",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "(wait why am I back to this version)",
+			expression: 'shocked',
+			speed: 0.015,
+			volume: 0.15,
+			color: 0xFFB7B7B7,
+			side: 3,
+		},
+		{
+			text: "(time constraints we'll get there next time babe)",
+			expression: 'idle',
+			speed: 0.015,
+			volume: 0.15,
+			color: 0xFFB7B7B7,
+			side: 2,
+		},
+		{
+			text: "Well... EVERYBODY READY?!",
+			expression: 'excitedmenacing',
+			side: 0,
+		},
+		{
+			text: "*loud cheering*",
+			expression: 'default',
+			speed: 0.02,
+			volume: 0.1,
+			side: 1,
+		},
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'crowd',
+			ratio: 10,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

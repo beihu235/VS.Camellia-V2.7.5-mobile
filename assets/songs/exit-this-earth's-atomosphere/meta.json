@@ -1,0 +1,29 @@
+{
+	"songName": "Exit This Earth's Atomosphere",
+	"subtitle": "(Camellia's 'PLANETARY//200STEP' Remix)",
+	"instComposer": "Camellia",
+	"vocalComposer": "tictacto",
+	"album": "Summary & VIPS 2",
+	"jacket": "Hitomasu Modoru",
+	"genre": "200step",
+	"charter": {
+		"Maniac": "Roxas, Lott",
+		"Hard": "Jaldabo, Rudyrue",
+		"Normal": "Foxeru, Jaldabo"
+	},
+	"rating": {
+		"Maniac": [15, 19],
+		"Hard": [10, 16],
+		"Normal": [7, 11]
+	},
+	"stage": "studio",
+	"enemy": "camellia",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 200
+		}
+	]
+}

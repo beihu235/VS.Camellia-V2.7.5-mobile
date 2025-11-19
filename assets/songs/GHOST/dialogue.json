@@ -1,0 +1,100 @@
+{
+	list: [
+		{
+			text: "ONE MORE SONG! ONE MORE SONG!",
+			expression: 'default',
+			volume: 0.1,
+			speed: 0.03,
+			side: 1,
+		},
+		{
+			text: "Something tells me the crowd still wants more, boys…~",
+			expression: 'grinning',
+			side: 2,
+		},
+		{
+			text: "!",
+			expression: 'menacing',
+			side: 0,
+		},
+		{
+			text: "...!",
+			expression: 'default',
+			side: 3,
+		},
+		{
+			text: "Alright, alright! I think BF and I hear you all loud and clear.",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "But I think we can do one better for you all…",
+			expression: 'thinking',
+			side: 0,
+		},
+		{
+			text: "BF, are you down to go for one final special set before we wrap up here for this evening?",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "heh… YEAH!",
+			expression: 'excited',
+			side: 3,
+		},
+		{
+			text: "Alright, just as a warning: I want you to give it all you got!",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "I won't be holding back this time! 3 final songs and then we're out, back to back!",
+			expression: 'excitedmenacing',
+			side: 0,
+		},
+		{
+			text: "YEAAAAAAH!!",
+			expression: 'default',
+			volume: 0.05,
+			speed: 0.02,
+			side: 1,
+		},
+		{
+			text: "You ready, BF?",
+			expression: 'default',
+			side: 0,
+		},
+		{
+			text: "boop skebop!",
+			expression: 'excited',
+			side: 3,
+		},
+		{
+			text: "Knock 'em dead, babe!",
+			expression: 'idle',
+			side: 2,
+		}
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'crowd',
+			ratio: 10,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

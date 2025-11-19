@@ -1,0 +1,31 @@
+{
+	"songName": "liquated",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"album": "crystallized",
+	"jacket": "PhilliaEsaya",
+	"genre": "Melodic Dubstep",
+	"charter": {
+		"Maniac": "Foxeru",
+		"Hard": "roko100789",
+		"Normal": "roko100789"
+	},
+	"rating": {
+		"Maniac": [7.5, 10.5],
+		"Hard": [5.5, 8],
+		"Normal": [4, 4.5]
+	},
+	"stage": "studio",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"offset": -1716,
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 140
+		}
+	]
+}

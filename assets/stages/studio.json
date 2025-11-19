@@ -1,0 +1,9 @@
+{
+	"zoom": 0.64,
+
+	"spectatorPos": [775, -280],
+	"playerPos": [1250, -200],
+	"opponentPos": [310, -150],
+
+	"cameraPos": [950, 140]
+}

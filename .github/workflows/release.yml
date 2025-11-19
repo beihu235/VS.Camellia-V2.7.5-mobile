@@ -1,0 +1,75 @@
+name: Release
+on: workflow_dispatch
+jobs:
+  Mobile:
+     uses: ./.github/workflows/MobileBuild.yml
+     with:
+      dependencies_to_update: all
+     
+  Windows:
+    uses: ./.github/workflows/WindowsBuild.yml
+    
+  Linux:
+    uses: ./.github/workflows/LinuxBuild.yml
+    
+  macOS:
+    uses: ./.github/workflows/MacBuild.yml
+    
+  Releaser:
+    needs: [Mobile, macOS, Windows, Linux]
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Download Android Build
+        uses: actions/download-artifact@main
+        with:
+           name: androidBuild
+           path: /home/runner
+
+      - name: Download iOS Build
+        uses: actions/download-artifact@main
+        with:
+           name: iOSBuild
+           path: /home/runner
+  
+      - name: Download macOS14 Build
+        uses: actions/download-artifact@main
+        with:
+           name: macOSBuild-14
+           path: /home/runner
+
+      - name: Download macOS15 Build
+        uses: actions/download-artifact@main
+        with:
+           name: macOSBuild-15
+           path: /home/runner
+
+      - name: Download Windows Build
+        uses: actions/download-artifact@main
+        with:
+           name: windowsBuild
+           path: /home/runner
+           
+      - name: Download Linux Build
+        uses: actions/download-artifact@main
+        with:
+           name: LinuxBuild
+           path: /home/runner
+
+      - name: Download Haxelib
+        uses: actions/download-artifact@main
+        with:
+           name: Haxelib
+           path: /home/runner
+
+      - name: Publish The Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          automatic_release_tag: "V1.1.9"
+          title: "V1.1.9"
+          files: |
+            /home/runner/*.apk
+            /home/runner/*.zip
+            /home/runner/*.tar

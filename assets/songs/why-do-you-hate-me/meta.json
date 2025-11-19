@@ -1,0 +1,29 @@
+{
+  	"songName": "Why do you hate me?",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"album": "PLANET//SHAPER",
+	"jacket": "PhilliaEsaya",
+	"genre": "Dubstep",
+	"charter": {
+		"Maniac": "Foxeru",
+		"Hard": "Foxeru",
+		"Normal": "Foxeru"
+	},
+	"rating": {
+		"Maniac": [8.5, 11.5],
+		"Hard": [6, 6.5],
+		"Normal": [4, 5.5]
+	},
+	"stage": "studio",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 140
+		}
+	]
+}

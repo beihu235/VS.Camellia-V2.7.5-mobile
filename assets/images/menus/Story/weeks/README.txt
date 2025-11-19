@@ -1,0 +1,1 @@
+Put the thumbnails of each week here! They should fit within the confines of the example placeholder image (BACKUP) in here!

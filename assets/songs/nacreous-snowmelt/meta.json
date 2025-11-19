@@ -1,0 +1,145 @@
+{
+	"songName": "Nacreous Snowmelt",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "STS-Puelle, PhilliaEsaya",
+	"genre": "Full Flavor",
+	"charter": {
+		"Maniac": "Kafkell",
+		"Hard": "Garacide",
+		"Normal": "roko100789, Foxeru"
+	},
+	"rating": {
+		"Maniac": [11, 15.5],
+		"Hard": [8, 11.5],
+		"Normal": [5, 6]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 198
+		},
+		{
+			"time": 168484,
+			"bpm": 191
+		},
+		{
+			"time": 169741,
+			"bpm": 184
+		},
+		{
+			"time": 171045,
+			"bpm": 177
+		},
+		{
+			"time": 171723,
+			"bpm": 174
+		},
+		{
+			"time": 172413,
+			"bpm": 170
+		},
+		{
+			"time": 173119,
+			"bpm": 168
+		},
+		{
+			"time": 173833,
+			"bpm": 165
+		},
+		{
+			"time": 174560,
+			"bpm": 156
+		},
+		{
+			"time": 175330,
+			"bpm": 155
+		},
+		{
+			"time": 176104,
+			"bpm": 151
+		},
+		{
+			"time": 176898,
+			"bpm": 145
+		},
+		{
+			"time": 177726,
+			"bpm": 143
+		},
+		{
+			"time": 178565,
+			"bpm": 139
+		},
+
+		{
+			"time": 261443,
+			"bpm": 141
+		},
+		{
+			"time": 262294,
+			"bpm": 145
+		},
+		{
+			"time": 263122,
+			"bpm": 151
+		},
+		{
+			"time": 263916,
+			"bpm": 156
+		},
+		{
+			"time": 264685,
+			"bpm": 157
+		},
+		{
+			"time": 265450,
+			"bpm": 164
+		},
+		{
+			"time": 266181,
+			"bpm": 166
+		},
+		{
+			"time": 266904,
+			"bpm": 172
+		},
+		{
+			"time": 267602,
+			"bpm": 173
+		},
+		{
+			"time": 268296,
+			"bpm": 180
+		},
+		{
+			"time": 268962,
+			"bpm": 182
+		},
+		{
+			"time": 269622,
+			"bpm": 183
+		},
+		{
+			"time": 270277,
+			"bpm": 185
+		},
+		{
+			"time": 270926,
+			"bpm": 194
+		},
+		{
+			"time": 271545,
+			"bpm": 198
+		},
+		{
+			"time": 272757,
+			"bpm": 201
+		}
+	]
+}

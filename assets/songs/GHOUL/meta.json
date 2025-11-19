@@ -1,0 +1,29 @@
+{
+	"songName": "GHOUL",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"album": "U.U.F.O.",
+	"genre": "TwerkCore",
+	"jacket": "Temmie Chang",
+	"charter": {
+		"Maniac": "Lott",
+		"Hard": "Kienoob, Foxeru",
+		"Normal": "roko100789, Foxeru"
+	},
+	"rating": {
+		"Maniac": [14.5, 17],
+		"Hard": [10, 13.5],
+		"Normal": [7.5, 9.5]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 230
+		}
+	]
+}

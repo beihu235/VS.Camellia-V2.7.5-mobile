@@ -1,0 +1,140 @@
+{
+	list: [
+		//text in the middle [after the concert...]
+		{
+			text: "You know what… I think we can call it a tie… *laughs*",
+			expression: 'flustered',
+			side: 0,
+		},
+		{
+			text: "shoobaloobadoo...",
+			expression: 'tired',
+			volume: 0.8,
+			side: 2,
+		},
+		{
+			text: "At any rate, that was really fun! Thanks again for bringing us on!",
+			expression: 'grinning',
+			side: 1,
+		},
+		{
+			text: "bullshit i totally won bro",
+			expression: 'idle',
+			color: 0xFFB7B7B7,
+			speed: 0.015,
+			volume: 0.15,
+			side: 2,
+		},
+		{
+			text: "BABE! Don't be a sore loser, you tied!",
+			expression: 'shocked',
+			side: 1,
+		},
+		{
+			text: "…bap. (still totally won…)",
+			expression: 'tired',
+			color: 0xFFB7B7B7,
+			volume: 0.15,
+			side: 2,
+		},
+		{
+			text: "Either way, I was thinking…",
+			expression: 'worried',
+			side: 0,
+		},
+		{
+			text: "That went really well for a last-minute idea, so…",
+			expression: 'thinking',
+			side: 0,
+		},
+		{
+			text: "I've got a world tour coming up soon. I'd love to have you guys as roadies!",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "!!!",
+			expression: 'shocked',
+			side: 2,
+		},
+		{
+			text: "Really?! You don't mind?",
+			expression: 'shocked',
+			side: 1,
+		},
+		{
+			text: "Yeah, if you're down for it! We'll discuss details later.",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "For now, let's get out of the venue. I'm starving!",
+			expression: 'flustered',
+			side: 0,
+		},
+		{
+			text: "Sweet!",
+			expression: 'grinning',
+			side: 1,
+		},
+		{
+			text: "Skebop!",
+			expression: 'grinning',
+			side: 2,
+		},
+		//we need a transition here, fades to black
+		//text in the middle (elsewhere, in space...)
+		{
+			text: "…those signals again…",
+			expression: 'default',
+			color: 0xFF5EFF1E,
+			speed: 0.06,
+			side: 3,
+		},
+		{
+			text: "Maybe they are worth looking into…",
+			expression: 'default',
+			color: 0xFF5EFF1E,
+			speed: 0.06,
+			side: 3,
+		},
+		{
+			text: "...",
+			expression: 'default',
+			color: 0xFF5EFF1E,
+			speed: 0.25,
+			volume: 0,
+			side: 3,
+		},
+		{
+			text: "Alright. Proceeding towards the source of the signal. Destination set.",
+			expression: 'default',
+			speed: 0.05,
+			color: 0xFF5EFF1E,
+			side: 3,
+		}
+
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		},
+		{
+			name: 'uufo',
+			ratio: 0.1,
+			offsetX: 0
+		},
+	]
+}

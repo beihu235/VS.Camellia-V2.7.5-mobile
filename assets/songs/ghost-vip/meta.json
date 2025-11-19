@@ -1,0 +1,28 @@
+{
+	"songName": "GHOST (2020 Halloween+++++++++ VIP)",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "PhilliaEsaya",
+	"genre": "Trap",
+	"charter": {
+		"Maniac": "Kafkell, Ragi",
+		"Hard": "Somf",
+		"Normal": "roko100789, Foxeru"
+	},
+	"rating": {
+		"Maniac": [14, 17.5],
+		"Hard": [9, 15.5],
+		"Normal": [6.5, 9]
+	},
+	"stage": "concert",
+	"enemy": "camellia-halloween",
+	"player": "bf-halloween",
+	"spectator": "gf-halloween",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 230
+		}
+	]
+}

@@ -1,0 +1,52 @@
+//i'm saving this here just so we can have a reference on what we can do with markdown later on
+{
+	list: [
+		{
+			text: "hey it\'s me boyfriend from friday fun   k",
+			side: 1,
+		},
+		{
+			text: "now im here and im kiryu from yakuza",
+			side: 0,
+		},
+		{
+			text: "holy fucking shit yakuza ex eff en eff crossover this is insane im speaking so fast i can't even comprehend what im saying blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah bl",
+			side: 1,
+			expression: 'happy',
+			speed: 0.01,
+			color: 0xFF00FF00
+		},
+		{
+			text: "kys or some shit idk",
+			side: 0,
+			color: 0xFFFF0000
+		},
+		{
+			text: "sob",
+			expression: 'confused',
+			side: 1,
+		},
+		{
+			text: "now im surprised",
+			expression: 'surprised',
+			side: 1,
+		},
+		{
+			text: "now im disgusted",
+			expression: 'disgusted',
+			side: 1,
+		},
+		{
+			text: "now im exhausted",
+			expression: 'exhausted',
+			side: 1,
+		},
+		{
+			text: "now im hyped",
+			expression: 'hyped',
+			side: 1,
+		}
+	],
+
+	characters: ['kiryu', 'bf']
+}

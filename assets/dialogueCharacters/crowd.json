@@ -1,0 +1,7 @@
+{
+	name: 'crowd',
+	sprite: '',
+	sound: 'default',
+	expressions: [
+	]
+}

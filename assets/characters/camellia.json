@@ -1,0 +1,193 @@
+{
+	animations: [
+		{
+			offsets: [
+				104,
+				24,
+			],
+			framerate: 24,
+			name: 'singLEFT',
+			looped: false,
+			id: 'Camellia/Camellia_Left',
+			indices: [],
+		},
+		{
+			offsets: [
+				0,
+				95,
+			],
+			framerate: 24,
+			name: 'singDOWN',
+			looped: false,
+			id: 'Camellia/Camellia_Down',
+			indices: [],
+		},
+		{
+			offsets: [
+				6,
+				129,
+			],
+			framerate: 24,
+			name: 'singUP',
+			looped: false,
+			id: 'Camellia/Camellia_Up',
+			indices: [],
+		},
+		{
+			offsets: [
+				0,
+				8,
+			],
+			framerate: 24,
+			name: 'singRIGHT',
+			looped: false,
+			id: 'Camellia/Camellia_Right',
+			indices: [],
+		},
+		{
+			offsets: [
+				0,
+				0,
+			],
+			framerate: 24,
+			name: 'idle',
+			looped: true,
+			indices: [],
+			id: 'Camellia/Camellia_Idle',
+		},
+		{
+			offsets: [
+				104,
+				15,
+			],
+			framerate: 24,
+			name: 'missLEFT',
+			looped: false,
+			indices: [],
+			id: 'Camellia/Camellia_Left_MISS',
+		},
+		{
+			offsets: [
+				5,
+				92,
+			],
+			framerate: 24,
+			name: 'missDOWN',
+			looped: false,
+			indices: [],
+			id: 'Camellia/Camellia_Down_MISS',
+		},
+		{
+			offsets: [
+				47,
+				136,
+			],
+			framerate: 24,
+			name: 'missUP',
+			looped: false,
+			indices: [],
+			id: 'Camellia/Camellia_Up_MISS',
+		},
+		{
+			offsets: [
+				2,
+				35,
+			],
+			framerate: 24,
+			name: 'missRIGHT',
+			looped: false,
+			indices: [],
+			id: 'Camellia/Camellia_Right_MISS',
+		},
+		{
+			offsets: [
+				94,
+				19,
+			],
+			indices: [],
+			id: 'Camellia_LeftAlt',
+			name: 'singLEFT-alt',
+			framerate: 24,
+			looped: false,
+		},
+		{
+			offsets: [
+				0,
+				92,
+			],
+			indices: [],
+			id: 'Camellia_DownAlt',
+			name: 'singDOWN-alt',
+			framerate: 24,
+			looped: false,
+		},
+		{
+			offsets: [
+				73,
+				263,
+			],
+			indices: [],
+			id: 'Camellia_UpAlt',
+			name: 'singUP-alt',
+			framerate: 24,
+			looped: false,
+		},
+		{
+			offsets: [
+				0,
+				-16,
+			],
+			indices: [],
+			id: 'Camellia_RightAlt',
+			name: 'singRIGHT-alt',
+			framerate: 24,
+			looped: false,
+		},
+		{
+			offsets: [
+				26,
+				-16,
+			],
+			framerate: 24,
+			name: 'firstDeath',
+			indices: [],
+			id: 'Camellia/Camellia_DEATH',
+			looped: false,
+		},
+		{
+			offsets: [
+				3,
+				-16,
+			],
+			framerate: 12,
+			name: 'death-loop',
+			indices: [],
+			id: 'Camellia/Camellia_DEATHLoop',
+			looped: true,
+		},
+		{
+			offsets: [
+				5,
+				119,
+			],
+			framerate: 12,
+			name: 'confirm',
+			indices: [],
+			id: 'Camellia/Camellia_Up',
+			looped: false,
+		}
+	],
+	healthColor: -2793642,
+	singDuration: 10.8,
+	flipX: false,
+	sheets: 'characters/camellia,characters/camellia-sing',
+	danceInterval: 0,
+	reflectionOffset: 100,
+	icon: 'camellia',
+	antialiasing: true,
+	offset: [
+		300,
+		80,
+	],
+	scale: 0.8,
+}

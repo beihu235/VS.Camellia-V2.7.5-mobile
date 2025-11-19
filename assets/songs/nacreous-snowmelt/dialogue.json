@@ -1,0 +1,58 @@
+{
+	list: [
+		{
+			text: "Talk about a killer performance— you can really sing!",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "This next song is going to be a real endurance test, though…",
+			expression: 'menacing',
+			side: 0,
+		},
+		{
+			text: ":(",
+			expression: 'disgusted',
+			side: 2,
+		},
+		{
+			text: "(He's starting to look real tired now… this one will do him in for sure…)",
+			expression: 'thonkmenacing',
+			color: 0xFFB7B7B7,
+			volume: 0.35,
+			side: 0,
+		},
+		{
+			text: "No holds barred! Let's go!",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "Bring it on!",
+			expression: 'idle',
+			side: 1,
+		},
+		{
+			text: "bop!",
+			expression: 'excited',
+			side: 2,
+		}
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

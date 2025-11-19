@@ -1,0 +1,26 @@
+{
+  	songs: [
+    	{
+      		id: 'first-town-of-this-journey',
+      		colors: [0xFF79e6fc, 0xFF00267a],
+			icons: ['bf', 'camellia']
+    	},
+    	{
+      		id: 'liquated',
+      		colors: [0xFF79e6fc, 0xFF00267a],
+			icons: ['bf', 'camellia']
+    	},
+    	{
+      		id: 'why-do-you-hate-me',
+      		colors: [0xFF0C4789, 0xFF8F0556],
+			icons: ['bf', 'camellia']
+    	}
+  	],
+
+  	name: 'Rehearsal Session',
+	subtitle: 'Boyfriend is invited to a quick rehearsal with Camellia!',
+	weekNum: '1',
+  	background: 'week1',
+	unselectedClipY: 285,
+	selectedClipY: 25
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="texture.png" width="4892" height="2592">
+	<SubTexture name="Boyfriend Death Loop0000" x="872" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0001" x="1311" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0002" x="1311" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0003" x="1750" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0004" x="1750" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0005" x="2189" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0006" x="2189" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0007" x="2628" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0008" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0009" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0010" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0011" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0012" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0013" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0014" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0015" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0016" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0017" x="872" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0018" x="1311" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0019" x="1311" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0020" x="1750" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0021" x="1750" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0022" x="2189" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0023" x="2189" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0024" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0025" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0026" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0027" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0028" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0029" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0030" x="2628" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0031" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0032" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+	<SubTexture name="Boyfriend Death Loop0033" x="3067" y="411" width="439" height="433" frameX="-0" frameY="-1" frameWidth="439" frameHeight="435"/>
+
+	<SubTexture name="Boyfriend Death Confirm0000" x="3506" y="411" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0001" x="2195" y="1710" width="447" height="439" rotated="true" frameX="-0" frameY="-51" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0002" x="2642" y="1710" width="465" height="439" rotated="true" frameX="-0" frameY="-33" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0003" x="3107" y="1710" width="447" height="439" rotated="true" frameX="-0" frameY="-51" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0004" x="3554" y="1710" width="446" height="439" rotated="true" frameX="-0" frameY="-52" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0005" x="4000" y="1714" width="446" height="439" rotated="true" frameX="-0" frameY="-52" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0006" x="4446" y="1714" width="446" height="439" rotated="true" frameX="-0" frameY="-52" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0007" x="0" y="2144" width="446" height="439" rotated="true" frameX="-0" frameY="-52" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0008" x="446" y="2146" width="446" height="439" rotated="true" frameX="-0" frameY="-52" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0009" x="892" y="2148" width="446" height="439" rotated="true" frameX="-0" frameY="-52" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0010" x="1338" y="2148" width="445" height="439" rotated="true" frameX="-0" frameY="-53" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0011" x="1783" y="2149" width="445" height="439" rotated="true" frameX="-0" frameY="-53" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0012" x="2228" y="2149" width="443" height="439" rotated="true" frameX="-0" frameY="-55" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0013" x="2671" y="2149" width="443" height="439" rotated="true" frameX="-0" frameY="-55" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0014" x="3114" y="2149" width="442" height="439" rotated="true" frameX="-0" frameY="-56" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0015" x="3556" y="2149" width="442" height="439" rotated="true" frameX="-0" frameY="-56" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0016" x="3998" y="2153" width="441" height="439" rotated="true" frameX="-0" frameY="-57" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0017" x="1317" y="1710" width="439" height="438" frameX="-0" frameY="-60" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0018" x="878" y="1710" width="439" height="436" frameX="-0" frameY="-62" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0019" x="3945" y="411" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0020" x="4384" y="415" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0021" x="0" y="826" width="433" height="439" rotated="true" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0022" x="433" y="843" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0023" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0024" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0025" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0026" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0027" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0028" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0029" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0030" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0031" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0032" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	<SubTexture name="Boyfriend Death Confirm0033" x="872" y="844" width="439" height="433" frameX="-0" frameY="-65" frameWidth="439" frameHeight="499"/>
+	
+	<SubTexture name="Boyfriend Death Start0000" x="4390" y="0" width="433" height="415" frameX="-1" frameY="-0" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0001" x="0" y="411" width="433" height="415" frameX="-1" frameY="-0" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0002" x="0" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0003" x="439" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0004" x="878" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0005" x="1317" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0006" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0007" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0008" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0009" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0010" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0011" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0012" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0013" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0014" x="1756" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0015" x="2195" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0016" x="2195" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0017" x="2195" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0018" x="2634" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0019" x="2634" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0020" x="3073" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0021" x="3073" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0022" x="3512" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0023" x="3512" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0024" x="3951" y="0" width="439" height="411" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0025" x="1756" y="1710" width="439" height="438" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0026" x="1756" y="1710" width="439" height="438" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0027" x="433" y="411" width="439" height="432" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0028" x="433" y="411" width="439" height="432" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0029" x="439" y="1710" width="439" height="434" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0030" x="439" y="1710" width="439" height="434" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0031" x="1311" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0032" x="1311" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0033" x="1311" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0034" x="1311" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0035" x="1750" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0036" x="2189" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0037" x="2628" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0038" x="3067" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0039" x="3506" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0040" x="3945" y="844" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0041" x="4384" y="848" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0042" x="0" y="1265" width="433" height="439" rotated="true" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0043" x="433" y="1276" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0044" x="872" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0045" x="1311" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0046" x="1750" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0047" x="2189" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0048" x="2628" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0049" x="3067" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0050" x="3506" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0051" x="3945" y="1277" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0052" x="4384" y="1281" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0053" x="872" y="411" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0054" x="0" y="1709" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0055" x="0" y="1709" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0056" x="0" y="1709" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+	<SubTexture name="Boyfriend Death Start0057" x="0" y="1709" width="439" height="433" frameX="-0" frameY="-7" frameWidth="439" frameHeight="445"/>
+</TextureAtlas>

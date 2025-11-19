@@ -1,0 +1,230 @@
+key,English,Português,日本語
+,,,
+story_button,STORY\nMODE,MODO\nHISTÓRIA,ストーリーモード
+freeplay_button,FREEPLAY,FREEPLAY,フリープレイ
+options_button,OPTIONS,OPÇÕES,設定
+extras_button,EXTRAS,EXTRAS,エキストラ
+credits_button,CREDITS,CRÉDITOS,クレジット
+story_desc,Play through a series of songs with an overarching storyline!,Jogue uma série de músicas com uma história interligada!,全体的物語のある曲のシリーズを遊びます！
+freeplay_desc,Pick a specific song of your liking without the need of cutscenes or other story songs!,Jogue uma música de sua escolha sem se preocupar com cutscenes ou outras músicas do modo história!,カットシーンとか他の物語曲無し好きな特定曲を決めます！
+options_desc,Edit the gameplay{0} visuals{0} and a plethora of other settings to customize your playstyle!,Edite os visuais{0} jogabilidade{0} e várias outras configurações para personalizar seu estilo de jogo!,ゲームプレイやビジュアルや色んな他もの微調整します！
+extras_desc,Visit a few more additions that Vs. Camellia has to offer!,Visite mais algumas adições que o Vs. Camellia tem para oferecer!,Vs. Camelliaの追加コンテンツをご覧ください！
+credits_desc,Check out everyone who've contributed to Vs. Camellia!,Confira todos os membros que contribuíram com o Vs. Camellia!,Vs. Camelliaを貢献した人をチェックします！
+,,,
+story_scroll,SELECT WEEK,ESCOLHER SEMANA,ウィークを選ぶ
+freeplay_scroll,SELECT SONG,ESCOLHER MÚSICA,曲を選ぶ
+diff_scroll,SELECT DIFFICULTY,ESCOLHER DIFICULDADE,難易度を選ぶ
+modifiers,MODIFIERS,MODIFICADORES,変更
+extras_scroll,SELECT EXTRA,ESCOLHER EXTRAS,エキストラを選ぶ
+addons_scroll,SELECT PACK,ESCOLHER ADDON,パックを選ぶ
+reload,RELOAD,RECARREGAR,再読み込む
+credits_scroll,PREVIOUS/NEXT,ANTERIOR/PRÓXIMO,前／次
+social_scroll,SWITCH SOCIALS,ESCOLHER SOCIAIS,SNSを切り替える
+,,,
+awards_total,TOTAL PROGRESS,,
+,,,
+addons_what_title,WHAT ARE ADD-ONS?,O QUE SÃO ADD-ONS?,アドオンは何ですか？
+addons_what_desc,Add-ons are additional side-content that acts as a supplement to the main mod. You can freely enable and disable mods to your liking!,Add-ons são um tipo de conteúdo adicional que servem para suplementar o mod principal. Você pode ligar e desligar Add-ons como quiser!,アドオンは元モッドの副内容です。お好みを自由に有効化および無効化できます！
+license_warning,denotes a pack that contains licensed songs. We recommend not playing these packs if you're streaming.,significa que um add-on contém músicas licensiadas. Sugerimos que não jogue esses packs se você estiver ao-vivo.,が著作権のある音楽を含まれますことを示します。配信してるなら、このアドオンを使わないことをお勧めします
+,,,
+Directors,Directors,Diretores,役員
+Musicians,Musicians,Músicos,音楽家
+Programmers,Programmers,Programadores,プログラマー
+Charters,Charters,Charters,チャート作者
+Artists,Artists,Artistas,画家
+Bugtesters,Bugtesters,Bugtesters,Bugtesters
+Special Thanks,Special Thanks,Agradecimentos Especiais,特別感謝
+,,,
+Settings,Settings,Configurações,設定
+Keybinds,Keybinds,Controles,コントロール
+key_opt_desc,When selected{0} hit {1} to change the indicated key.,Quando selecionado{0} aperte {1} para mudar o controle indicado.,選んだら{0}、指定されたボタンを変わるために{1}を叩いてください
+sel_key_desc,Input any key to set the bind.\nTo cancel{0} press ESCAPE. To delete{0} press DELETE.,Pressione qualquer tecla para definir o controle.\nPara cancelar{0} aperte ESCAPE. Para apagar{0} aperte DELETE,Input any key to set the bind.\nTo cancel{0} press ESCAPE. To delete{0} press DELETE.
+left_note,Left Note,Esquerda (Jogo),左ノート
+left_note_desc,For hitting left notes.,Para acertar notas à esquerda.,左音符を叩くに
+down_note,Down Note,Abaixo (Jogo),下ノート
+down_note_desc,For hitting down notes.,Para acertar notas abaixo.,下音符を叩くに
+up_note,Up Note,Acima (Jogo),上ノート
+up_note_desc,For hitting up notes.,Para acertar notas acima.,上音符を叩くに
+right_note,Right Note,Direita (Jogo),右ノート
+right_note_desc,For hitting right notes.,Para acertar notas à direita.,右音符を叩くに
+pause,Pause,Pause,ポーズ
+pause_desc,For pausing the game mid-song.,Para pausar o jogo no meio de uma música.,曲を一時停止するに
+reset,Reset,Reiniciar,やり直す
+reset_desc,For forfeiting the song mid-way if allowed.,Para reiniciar no meio de uma música caso permitido.,許したら、喪失して繰り返すに
+ui_left,UI Left,Esquerda (Menu),UI左
+ui_left_desc,For moving left in the menu.,Para mover-se para a esquerda no menu,メニューで左に移動するに
+ui_up,UI Up,Acima (Menu),UI右
+ui_up_desc,For moving up in the menu.,Para mover-se para cima no menu,メニューで下に移動するに
+ui_down,UI Down,Abaixo (Menu),UI下
+ui_down_desc,For moving down in the menu.,Para mover-se para baixo no menu,メニューで上に移動するに
+ui_right,UI Right,Direita (Menu),UI上
+ui_right_desc,For moving right in the menu.,Para mover-se para a direita no menu,メニューで右に移動するに
+accept,Accept,Confirmar,同意する
+accept_desc,For confirming actions in the menu.,Para confirmar ações no menu.,行動を同意するに
+back,Back,Voltar,戻る
+back_desc,For exiting or canceling actions in the menu.,Para cancelar ações no menu.,行動を戻るやキャンセルするに
+mute,Mute/Unmute,Silenciar/Habilitar Volume,ミュート
+mute_desc,For muting or unmuting the game.,Para silenciar ou habilitar o volume do jogo.,ゲームを音有効又は無効するに
+volume_up,Volume Up,Aumentar Volume,ボリューム上
+volume_up_desc,For increasing the volume.,Para aumentar o volume.,ボリュームを増すに
+volume_down,Volume Down,Diminuir Volume,ボリューム下
+volume_down_desc,For decreasing the volume.,Para diminuir o volume.,ボリュームを減らすに
+,,,
+Gameplay,Gameplay,Jogabiliade,ゲームプレイ
+scroll_dir,Scroll Direction,Direção do jogo,スクロールの方向
+scroll_dir_desc,Which way the notes will move.,Altera a direção das notas (Para cima/Para baixo),音符の動きの方
+scroll_speed,Scroll Speed,Velocidade do jogo,スクロールの速度
+scroll_speed_desc,How fast the notes will move.,Altera o quão rápido as notas aparecerão.,音符の動き速度
+center_notes,Centered Notes,Coluna Centralizada,画面中心音符
+center_notes_desc,If your field should be in the middle of the game instead of the side.,Permite que suas notas sejam centralizadas no meio da tela,プレイフィールドが側面ではなく中央を占めるべきの場合
+opp_notes,Opponent Notes,Coluna do oponente,敵音符
+opp_notes_desc,If your opponent's field should be visible.,Se as notas do seu oponente devem ser visíveis.,敵音符が見えるべきの場合
+quant_col,Quant Coloring,Colorização quantitativa,タイミング基づき色付け
+quant_col_desc,The colorization method for the notes.,Altera a forma que as notas serão coloridas.,音符色化の方
+ghost_t,Ghost Tapping,Ghost Tapping,ゴーストタップ
+ghost_t_desc,Whether or not you avoid a penalty for pressing a key without hitting notes.,Se você deve sofrer uma penalidade por pressionar uma tecla sem acerta uma nota.,音符無しにボタンが当たる時に罰するべきの場合
+metronome,Metronome,Metrónomo,メトロノーム
+metronome_desc,Whether or not a sound should be played every beat.,Se o jogo deve reproduzir um som a cada batida,Whether or not a sound should be played every beat.
+can_reset,Can Reset,Permitido Reiniciar,やり直せる
+can_reset_desc,If you're allowed to die and restart by pressing your reset bind.,Se é possível reiniciar ou não apertando a tecla respectiva,リセットボタンを押す時に死んで繰り返せる場合
+note_offset,Note Offset,Offset das Notas,ノートオフセット
+note_offset_desc,How offset the notes are from the chart. \n\n(Higher = Later),Aplica um offset para o chart. \n\n(Número maior = Mais tarde),音符が譜面からどれだけずれてます（より高い＝より後）
+calc_offset,Calibrate Offset,Calibração de Offset,Calibrate Offset
+calc_offset_desc,Find your offset automatically.,Encontre seu offset automáticamente.,Find your offset automatically.
+assist_claps,Assist Claps,Assist Claps,当たり音
+assist_claps_desc,Plays a hitsound for when you should hit a note.,Toca um som quando você deve acertar uma nota.,音符を押す時に音が鳴らす場合
+acc_type,Accuracy Type,Tipo de Precisão,精度タイプ
+acc_type_desc,How your accuracy should be calculated.,Como o jogo calculará sua precisão,精度の計算方
+hit_error_bar,Hit Error Bar,Barra de precisão,当たり誤差棒
+hit_error_bar_desc,If the game will show a bar containing how off your recent hits were.,Se o jogo mostrará uma barra que indica o quão perto você esteve de acertar a nota perfeitamente.,タイミングを表示する棒を視認できる
+modcharts,Modcharts,Modcharts,モッド譜面
+modcharts_desc,Whether or not the game can move the notes around crazily in specific songs.,Se o jogo pode mexer as notas de uma forma especial em músicas específicas.,特定曲に音符が荒いに動くかどうか場合
+,,,
+customize_notes,Customize Notes,Customize Notes,Customize Notes
+customize_notes_desc,Edit the note textures and colors to your liking.,Edit the note textures and colors to your liking.,Edit the note textures and colors to your liking.
+color_warning,You're not on custom! Your modified color will not save!\nPlease use "Apply to Custom" and switch Quant Coloring to "Custom" or "Custom (Columns).",You're not on custom! Your modified color will not save!\nPlease use "Apply to Custom" and switch Quant Coloring to "Custom" or "Custom (Columns).",You're not on custom! Your modified color will not save!\nPlease use "Apply to Custom" and switch Quant Coloring to "Custom" or "Custom (Columns)."
+hue,HUE,HUE,HUE
+red,RED,RED,RED
+sat,SATURATION,SATURATION,SATURATION
+green,GREEN,GREEN,GREEN
+val,VALUE,VALUE,VALUE
+blue,BLUE,BLUE,BLUE
+apply_custom,APPLY TO CUSTOM,APPLY TO CUSTOM,APPLY TO CUSTOM
+copy,COPY,COPY,COPY
+paste,PASTE,PASTE,PASTE
+rgb,RGB,RGB,RGB
+hsv,HSV,HSV,HSV
+,,,
+HUD,HUD,HUD,HUD
+judge_counter,Judgement Counter,Contador de Julgamentos,判定数表示
+judge_counter_desc,If there will be a counter on the corner showing your judgement totals.,Se o jogo mostrará um contador na tela mostrando sua quantidade total de julgamentos.,If there will be a counter on the corner showing your judgement totals.
+combo_tinting,Combo Tinting,Colorização de Combo,コンボ色合い
+combo_tinting_desc,Allows the combo numbers to be tinted by judgements.,Permite que os números do combo sejam alterados de acordo com os julgamentos.,判定がコンボナンバーの色合いを決定します
+popup_cent,Score Popup Center,Localização de pop-up dos Julgamentos,スコアポップアップ場所
+popup_cent_desc,Where the judgements and combo are positioned. (WILL BE FORCED TO “HUD” WITH CENTERED NOTES!),Onde os julgamentos e o combo serão posicionados na tela. (ESSA OPÇÃO É FORÇADA EM “HUD” COM NOTAS CENTRALIZADAS!),判定とコンボの配置 \n ＊もし画面中心音符が有効したら、HUDに強行されます
+hide_acc,Hide Accuracy,Esconder Precisão,Hide Accuracy
+hide_acc_desc,Hides the accuracy % in the HUD.,Esconde a porcentagem de precisão na HUD.,HUDに精度を隠す
+hide_highest,Hide Highest Judgement,Hide Highest Judgement,Hide Highest Judgement
+hide_highest_desc,Whether or not the game will display the highest possible judgement when it is hit.,Whether or not the game will display the highest possible judgement when it is hit.,Whether or not the game will display the highest possible judgement when it is hit.
+hp_alpha,Health Bar Alpha,Opacidade da Vida,体力ゲージ透明度
+hp_alpha_desc,How much you can see the the health bar in game.,Altera a opacidade da barra de vida durante o jogo.,ゲーム内で体力ゲージがどれだけ見える
+,,,
+Performance,Performance,Gráficos,グラフィック
+framerate,Framerate,Taxa de Quadros,フレームレート
+framerate_desc,The maximum frame rate the game will run at.,A taxa de quadros máxima que o jogo poderá rodar.,ゲームが動作する最大フレームレート
+hold_grain,Hold Grain,Comprimento das Notas Sustenidas,持続音符粒長さ
+hold_grain_desc,How many times the game will compress sustain vertices. Higher Values will stretch the hold graphic for more performance.,Quantas vezes o jogo comprimirá os vértices das notas sustenidas. Valores mais altos esticarão o sprite para obter melhor desempenho.,持続音符の頂点何回を詰め込みます。より高い値が持続グラフィックを延長してパフォーマンスを向上させます
+antialiasing,Antialiasing,Antialiasing,アンチエリアス
+antialiasing_desc,If textures will have a linear transition between pixels instead of instant.,Se as texturas terão uma transição linear entre os pixels ao invés de instantânea.,If textures will have a linear transition between pixels instead of instant.
+streams,Audio Streams,Streaming de Áudio,Audio Streams
+streams_desc,If music will load as it plays or simply load all at once. (If you're suffering from lag spikes{0} try disabling this! Memory usage may be higher{0} but also more stable.),Se a música será carregada conforme ela é tocada ou de uma só vez. (Se você estiver com problemas de lag{0} tente desligar essa opção! O uso de memória pode ser maior{0} mas ele também será mais estável.),If music will load as it plays or simply load all at once. (If you're suffering from lag spikes{0} try disabling this! Memory usage may be higher{0} but also more stable.)
+reduced_quality,Reduced Quality,Qualidade Reduzida,質減少
+reduced_quality_desc,If the game can cut out a few things for less work.,Se o jogo pode cortar alguns recursos para consumir menos processos.,If the game can cut out a few things for less work.
+shaders,Shaders,Shaders,シェーダー
+shaders_desc,If some sprites can use special code to create special visuals.,Se alguns sprites podem usar shaders para criar visuais especiais.,If some sprites can use special code to create special visuals.
+gpu_cache,GPU Cache,Cachê da GPU,GPUキャッシュ
+gpu_cache_desc,If the game will use VRAM for texture storage to reduce RAM.\n\n(1GB OF VRAM RECOMMENDED{0} THE GAME WILL RESTART IF CHANGED.),Se o jogo deve usar VRAM para (1GB DE VRAM RECOMENDADA {0} O JOGO REINICIARÁ SE MUDAR ESSA OPÇÃO.),If the game will use VRAM for texture storage to reduce RAM.\n\n(1GB OF VRAM RECOMMENDED{0} THE GAME WILL RESTART IF CHANGED.)
+fullscreen,Fullscreen,Tela Cheia,全画面
+fullscreen_desc,Whether or not the game will take all of your screen space. (This can affect your viewing experience with Discord screensharing!),Se o jogo ficará em tela cheia ou não. (Isso pode afetar sua performance com o compartilhamento de tela do Discord!),Whether or not the game will take all of your screen space. (This can affect your viewing experience with Discord screensharing!)
+reflections,Reflections,Reflexões,反射
+reflections_desc,If some characters will shine reflections on the stage.,Se alguns personagens poderão ter um efeito de reflexão de luzes em certos cenários.,If some characters will shine reflections on the stage.
+close_animation,Close Animation,Animação ao fechar,閉じるでアニメーション
+close_animation_desc,If the game should fade out when closed.,Se o jogo deve desaparecer lentamente ao fechar.,If the game should fade out when closed.
+videos,Videos,Vídeos,動画
+videos_desc,Whether the game can run videos or not. Can impact performance/load times if enabled.,Se o jogo pode reproduzir vídeos ou não. (Pode afetar a performance do jogo se estiver ativado.),Whether the game can run videos or not. Can impact performance/load times if enabled.
+discord_rpc,Discord RPC,Discord RPC,Discord RPC
+discord_rpc_desc,If the game can connect to your Discord client and display that you are playing Vs. Camellia!,Se o jogo pode connectar ao seu cliente do Discord para mostras que você esta jogando Vs. Camellia!,If the game can connect to your Discord client and display that you are playing Vs. Camellia!
+auto_pause,Auto Pause,Pause Automático,Auto Pause
+auto_pause_desc,Auto Pauses the game if the window loses focus.,Pausa o jogo automaticamente se perder o foco da janela.,Auto Pauses the game if the window loses focus.
+,,,
+Visuals,Visuals,Visuais,ビジュアル
+language,Language,Idioma,言語
+language_desc,Changes the language of the game. (This feature is not fully implemented yet!),Muda o idioma do jogo.,ゲーム言語を変わります
+flashing_lights,Flashing Lights,Modo de Fotossensibilidade,明滅光
+flashing_lights_desc,If the game is allowed to risk seizures for fast colored effects.,Liga/Desliga alguns efeitos que podem conter riscos de epilepsia.,If the game is allowed to risk seizures for fast colored effects.
+note_skin,Note Skin,Skin das Notas,音符外観
+note_skin_desc,What texture the notes will use in game.,Qual estilo as notas usarão durante o jogo.,What texture the notes will use in game.
+splash_skin,Splash Skin,Skin das Explosões,飛散外観
+splash_skin_desc,What texture the note splashes will use in game.,Qual estilo as explosões de notas usarão durante o jogo.,What texture the note splashes will use in game.
+can_unglow,Unglow On Anim Finish,Remover Brilho no fim da Animação,アニメーション終了に光止まる
+can_unglow_desc,Whether or not the strum going back to static relies on the animation finishing or the player releasing the key.,Define se os receptores voltarão à forma original quando terminar a animação ou quando o jogador soltar uma tecla.,Whether or not the strum going back to static relies on the animation finishing or the player releasing the key.
+game_alpha,Game Visibility,Visibilidade do Jogo,ゲーム視認性
+game_alpha_desc,How much you can see the visuals behind the HUD. (If this is set to 0%{0} visuals will be disabled entirely. That could help with performance!),Altera a opacidade dos visuais por trás da HUD. (Se essa opção estiver em 0%{0} os visuais serão desativados inteiramente. Isso pode ajudar com performance!),How much you can see the visuals behind the HUD. (If this is set to 0%{0} visuals will be disabled entirely. That could help with performance!)
+cam_zooms,Camera Zooms,Zooms da Cãmera,カメラ拡大縮小
+cam_zooms_desc,If the game is allowed to bump the camera every measure. (If it's set to “Legacy”{0} all HUD elements will zoom out when the camera does in Week 2 songs.),Permite que a câmera se mova a cada batida. (Se o “Legado” estiver ligado{0} todos os elementos da HUD se moverão junto com a câmera nas músicas da Semana 2.),If the game is allowed to bump the camera every measure. (If it's set to “Legacy”{0} all HUD elements will zoom out when the camera does in Week 2 songs.)
+cam_movement,Notes Move Camera,Notas Movimentam a Câmera,音符追尾カメラ
+cam_movement_desc,If hitting a note will shift the camera in the note's direction.,Se acertar uma nota moverá a câmera na direção dela.,If hitting a note will shift the camera in the note's direction.
+strum_glow,Strum Glow,Brilho dos Receptores,ストルム輝き
+strum_glow_desc,How the strums will glow when you hit a note.,Como os receptores brilharão ao acertar uma nota.,How the strums will glow when you hit a note.
+hide_hud,Hide HUD,Esconder a HUD,HUD隠す
+hide_hud_desc,Makes the entire HUD disappear{0} if you want just the notes. Or if you're showcasing something.,Esconde toda a HUD{0} caso você queria ver apenas as notas.,Makes the entire HUD disappear{0} if you want just the notes. Or if you're showcasing something.
+judge_alpha,Judgement Alpha,Opacidade dos Julgamentos,判定透明度
+judge_alpha_desc,How much you can see the judgements of the notes you hit.,Altera a opacidade dos julgamentos durante o jogo.,How much you can see the judgements of the notes you hit.
+combo_alpha,Combo Alpha,Opacidade do Combo,コンボ透明度
+combo_alpha_desc,How much you can see the combo counter.,Altera a opacidade do combo durante o jogo.,How much you can see the combo counter.
+Judgement Bar,Judgement Bar,Barra de Julgamentos,判定数バー
+fps_counter,Fps Counter,Contador de FPS,FPS表示
+fps_counter_desc,If the game will show a counter in the corner of your framerate.,Se o jogo mostrará um contador de FPS no canto da tela.,If the game will show a counter in the corner of your framerate.
+no_vocals,Disable Vocals,Desligar Vocais,ボーカル無効にする
+no_vocals_desc,Whether or not the game will play the FNF Cover's vocals on top of the modified instrumental.,Se o jogo tocará ou não os vocais dos Covers de FNF por cima da música.,Whether or not the game will play the FNF Cover's vocals on top of the modified instrumental.
+clear_save,Clear Save,Apagar Save,Clear Save
+clear_save_desc,Will delete all of your save data. (THIS DOES NOT HAVE A PROMPT AND CANNOT BE UNDONE!),Apagará todo o seu save data. (ESSE MENU NÃO POSSÚI UM PROMPT DE CONFIRMAÇÃO E NÃO PODE SER DESFEITO!),Will delete all of your save data. (THIS DOES NOT HAVE A PROMPT AND CANNOT BE UNDONE!)
+clear_scores,Clear Scores,Apagar Pontuações,Clear Scores
+clear_scores_desc,Will delete all of your scores that you obtained. (THIS DOES NOT HAVE A PROMPT AND CANNOT BE UNDONE!),Apagará todos as pontuações que você tiver obtido. (ESSE MENU NÃO POSSÚI UM PROMPT DE CONFIRMAÇÃO E NÃO PODE SER DESFEITO!),Will delete all of your scores that you obtained. (THIS DOES NOT HAVE A PROMPT AND CANNOT BE UNDONE!)
+clear_awards,Clear Awards,Apagar Trófeis,Clear Awards
+clear_awards_desc,Will delete all of your awards that you obtained. (THIS DOES NOT HAVE A PROMPT AND CANNOT BE UNDONE!),Apagará todos os troféis que você tiver obtido. (ESSE MENU NÃO POSSÚI UM PROMPT DE CONFIRMAÇÃO E NÃO PODE SER DESFEITO!),Will delete all of your awards that you obtained. (THIS DOES NOT HAVE A PROMPT AND CANNOT BE UNDONE!)
+,,,
+mode translations,,,
+STORY MODE,STORY MODE,MODO HISTÓRIA,ストーリーモード
+FREEPLAY,FREEPLAY,FREEPLAY,フリープレイ
+OPTIONS,OPTIONS,OPÇÕES,オプション
+EXTRAS,EXTRAS,EXTRAS,エキストラ
+CREDITS,CREDITS,CRÉDITOS,クレジット
+,,,
+formatted translations,,,
+score,Score: {0} | Accuracy: {1}%,Pontuação: {0} | Precisão: {1}%,スコア: {0} | 精度: {1}%
+score_no_acc,Score: {0},Pontuação: {0},スコア: {0}
+marv,Marvelous,Marvelous,かんぺき
+sick,Sick,Sick,えぐい
+good,Good,Good,いい
+bad,Bad,Bad,わるい
+shit,Shit,Shit,くそ
+miss,Miss,Miss,ミス
+early,early,cedo,早い
+late,late,tarde,遅い
+new_best,NEW BEST!!!,NOVO RECORDE!!!,NEW BEST!!!
+,,,
+misc translations,,,
+up,Up,Acima,上へ
+down,Down,Abaixo,下へ
+simple,Simple,Simples,簡単
+complex,Complex,Complexo,複雑
+on,On,Ligado,オン
+off,Off,Desligado,オフ
+disclaimer,Hello! Thank you for picking up this mod!\n\nPlease keep in mind this mod's difficulty curve has slowly increased with each update!\nThe charts may be more overwhelming than your standard FNF mod{0}\n but do not worry! Vs. Camellia does come with easier difficulties in mind!\n\nWe recommend you play the mod on “Normal” difficulty for a more casual gameplay{0}\n“Hard” for the baseline Vs. Camellia experience{0} and “Maniac” if you're seeking a true challenge!\n\nOn another note{0} if you have any issues with performance{0}\nwe have optimization settings available in the Options menu!\n\nKeep in mind Never2x is a new engine{0} so it's bound to have some bugs along with it!\nAny feedback is deeply appreciated!\n\nPress {1} to continue,Olá! Obrigado por jogar este mod!\n\nÉ importante lembrar que a curva de dificuldade deste mod tem aumentado gradualmente a cada atualização!\nOs mapas podem ser bem mais difíceis que os mods padrões do FNF{0}\nmas não se preocupe! O Vs. Camellia foi feito com dificuldades mais fáceis em mente!\n\nRecomendamos que você jogue o mod na dificuldade “Normal” para uma gameplay mais casual{0}\n“Hard” para a experiência padrão do Vs. Camellia{0} e “Maniac” se você estiver procurando um desafio de verdade!\n\nAlém disso{0} se você tiver algum problema de desempenho com o mod{0}\ntemos configurações de otimização disponíveis no menu de Opções!\n\nLembre-se que o Never2x é uma engine nova{0} então é muito provável que ela possua alguns bugs!\nQualquer feedback é muito bem-vindo!\n\nPressione {1} para continuar,このモッドを選んでくれてありがとうございます！\n\nそれぞれアップデートにモッドの難易度曲線が徐々に増しましたことご注意してください！\n普通のFNFモッドよりの方がもっと難しいです。\nただし心配しないでください！より簡単の譜面があります！\n\n何気ない遊びに「Normal」、基準の経験に「Hard」、\nと本気な挑戦お探しことに「Maniac」をお進みます！\n\nところで、「Never2x」が新しいエンジンからバグがありますはずです。\nいかなフィードバックは感謝します！\n\n{1}を押して続行する
+,,,
+danger_title,HOLD IT!,HOLD IT!,HOLD IT!
+danger_data,This action is irreversible! You won't be able to get back the data you plan to delete!,This action is irreversible! You won't be able to get back the data you plan to delete!,This action is irreversible! You won't be able to get back the data you plan to delete!
+danger_confirm1,I'M AWARE. GO FOR IT.,I'M AWARE. GO FOR IT.,I'M AWARE. GO FOR IT.
+danger_confirm2,I MEAN IT.,I MEAN IT.,I MEAN IT.
+danger_cancel,MISCLICKED! TAKE ME BACK!,MISCLICKED! TAKE ME BACK!,MISCLICKED! TAKE ME BACK!

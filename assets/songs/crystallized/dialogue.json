@@ -1,0 +1,61 @@
+{
+	list: [
+		{
+			text: "You're killing it, babe!",
+			expression: 'shocked',
+			side: 1,
+		},
+		{
+			text: "Oh-hohoho... Not bad!",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "Things are only gonna ramp up from here.",
+			expression: 'thinkglow',
+			side: 0,
+		},
+		{
+			text: "beep boop skabap…",
+			expression: 'tired',
+			side: 2,
+		},
+		{
+			text: "You've dealt with worse before, babe. You got this!",
+			expression: 'idle',
+			side: 1,
+		},
+		{
+			text: "Alright then, I hope you're ready for this!",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "Think you can keep up?",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "bep!",
+			expression: 'excited',
+			side: 2,
+		}
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.8,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

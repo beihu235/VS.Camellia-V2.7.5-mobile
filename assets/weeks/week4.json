@@ -1,0 +1,24 @@
+{
+  	songs: [
+    	{
+      		id: 'ghost',
+      		colors: [0xFFCBC299, 0xFF082439],
+			icons: ['bf', 'camellia']
+    	},
+    	{
+      		id: 'ghoul',
+      		colors: [0xFF000000, 0xFF000000],
+			icons: ['bf', 'camellia']
+    	},
+    	{
+      		id: 'ghost-vip',
+      		colors: [0xFFCC3018, 0xFF5D0C7A],
+			icons: ['bf', 'camellia']
+    	}
+  	],
+
+  	name: 'Fingerbreaker',
+	subtitle: 'fuck you',
+	weekNum: 'FB',
+  	background: 'fingerbreaker'
+}

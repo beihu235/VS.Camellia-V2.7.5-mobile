@@ -1,0 +1,79 @@
+osu file format v14
+
+[General]
+AudioFilename: audio_both.ogg
+AudioLeadIn: 0
+PreviewTime: -1
+Countdown: 0
+SampleSet: Normal
+StackLeniency: 0.7
+Mode: 3
+LetterboxInBreaks: 0
+SpecialStyle: 0
+WidescreenStoryboard: 1
+
+[Editor]
+Bookmarks: 43981,53486,153288,170219,177051,196061,234080,262595
+DistanceSpacing: 1.5
+BeatDivisor: 1
+GridSize: 4
+TimelineZoom: 2.100001
+
+[Metadata]
+Title:Racemization
+TitleUnicode:Racemization
+Artist:Camellia
+ArtistUnicode:Camellia
+Creator:Alumence
+Version:gf
+Source:
+Tags:
+BeatmapID:0
+BeatmapSetID:-1
+
+[Difficulty]
+HPDrainRate:8
+CircleSize:1
+OverallDifficulty:8
+ApproachRate:5
+SliderMultiplier:1.4
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+//Break Periods
+2,52180,166918
+2,193863,205235
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Layer 4 (Overlay)
+//Storyboard Sound Samples
+
+[TimingPoints]
+0,297.029702970297,4,1,0,100,1,0
+
+
+[HitObjects]
+256,192,44851,5,4,0:0:0:0:
+256,192,47227,1,4,0:0:0:0:
+256,192,49603,1,4,0:0:0:0:
+256,192,51980,1,4,0:0:0:0:
+256,192,168118,5,4,0:0:0:0:
+256,192,170495,1,4,0:0:0:0:
+256,192,172871,1,4,0:0:0:0:
+256,192,175247,1,4,0:0:0:0:
+256,192,177623,1,4,0:0:0:0:
+256,192,180000,1,4,0:0:0:0:
+256,192,182376,1,4,0:0:0:0:
+256,192,184752,1,4,0:0:0:0:
+256,192,185940,1,4,0:0:0:0:
+256,192,186534,1,4,0:0:0:0:
+256,192,188910,1,4,0:0:0:0:
+256,192,191287,1,4,0:0:0:0:
+256,192,193663,1,4,0:0:0:0:
+256,192,206435,5,4,0:0:0:0:
+256,192,208811,1,4,0:0:0:0:
+256,192,211188,1,4,0:0:0:0:
+256,192,213564,1,4,0:0:0:0:

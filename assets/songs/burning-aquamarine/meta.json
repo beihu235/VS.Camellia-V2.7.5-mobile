@@ -1,0 +1,28 @@
+{
+	"songName": "Burning Aquamarine",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"jacket": "Shiroboom",
+	"genre": "Hardcore",
+	"charter": {
+		"Maniac": "YokiGuise",
+		"Hard": "Polarin, Foxeru",
+		"Normal": "YokiGuise, Kodapop"
+	},
+	"rating": {
+		"Maniac": [12.5, 15],
+		"Hard": [10.5, 12],
+		"Normal": [9.5, 10.5]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 202
+		}
+	]
+}

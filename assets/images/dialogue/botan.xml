@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="botan.png" width="1382" height="509">
+	<SubTexture name="excited" x="2" y="2" width="538" height="505" frameX="-0" frameY="-0" frameWidth="538" frameHeight="505"/>
+	<SubTexture name="grinning" x="543" y="2" width="417" height="505" frameX="-0" frameY="-0" frameWidth="417" frameHeight="505"/>
+	<SubTexture name="idle" x="963" y="2" width="417" height="505" frameX="-0" frameY="-0" frameWidth="417" frameHeight="505"/>
+</TextureAtlas>

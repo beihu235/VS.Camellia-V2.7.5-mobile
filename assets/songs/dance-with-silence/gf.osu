@@ -1,0 +1,102 @@
+osu file format v14
+
+[General]
+AudioFilename: Inst.ogg
+AudioLeadIn: 0
+PreviewTime: -1
+Countdown: 0
+SampleSet: Normal
+StackLeniency: 0.7
+Mode: 3
+LetterboxInBreaks: 0
+SpecialStyle: 0
+WidescreenStoryboard: 1
+
+[Editor]
+DistanceSpacing: 1.5
+BeatDivisor: 1
+GridSize: 4
+TimelineZoom: 0.9
+
+[Metadata]
+Title:Dance With Silence (Vs. Camellia)
+TitleUnicode:Dance With Silence (Vs. Camellia)
+Artist:Camellia
+ArtistUnicode:Camellia
+Creator:Foxeru
+Version:gf
+Source:
+Tags:
+BeatmapID:0
+BeatmapSetID:-1
+
+[Difficulty]
+HPDrainRate:8
+CircleSize:1
+OverallDifficulty:5
+ApproachRate:5
+SliderMultiplier:1.4
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+0,0,"FhcOJWQVQAEidoy.jpg",0,0
+//Break Periods
+2,37231,50831
+2,112231,193331
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Layer 4 (Overlay)
+//Storyboard Sound Samples
+
+[TimingPoints]
+0,468.75,4,1,0,35,1,0
+
+
+[HitObjects]
+256,192,25781,5,4,0:0:0:0:
+256,192,29531,1,4,0:0:0:0:
+256,192,33281,1,4,0:0:0:0:
+256,192,37031,1,4,0:0:0:0:
+256,192,52031,5,4,0:0:0:0:
+256,192,55781,1,4,0:0:0:0:
+256,192,59531,1,4,0:0:0:0:
+256,192,63281,1,4,0:0:0:0:
+256,192,64218,1,4,0:0:0:0:
+256,192,65156,1,4,0:0:0:0:
+256,192,66093,1,4,0:0:0:0:
+256,192,67031,1,4,0:0:0:0:
+256,192,70781,1,4,0:0:0:0:
+256,192,74531,1,4,0:0:0:0:
+256,192,78281,1,4,0:0:0:0:
+256,192,79218,1,4,0:0:0:0:
+256,192,80156,1,4,0:0:0:0:
+256,192,81093,1,4,0:0:0:0:
+256,192,82031,1,4,0:0:0:0:
+256,192,85781,1,4,0:0:0:0:
+256,192,89531,1,4,0:0:0:0:
+256,192,93281,1,4,0:0:0:0:
+256,192,97031,1,4,0:0:0:0:
+256,192,100781,1,4,0:0:0:0:
+256,192,104531,1,4,0:0:0:0:
+256,192,108281,1,4,0:0:0:0:
+256,192,112031,1,4,0:0:0:0:
+256,192,194531,5,4,0:0:0:0:
+256,192,198281,1,4,0:0:0:0:
+256,192,202031,1,4,0:0:0:0:
+256,192,205781,1,4,0:0:0:0:
+256,192,209531,1,4,0:0:0:0:
+256,192,213281,1,4,0:0:0:0:
+256,192,217031,1,4,0:0:0:0:
+256,192,220781,1,4,0:0:0:0:
+256,192,224531,1,4,0:0:0:0:
+256,192,228281,1,4,0:0:0:0:
+256,192,232031,1,4,0:0:0:0:
+256,192,235781,1,4,0:0:0:0:
+256,192,239531,1,4,0:0:0:0:
+256,192,243281,1,4,0:0:0:0:
+256,192,247031,1,4,0:0:0:0:
+256,192,250781,1,4,0:0:0:0:
+256,192,254531,1,4,0:0:0:0:

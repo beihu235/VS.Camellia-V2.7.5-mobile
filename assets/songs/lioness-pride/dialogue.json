@@ -1,0 +1,97 @@
+{
+	list: [
+		{
+			text: "Hello everybody! Thank you for coming out tonight!",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "We have a special line-up planned tonight, so let's get things started!",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "I'm so excited to introduce you all to my first guest! The white-haired lion,  the inscrutable huntress:",
+			expression: 'glowdle',
+			side: 0,
+		},
+		{
+			text: "Please give a hand for Botan-chan!",
+			expression: 'point',
+			side: 0,
+		},
+		{
+			text: "La-lion♪ I'm Shishiro Botan, part of hololive's 5th generation.",
+			expression: 'excited',
+			side: 1,
+		},
+		{
+			text: "It's so nice to meet everyone!! Yay!!",
+			expression: 'grinning',
+			side: 1,
+		},
+		{
+			text: "Thank you for coming out tonight, Botan-chan!",
+			expression: 'idle',
+			side: 0,
+		},
+		{
+			text: "It's an honor to be on stage with you too, Came-san!",
+			expression: 'idle',
+			side: 1,
+		},
+		{
+			text: "I'm looking forward to performing with you and Boyfriend-kun. Nice to meet you!",
+			expression: 'grinning',
+			side: 1,
+		},
+		{
+			text: "beep ske dap! bop dee boo!",
+			expression: 'grinning',
+			side: 3,
+		},
+		{
+			text: "He's really excited to sing with you as well, but only if you promise to run some Fortnite with him after!",
+			expression: 'idle',
+			side: 2,
+		},
+		{
+			text: "Heheh, only if he can keep up with me!",
+			expression: 'grinning',
+			side: 1,
+		},
+		{
+			text: "Bap skebop!",
+			expression: 'excited',
+			side: 3,
+		},
+		{
+			text: "It's gonna get crazy now! IT'S SHOWTIME!",
+			expression: 'excitedmenacing',
+			side: 0,
+		}
+
+],
+	characters: [
+		{
+			name: 'camellia',
+			ratio: 0.05,
+			offsetX: 0
+		},
+		{
+			name: 'botan',
+			ratio: 0.15,
+			offsetX: 0
+		},
+		{
+			name: 'gf',
+			ratio: 0.85,
+			offsetX: 0
+		},
+		{
+			name: 'bf',
+			ratio: 0.95,
+			offsetX: 0
+		}
+	]
+}

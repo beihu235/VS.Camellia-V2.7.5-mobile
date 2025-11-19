@@ -1,0 +1,8 @@
+{
+	name: '???',
+	sprite: '',
+	sound: 'uufo',
+	offset: [0, 40],
+	expressions: [
+	]
+}

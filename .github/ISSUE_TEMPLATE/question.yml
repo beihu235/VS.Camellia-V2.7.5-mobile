@@ -1,0 +1,10 @@
+name: Question
+description: Ask about something here.
+labels: [question]
+body:
+  - type: textarea
+    attributes:
+      label: What is your question?
+      placeholder: "Please note! If you're just giving comments for NF, then we'll only accept things that Lua can't do, and if you can't write Lua then you can issue 'help' issues asking how to write them"
+    validations:
+      required: true

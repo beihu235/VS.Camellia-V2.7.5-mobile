@@ -1,0 +1,52 @@
+name: InstallHaxelib
+
+on:
+  workflow_dispatch:
+    inputs:
+      dependencies_to_update:
+        description: '输入 "all" 更新所有haxelib, 或指定库名 (e.g. "lime,openfl")不输入即不给haxelib做任何更新'
+        required: false
+        type: string
+        default: ''
+  workflow_call:
+    inputs:
+      dependencies_to_update:
+        description: '输入 "all" 更新所有haxelib, 或指定库名 (e.g. "lime,openfl")不输入即不给haxelib做任何更新'
+        required: false
+        type: string
+        default: ''
+
+env:
+  HAXE_VERSION: 4.3.7
+
+jobs:
+  build:
+    name: InstallHaxelib
+    runs-on: macos-15
+    concurrency:
+      group: ${{ github.workflow }}-Haxelib-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: ${{ env.HAXE_VERSION }}
+        
+      - name: Install Libraries
+        run: |
+          haxelib setup ~/haxelib
+          haxelib install hmm 
+          haxelib run hmm install
+
+      - name: Make Haxelib Zip
+        run: |
+          zip -r /Users/runner/haxelib.zip .haxelib/
+
+      - name: Upload Haxelib
+        uses: actions/upload-artifact@main
+        with:
+          name: Haxelib
+          path: /Users/runner/haxelib.zip
+          if-no-files-found: error

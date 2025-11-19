@@ -1,0 +1,34 @@
+{
+	"list": [
+		{
+			"name": "camelliazoom",
+			"time": 52500,
+			"args": [1]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 112500,
+			"args": [2]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 150000,
+			"args": [3, 2]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 180000,
+			"args": [2, 2]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 195000,
+			"args": [1, 5]
+		},
+		{
+			"name": "camelliazoom",
+			"time": 255234.375,
+			"args": [2, 3]
+		}
+	]
+}

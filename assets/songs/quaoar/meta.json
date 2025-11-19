@@ -1,0 +1,29 @@
+{
+	"songName": "Quaoar",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"album": "heart of android",
+	"jacket": "PhilliaEsaya",
+	"genre": "Artcore",
+	"charter": {
+		"Maniac": "Ragi",
+		"Hard": "Kafkell",
+		"Normal": "roko100789, Foxeru"
+	},
+	"rating": {
+		"Maniac": [9, 12.5],
+		"Hard": [6.5, 9.5],
+		"Normal": [5.5, 6]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 174
+		}
+	]
+}

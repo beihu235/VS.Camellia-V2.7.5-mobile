@@ -1,0 +1,52 @@
+{
+	name: 'Camellia',
+	sprite: 'dialogue/camellia',
+	sound: 'camellia',
+	expressions: [
+		{
+			name: "idle",
+			offsets: [0, 0]
+		},
+		{
+			name: "glowdle",
+			offsets: [0, 0]
+		},
+		{
+			name: "menacing",
+			offsets: [0, 0]
+		},
+		{
+			name: "shocked",
+			offsets: [0, 0]
+		},
+		{
+			name: "thinking",
+			offsets: [0, 0]
+		},
+		{
+			name: "thinkglow",
+			offsets: [0, 0]
+		},
+		{
+			name: "thonkmenacing",
+			offsets: [0, 0]
+		},
+		{
+			name: "worried",
+			offsets: [0, 0]
+		},
+		{
+			name: "flustered",
+			offsets: [0, 0]
+		},
+		{
+			name: "point",
+			offsets: [0, 0]
+		},
+		{
+			name: "excitedmenacing",
+			offsets: [0, 0]
+		}
+		
+	]
+}

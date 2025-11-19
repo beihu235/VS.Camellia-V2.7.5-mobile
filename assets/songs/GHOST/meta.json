@@ -1,0 +1,29 @@
+{
+	"songName": "GHOST",
+	"instComposer": "Camellia",
+	"vocalComposer": "LiterallyNoOne",
+	"album": "Cyphisonia E.P.",
+	"genre": "Trap",
+	"jacket": "reku_AL",
+	"charter": {
+		"Maniac": "Ragi",
+		"Hard": "Kienoob, Cloverderus",
+		"Normal": "roko100789, Foxeru"
+	},
+	"rating": {
+		"Maniac": [13, 16.5],
+		"Hard": [8.5, 11],
+		"Normal": [6, 8]
+	},
+	"stage": "concert",
+	"enemy": "camellia",
+	"player": "bf",
+	"spectator": "gf",
+
+	"timingPoints": [
+		{
+			"time": 0,
+			"bpm": 220
+		}
+	]
+}

@@ -32,7 +32,7 @@ class PirateState extends FunkinState
 	override function update(elapsed:Float)
 	{
 		if (Controls.pressed('accept'))
-			CoolUtil.browserLoad('https://github.com/beihu235/VS.Camellia-V2.7.5-mobile');
+			Util.openURL('https://github.com/beihu235/VS.Camellia-V2.7.5-mobile');
 
 		super.update(elapsed);
 	}

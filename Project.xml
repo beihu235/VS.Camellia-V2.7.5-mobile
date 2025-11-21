@@ -2,7 +2,7 @@
 <project>
 
 	<!-- application stuff -->
-	<app title="Friday Night Funkin': Vs. Camellia" file="VS.Camellia V2.7.5" packageName="com.VS.Camellia2.7.5" package="com.VS.Camellia2.7.5" main="Main" version="3.0.0" company="Camellia"/>
+	<app title="Friday Night Funkin': Vs. Camellia" file="VS.Camellia V2.7.5" packageName="com.VS.Camellia3" package="com.VS.Camellia3" main="Main" version="3.0.0" company="Camellia"/>
 
 	<window width="1280" height="720" fps="120" background="#000000" hardware="true" vsync="false" />
 	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true" vsync="false" />

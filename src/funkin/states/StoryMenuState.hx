@@ -873,6 +873,7 @@ class StoryMenuState extends FunkinState {
 			FlxG.sound.play(Paths.audio("popup_appear", "sfx"));
 			curModRow = modKeyRow;
 			inMods = true;
+			addVirtualPad(UP_DOWN, NONE);
 		} else if (Controls.justPressed('accept'))
 			confirmWeek();
 
@@ -975,6 +976,7 @@ class StoryMenuState extends FunkinState {
 			FlxG.sound.play(Paths.audio("menu_cancel", "sfx"));
 			curModRow = FreeplayState.modList.length + 1;
 			inMods = false;
+			removeVirtualPad();
 		} else if (leftJustPressed || Controls.justPressed('ui_right')) {
 			FreeplayState.modList[hoverMod].change(leftJustPressed);
 			modVals.members[hoverMod].text = ("< " + FreeplayState.modList[hoverMod].formatText(true) + " >").toUpperCase();

@@ -20,6 +20,7 @@ import sys.io.File;
 
 #if mobile
 import funkin.mobile.states.CopyState;
+import funkin.states.PirateState;
 #end
 
 #if (linux && !debug)

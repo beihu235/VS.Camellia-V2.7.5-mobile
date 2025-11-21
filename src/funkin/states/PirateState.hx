@@ -1,9 +1,8 @@
-package states.backend;
+package funkin.states;
 
 import flixel.FlxSubState;
 import flixel.effects.FlxFlicker;
 import lime.app.Application;
-import flixel.addons.transition.FlxTransitionableState;
 import openfl.Lib;
 
 class PirateState extends FunkinState

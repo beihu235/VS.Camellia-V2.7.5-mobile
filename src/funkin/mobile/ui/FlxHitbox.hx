@@ -1,10 +1,10 @@
-package funkin.mobile.flixel;
+package funkin.mobile.ui;
 
-import funkin.mobile.flixel.input.FlxMobileInputManager;
+import funkin.mobile.ui.input.FlxMobileInputManager;
 import openfl.display.BitmapData;
-import funkin.mobile.flixel.FlxButton;
+import funkin.mobile.ui.FlxButton;
 import openfl.display.Shape;
-import funkin.mobile.flixel.input.FlxMobileInputID;
+import funkin.mobile.ui.input.FlxMobileInputID;
 import funkin.states.PlayState;
 import flixel.util.FlxColor;
 
@@ -35,10 +35,6 @@ class FlxHitbox extends FlxMobileInputManager
 
 		var stage = Lib.current.stage;
 
-		var scale:Float = Math.min(stage.stageWidth / 1280, stage.stageHeight / 720);
-		var newWidth:Int = Std.int(stage.stageWidth / scale);
-		var newHeight:Int = Std.int(stage.stageHeight / scale);
-
 		for (button in Reflect.fields(this))
 		{
 			if (Std.isOfType(Reflect.field(this, button), FlxButton))
@@ -49,7 +45,7 @@ class FlxHitbox extends FlxMobileInputManager
 
 		for (i in 0...4)
 		{
-			var button = createHint(newWidth * i / 4, 0, Std.int(newWidth / 4), Std.int(newHeight), getColor(i));
+			var button = createHint(FlxG.width * i / 4, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height), getColor(i));
 			buttonNotes.push(button);
 			add(button);
 		}
@@ -95,14 +91,8 @@ class FlxHitbox extends FlxMobileInputManager
 		if (Settings.data.dynamicColors)
 		{		
 			return Settings.data.customColumns[index];
-		}
-
-		return switch (index)
-		{
-			case 0: 0xFFC24B99;
-			case 1: 0xFF12FA05;
-			case 2: 0xFFF9393F;
-			default: 0xFFF9393F;
+		} else {
+			return Settings.default_data.customColumns[index];
 		}
 	}
 

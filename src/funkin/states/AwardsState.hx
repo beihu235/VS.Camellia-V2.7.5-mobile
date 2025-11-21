@@ -275,7 +275,7 @@ class AwardsState extends FunkinState {
 				spr.alpha = 0.7;
 		}
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			final cacheSel = curSelected;
 			curSelected = -1;
 			FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));

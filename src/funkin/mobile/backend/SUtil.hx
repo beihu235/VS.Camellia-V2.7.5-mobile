@@ -27,11 +27,7 @@ class SUtil
 	{
 		var daPath:String = '';
 		#if android
-		switch (type)
-		{
-			case EXTERNAL:
-				daPath = AndroidEnvironment.getExternalStorageDirectory() + '/.' + lime.app.Application.current.meta.get('file');
-		}
+		daPath = AndroidEnvironment.getExternalStorageDirectory() + '/.' + lime.app.Application.current.meta.get('file');
 		daPath = haxe.io.Path.addTrailingSlash(daPath);
 		#elseif ios
 		daPath = LimeSystem.documentsDirectory;

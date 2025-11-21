@@ -162,7 +162,7 @@ class MainMenuState extends FunkinState {
 
 		if (curSelected < -1) return;
 		
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			FlxG.sound.play(Paths.audio("menu_cancel", "sfx"));
 			borderBot.transitionTween(false, 0.25, 0.25, () -> {FlxG.switchState(new TitleState());});
 			curSelected = -2;

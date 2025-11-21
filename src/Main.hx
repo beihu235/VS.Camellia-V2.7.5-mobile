@@ -15,8 +15,11 @@ import lime.app.Application;
 
 #if android
 import funkin.backend.AppData;
-//import states.backend.PirateState;
 import sys.io.File;
+#end
+
+#if mobile
+import funkin.mobile.states.CopyState;
 #end
 
 #if (linux && !debug)
@@ -51,25 +54,11 @@ class Main extends Sprite {
 		Sys.setCwd(SUtil.getStorageDirectory());
 		#end
 
-		#if android
-			if (AppData.getVersionName() != Application.current.meta.get('version')
-				|| AppData.getAppName() != Application.current.meta.get('file')                                                                                                                                                                                                                                                                                                                                                                                                                         || !AppData.verifySignature()
-				|| (AppData.getPackageName() != Application.current.meta.get('packageName')
-					&& AppData.getPackageName() != Application.current.meta.get('packageName') + 'Backup1' // 共存
-					&& AppData.getPackageName() != Application.current.meta.get('packageName') + 'Backup2' // 共存
-					&& AppData.getPackageName() != 'com.antutu.ABenchMark' // 超频测试 安兔兔
-					&& AppData.getPackageName() != 'com.ludashi.benchmark' // 超频测试 鲁大师
-				)) {
-					//FlxG.switchState(new PirateState());
-					return;
-				}
-		#end
-
-		trace('Main.new()');
 		//Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 
-		addChild(new FlxGame(InitState, 0, 0, 60, true));
-		addChild(fpsCounter = new FPSCounter(10, 10, 12));
+		addChild(new FlxGame(InitState, 1280, 720, 60, true, true));
+		
+		addChild(fpsCounter = new FPSCounter(10, 10, 16));
 		fpsCounter.visible = Settings.data.fpsCounter;
 		addChild(awardsCard = new AwardCard());
 
@@ -140,8 +129,45 @@ class Main extends Sprite {
 }
 
 class InitState extends flixel.FlxState {
+
+	public static var ignoreCopy = false; //用于copystate，别删
+
 	override function create():Void {
+
+		cpp.vm.Gc.enable(true);
+		cpp.vm.Gc.run(true);  
+
+		#if mobile
+		FlxG.mouse.visible = false;
+		FlxG.fullscreen = true;
+		#end
+		
+		#if mobile
+		if (!CopyState.checkExistingFiles())
+		{
+			flixel.FlxG.switchState(new CopyState());
+			return;
+		}
+		#end
+
 		setDefines();
+
+		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
+
+		#if android
+			if (AppData.getVersionName() != Application.current.meta.get('version')
+				|| AppData.getAppName() != Application.current.meta.get('file')                                                                                                                                                                  
+				|| (AppData.getPackageName() != Application.current.meta.get('packageName')
+					&& AppData.getPackageName() != Application.current.meta.get('packageName') + 'Backup1' // 共存
+					&& AppData.getPackageName() != Application.current.meta.get('packageName') + 'Backup2' // 共存
+					&& AppData.getPackageName() != 'com.antutu.ABenchMark' // 超频测试 安兔兔
+					&& AppData.getPackageName() != 'com.ludashi.benchmark' // 超频测试 鲁大师
+				)) {
+					FlxG.switchState(new PirateState());
+					return;
+				}
+		#end
+
 		flixel.FlxG.switchState(new TitleState());
 	}
 
@@ -162,7 +188,7 @@ class InitState extends flixel.FlxState {
 
 		FlxG.mouse.load(openfl.display.BitmapData.fromFile('assets/images/cursor.png'));
 
-		FlxG.fullscreen = Settings.data.fullscreen;
+		FlxG.fullscreen = #if mobile true #else Settings.data.fullscreen #end;
 		FlxG.fixedTimestep = false;
 		FlxG.drawFramerate = FlxG.updateFramerate = Settings.data.framerate;
 		FlxG.game.focusLostFramerate = Math.floor(Settings.data.framerate / 4);
@@ -215,7 +241,13 @@ class InitState extends flixel.FlxState {
 		FlxG.sound.volume = FlxG.save.data.volume ?? 1.0;
 		FlxG.sound.muted = FlxG.save.data.muted ?? false;
 		FlxG.sound.volumeHandler(FlxG.sound.muted ? 0 : FlxG.sound.volume);
+		#if !mobile
 		FlxG.game.soundTray.updateWithSettings();
+		#end
+
+		#if !debug
+			cpp.NativeGc.enterGCFreeZone();
+		#end
 
 		openfl.Lib.application.window.onClose.add(function () {
 			Main.isClosing = true;

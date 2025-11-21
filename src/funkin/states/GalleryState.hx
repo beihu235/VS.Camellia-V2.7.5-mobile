@@ -54,8 +54,13 @@ class GalleryState extends FunkinState {
 	var artistBG:FunkinSprite;
 	var artistTxt:FlxText;
 
-	var descBG:FunkinSprite;
-	var descTxt:FlxText;
+    var descBG:FunkinSprite;
+    var descTxt:FlxText;
+    var spaceButton:FunkinSprite;
+    var spaceTxt:FlxText;
+    var socialTxt:FlxText;
+    var enterButton:FunkinSprite;
+    var fullscreenTxt:FlxText;
 
     var bg:SwirlBG;
 	var lineShader:TileLine;
@@ -149,31 +154,31 @@ class GalleryState extends FunkinState {
 		add(borderTop = new Border(true, "BROWSE THE IMAGES • ", "Gallery"));
 		add(borderBot = new Border(false));
 
-		final buttonY = borderBot.border.y + 58; // unfortunately 58 is the only number that centers it.
-		var spaceButton = new FunkinSprite(borderBot.x + 40, buttonY, Paths.image('menus/spaceKey'));
-		spaceButton.scrollFactor.set(0, 1);
-		borderBot.add(spaceButton);
+        final buttonY = borderBot.border.y + 58; // unfortunately 58 is the only number that centers it.
+        spaceButton = new FunkinSprite(borderBot.x + 40, buttonY, Paths.image('menus/spaceKey'));
+        spaceButton.scrollFactor.set(0, 1);
+        borderBot.add(spaceButton);
 
-		var spaceTxt = new FlxText(spaceButton.x + spaceButton.width * 0.5, spaceButton.y + spaceButton.height * 0.5, 0, "SPACE");
-		spaceTxt.setFormat(Paths.font('LineSeed.ttf'), 16, 0xFF000000, LEFT);
-		spaceTxt.x -= spaceTxt.width * 0.5;
-		spaceTxt.y -= spaceTxt.height * 0.5;
-		spaceTxt.scrollFactor.set(0, 1);
-		borderBot.add(spaceTxt);
+        spaceTxt = new FlxText(spaceButton.x + spaceButton.width * 0.5, spaceButton.y + spaceButton.height * 0.5, 0, "SPACE");
+        spaceTxt.setFormat(Paths.font('LineSeed.ttf'), 16, 0xFF000000, LEFT);
+        spaceTxt.x -= spaceTxt.width * 0.5;
+        spaceTxt.y -= spaceTxt.height * 0.5;
+        spaceTxt.scrollFactor.set(0, 1);
+        borderBot.add(spaceTxt);
 
-		var socialTxt = new FlxText((spaceButton.x + spaceButton.width) + 5, spaceButton.y, 0, 'OPEN SOCIAL', 16);
-		socialTxt.font = Paths.font('LineSeed.ttf');
-		socialTxt.scrollFactor.set(0, 1);
-		borderBot.add(socialTxt);
+        socialTxt = new FlxText((spaceButton.x + spaceButton.width) + 5, spaceButton.y, 0, 'OPEN SOCIAL', 16);
+        socialTxt.font = Paths.font('LineSeed.ttf');
+        socialTxt.scrollFactor.set(0, 1);
+        borderBot.add(socialTxt);
 
-		var enterButton = new FunkinSprite(socialTxt.x + socialTxt.width + 30, buttonY, Paths.image('menus/enterKey'));
-		enterButton.scrollFactor.set(0, 1);
-		borderBot.add(enterButton);
+        enterButton = new FunkinSprite(socialTxt.x + socialTxt.width + 30, buttonY, Paths.image('menus/enterKey'));
+        enterButton.scrollFactor.set(0, 1);
+        borderBot.add(enterButton);
 
-		var fullscreenTxt = new FlxText((enterButton.x + enterButton.width) + 5, enterButton.y, 0, 'FULL SCREEN', 16);
-		fullscreenTxt.font = Paths.font('LineSeed.ttf');
-		fullscreenTxt.scrollFactor.set(0, 1);
-		borderBot.add(fullscreenTxt);
+        fullscreenTxt = new FlxText((enterButton.x + enterButton.width) + 5, enterButton.y, 0, 'FULL SCREEN', 16);
+        fullscreenTxt.font = Paths.font('LineSeed.ttf');
+        fullscreenTxt.scrollFactor.set(0, 1);
+        borderBot.add(fullscreenTxt);
 
 		borderTop.transitionTween(true);
 	}
@@ -257,7 +262,7 @@ class GalleryState extends FunkinState {
 				spr.alpha = 0.7;
 		}
 
-		if (!fullscreen && (Controls.justPressed('back') || FlxG.mouse.justPressedRight)) {
+		if (!fullscreen && (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack())) {
 			final cacheSel = curSelected;
 			curSelected = -1;
 			FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
@@ -267,7 +272,7 @@ class GalleryState extends FunkinState {
 			});
 		}
 
-		var hitFullscreen = FlxG.keys.justPressed.ENTER || (fullscreen && (Controls.justPressed('back') || FlxG.mouse.justReleased || FlxG.mouse.justPressedRight));
+		var hitFullscreen = (FlxG.keys.justPressed.ENTER || overlapCheck(enterButton.x, enterButton.y, fullscreenTxt.x + fullscreenTxt.width, fullscreenTxt.y + fullscreenTxt.height)) || (fullscreen && (Controls.justPressed('back') || FlxG.mouse.justPressed || FlxG.mouse.justPressedRight || androidBack()));
 		if (!fullscreen && !hitFullscreen && FlxG.mouse.justReleased) {
 			final halfWidth = bigDisplay.frameWidth * bigDisplay.scale.x * 0.5;
 			final halfHeight = bigDisplay.frameHeight * bigDisplay.scale.y * 0.5;
@@ -280,7 +285,7 @@ class GalleryState extends FunkinState {
 			artistTxt.text = nowHoveringSocial ? "OPEN SOCIAL" : list[curSelected].artist.toUpperCase();
 		}
 
-		if ((FlxG.keys.justPressed.SPACE || (FlxG.mouse.justReleased && hoveringSocial)) && list[curSelected].link.trim() != "")
+		if ((FlxG.keys.justPressed.SPACE || (FlxG.mouse.justReleased && hoveringSocial) || overlapCheck(spaceButton.x, spaceButton.y, socialTxt.x + socialTxt.width, socialTxt.y + socialTxt.height)) && list[curSelected].link.trim() != "")
 			Util.openURL(list[curSelected].link);
 		else if (hitFullscreen) {
 			fullscreen = !fullscreen;
@@ -314,4 +319,6 @@ class GalleryState extends FunkinState {
 		bigDisplay.scale.x = bigDisplay.scale.y = FlxMath.lerp(smallScale, bigScale, ratio);
 		return fullscreenPercent = ratio;
 	}
+
+	
 }

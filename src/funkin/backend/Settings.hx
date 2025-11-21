@@ -47,13 +47,15 @@ class SaveVariables {
 
 	// graphics (that affect performance)
 	var framerate:ShortUInt = 60;
+	var drawFramerate:Int = 60;
+	var splitUpdate:Bool = true;
 	var holdGrain:ByteUInt = 1;
 	var antialiasing:Bool = true;
 	var audioStreams:Bool = true;
 	var reducedQuality:Bool = false;
 	var shaders:Bool = true;
 	var gpuCache:Bool = true;
-	var fullscreen:Bool = false;
+	var fullscreen:Bool = #if mobile true #else false #end;
 	var closeAnimation = true;
 	var reflections:Bool = true;
 	var videos:Bool = true;
@@ -87,11 +89,9 @@ class SaveVariables {
 	//mobile 
 	public var dynamicColors:Bool = true;
 	public var needMobileControl:Bool = true; // work for desktop
-	public var hitboxLocation:String = 'Bottom';
 	public var controlsAlpha:Float = 0.6;
 	public var playControlsAlpha:Float = 0.2;
-	public var hideHitboxHints:Bool = false;
-	public var extraKey:Int = 0;
+	public var screensaver:Bool = false;
 
 	var gameplayModifiers:Map<String, Dynamic> = [
 		'playbackRate' => 1.0,
@@ -137,9 +137,18 @@ class Settings {
 		}
 
 		if (FlxG.save.data.framerate == null) {
-			final refreshRate:ShortUInt = FlxG.stage.application.window.displayMode.refreshRate;
-			data.framerate = Std.int(FlxMath.bound(refreshRate * 2, 60, 240));
+			final refreshRate:ShortUInt = FlxG.stage.application.window.displayMode.refreshRate * 2;
+			data.framerate = Std.int(FlxMath.bound(refreshRate * 2, 60, 1000));
 		}
+
+		if (FlxG.save.data.drawFramerate == null)
+		{
+			final refreshRate:Int = FlxG.stage.application.window.displayMode.refreshRate;
+			data.drawFramerate = Std.int(FlxMath.bound(refreshRate, 60, 360));
+		}
+
+		FlxG.stage.application.window.splitUpdate = data.splitUpdate;
+		FlxG.stage.application.window.drawFrameRate = data.drawFramerate;
 	
 		if (FlxG.save.data.gameplayModifiers != null) {
 			final map:Map<String, Dynamic> = FlxG.save.data.gameplayModifiers;

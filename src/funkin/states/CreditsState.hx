@@ -34,11 +34,13 @@ enum abstract SocialPage(String) from String to String {
 	var BLUESKY = 'Bluesky';
 	var YOUTUBE = 'YouTube';
 	var CARRD = 'carrd';
+	var BILIBILI = 'Bilibili';
+	var GITHUB = 'github';
 	var OTHER = 'Other';
 }
 
 class CreditsState extends FunkinState {
-	public static final categoryList:Array<String> = ["Musicians", "Programmers", "Artists", "Charters", "Bugtesters", "Special Thanks"];
+	public static final categoryList:Array<String> = ["Musicians", "Programmers", "Artists", "Charters", "Bugtesters", "Mobile Porters", "Special Thanks"];
 	public static final list:Map<String, Array<Person>> = [
 		"Musicians" => [
 			{
@@ -531,6 +533,26 @@ class CreditsState extends FunkinState {
 			}
 		],
 
+		"Mobile Porters" => [
+			{
+				name: 'Beihu',
+				role: 'Head Porter',
+				links: [
+					YOUTUBE => 'https://youtube.com/@beihu235?si=3uPFzd4F6dGXpzi8',
+					BILIBILI => 'https://b23.tv/b3z7zW3',
+					GITHUB => 'https://github.com/beihu235'
+				],
+				pronouns: 'he/they',
+				//portrait: 'rudy',
+				//pixelSize: 500,
+				//pixelSizeMatches: HEIGHT,
+				//offsetX: 7,
+
+				color1: 0xFF96B5FF,
+				color2: 0xFFFF90DC
+			},
+		],
+
 		"Special Thanks" => [
 			{name: "Camellia", role: "Thank you for everything, man!"},
 			{name: "Holofunk Team", role: "Holofunk Collab"},
@@ -770,7 +792,7 @@ class CreditsState extends FunkinState {
 		woke.text = curList[curPerson].pronouns;
 		descTxt.text = curList[curPerson].role;
 
-		socials.options = [for (key in [TWITTER, BLUESKY, YOUTUBE, CARRD, OSU, OTHER])
+		socials.options = [for (key in [TWITTER, BLUESKY, YOUTUBE, CARRD, OSU, OTHER, GITHUB, BILIBILI])
 			if (curList[curPerson].links.exists(key))
 				key
 		];
@@ -805,6 +827,9 @@ class CreditsState extends FunkinState {
 		} else {
 			curPerson = 0;
 			changePerson(0);
+			addVirtualPad(LEFT_RIGHT, NONE);
+			virtualPad.buttonRight.x = FlxG.width - virtualPad.buttonRight.width - 10;
+			virtualPad.buttonLeft.x = virtualPad.buttonRight.x - virtualPad.buttonRight.width;
 		}
 
 		FlxG.sound.play(Paths.audio("popup_appear", 'sfx')); // combo sounds baybee
@@ -854,7 +879,7 @@ class CreditsState extends FunkinState {
 				FlxG.sound.play(Paths.audio("menu_move", "sfx"));
 			}
 
-			if (Controls.justPressed("back") || FlxG.mouse.justPressedRight) {
+			if (Controls.justPressed("back") || FlxG.mouse.justPressedRight || androidBack()) {
 				FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
 
 				thankTxt.members[curPerson].color = 0xFFFFFFFF;
@@ -863,6 +888,7 @@ class CreditsState extends FunkinState {
 				borderTop.scrollText = "SELECT A CATEGORY • ";
 				listGrp.useInputs = true;
 				selCategory = -1;
+				
 			}
 		} else if (selCategory >= 0) {
 			final leftJustPressed = Controls.justPressed("ui_left");
@@ -872,7 +898,7 @@ class CreditsState extends FunkinState {
 				FlxG.sound.play(Paths.audio("menu_move", "sfx"));
 			}
 
-			if (Controls.justPressed("back") || FlxG.mouse.justPressedRight) {
+			if (Controls.justPressed("back") || FlxG.mouse.justPressedRight || androidBack()) {
 				FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
 				listGrp.useInputs = listGrp.useMouse = true;
 				socials.useInputs = socials.useMouse = false;
@@ -881,8 +907,9 @@ class CreditsState extends FunkinState {
 				bg.targetColor1 = 0xFF606060;
 				bg.targetColor2 = 0xFFA0A0A0;
 				selCategory = -1;
+				removeVirtualPad();
 			}
-		} else if (selCategory > -2 && (Controls.justPressed('back') || FlxG.mouse.justPressedRight)) {
+		} else if (selCategory > -2 && (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack())) {
 			FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
 			listGrp.useInputs = listGrp.useMouse = false;
 			selCategory = -2;

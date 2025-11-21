@@ -179,7 +179,7 @@ class ExtrasState extends FunkinState {
 			}
 		}
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			exiting = true;
 			FlxG.sound.play(Paths.audio("menu_cancel", "sfx"));
 			borderTop.transitionTween(false, 0, 0.25, function() {

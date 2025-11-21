@@ -2,11 +2,11 @@ package funkin.mobile.objects;
 
 import haxe.ds.Map;
 import flixel.math.FlxPoint;
-import funkin.mobile.flixel.input.FlxMobileInputManager;
+import funkin.mobile.ui.input.FlxMobileInputManager;
 import haxe.extern.EitherType;
-import funkin.mobile.flixel.FlxButton;
-import funkin.mobile.flixel.FlxVirtualPad;
-import funkin.mobile.flixel.FlxHitbox;
+import funkin.mobile.ui.FlxButton;
+import funkin.mobile.ui.FlxVirtualPad;
+import funkin.mobile.ui.FlxHitbox;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 
 class MobileControls extends FlxTypedSpriteGroup<FlxMobileInputManager>
@@ -15,8 +15,6 @@ class MobileControls extends FlxTypedSpriteGroup<FlxMobileInputManager>
 	public var hitbox:FlxHitbox = new FlxHitbox();
 	// YOU CAN'T CHANGE PROPERTIES USING THIS EXCEPT WHEN IN RUNTIME!!
 	public var current:CurrentManager;
-
-	public var isHitbox:Bool = false;
 
 	public static var mode(get, set):Int;
 	public static var forcedControl:Null<Int>;
@@ -74,7 +72,6 @@ class MobileControls extends FlxTypedSpriteGroup<FlxMobileInputManager>
 			case 4:
 				hitbox = new FlxHitbox();
 				add(hitbox);
-				isHitbox = true;
 		}
 	}
 
@@ -173,10 +170,7 @@ class MobileControls extends FlxTypedSpriteGroup<FlxMobileInputManager>
 		else
 			data = Settings.default_data;
 
-		buttonsColors.push(data.customColumns[0][0]);
-		buttonsColors.push(data.customColumns[1][0]);
-		buttonsColors.push(data.customColumns[2][0]);
-		buttonsColors.push(data.customColumns[3][0]);
+		buttonsColors = data.customColumns;
 		if (mode == 3)
 		{
 			virtualPad.buttonLeft2.color = buttonsColors[0];
@@ -188,18 +182,6 @@ class MobileControls extends FlxTypedSpriteGroup<FlxMobileInputManager>
 		current.buttonDown.color = buttonsColors[1];
 		current.buttonUp.color = buttonsColors[2];
 		current.buttonRight.color = buttonsColors[3];
-
-		/*if(mode == 4){
-				hitbox.buttonLeft.color = buttonsColors[0];
-				hitbox.buttonDown.color = buttonsColors[1];
-				hitbox.buttonUp.color = buttonsColors[2];
-				hitbox.buttonRight.color = buttonsColors[3];
-			} else {
-				virtualPad.buttonLeft.color = buttonsColors[0];
-				virtualPad.buttonDown.color = buttonsColors[1];
-				virtualPad.buttonUp.color = buttonsColors[2];
-				virtualPad.buttonRight.color = buttonsColors[3];
-		}*/
 	}
 }
 
@@ -213,11 +195,22 @@ class CurrentManager
 
 	public function new(control:MobileControls)
 	{
-		target = control.hitbox;
-		// Use buttonNotes array instead of individual button fields
-		buttonLeft = control.hitbox.buttonNotes[0];
-		buttonDown = control.hitbox.buttonNotes[1];
-		buttonUp = control.hitbox.buttonNotes[2];
-		buttonRight = control.hitbox.buttonNotes[3];
+		if (MobileControls.mode == 4)
+		{
+			target = control.hitbox;
+			// Use buttonNotes array instead of individual button fields
+			buttonLeft = control.hitbox.buttonNotes[0];
+			buttonDown = control.hitbox.buttonNotes[1];
+			buttonUp = control.hitbox.buttonNotes[2];
+			buttonRight = control.hitbox.buttonNotes[3];
+		}
+		else
+		{
+			target = control.virtualPad;
+			buttonLeft = control.virtualPad.buttonLeft;
+			buttonDown = control.virtualPad.buttonDown;
+			buttonUp = control.virtualPad.buttonUp;
+			buttonRight = control.virtualPad.buttonRight;
+		}
 	}
 }

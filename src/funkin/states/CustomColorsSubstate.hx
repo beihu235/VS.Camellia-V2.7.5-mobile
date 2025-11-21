@@ -13,7 +13,7 @@ import haxe.io.Path;
 
 using StringTools;
 
-class CustomColorsSubstate extends flixel.FlxSubState {
+class CustomColorsSubstate extends FunkinSubstate {
 	var lineShader:TileLine;
 	var bg:FunkinSprite;
 	var mainRect:FunkinSprite;
@@ -780,7 +780,7 @@ class CustomColorsSubstate extends flixel.FlxSubState {
 			FlxG.sound.play(Paths.audio("menu_move", 'sfx'));
 		} else if (Controls.justPressed("accept") && curRow == 3) {
 			runAction();
-		} else if (Controls.justPressed("back") || FlxG.mouse.justPressedRight) {
+		} else if (Controls.justPressed("back") || FlxG.mouse.justPressedRight || androidBack()) {
 			if (Settings.data.quantColouring.startsWith("Custom")) {
 				if (Note.byQuant)
 					Settings.data.customQuants = Note.curPalette;

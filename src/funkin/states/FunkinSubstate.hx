@@ -1,41 +1,18 @@
 package funkin.states;
 
 import funkin.backend.FlxAudioHandler;
-import flixel.FlxState;
+import flixel.FlxSubState;
 import openfl.Lib;
 
-class FunkinState extends FlxState {
-	public static var instance:FunkinState;
-		
-	public static var menuSong:String = "";
-	var skipMusicCheck:Bool = false;
+//仅仅添加移动端控件
+class FunkinSubstate extends FlxSubState {
+	public static var instance:FunkinSubstate;
 		
 	override function create() {
-		instance = this;
+		instance = this;	
 		super.create();
-		//Conductor.reset();
-		Paths.clearUnusedMemory();
 
-		Conductor.onStep.add(stepHit);
-		Conductor.onBeat.add(beatHit);
-		Conductor.onMeasure.add(measureHit);
-
-		musicCheck();
-
-		Controls.isInSubstate = false;
-	}
-	
-	function musicCheck() {
-		if (skipMusicCheck || FlxAudioHandler.music.playing) return;
-
-		funkin.backend.CreditsStuff.MenuMusic.loadMusicList();
-		menuSong = funkin.backend.CreditsStuff.MenuMusic.gimmeMusicName();
-		funkin.backend.CreditsStuff.MenuMusic.menuCredits(this);
-		Conductor.inst = FlxAudioHandler.loadMusic(Paths.audioPath(menuSong, 'music'), true);
-		Conductor.play();
-
-		if (!funkin.backend.CreditsStuff.MenuMusic.gameInitialized)
-			funkin.backend.CreditsStuff.MenuMusic.gameInitialized = true;
+		Controls.isInSubstate = true;
 	}
 
 	public var virtualPad:FlxVirtualPad;
@@ -66,7 +43,16 @@ class FunkinState extends FlxState {
 	public function addMobileControls(DefaultDrawTarget:Bool = true):Void
 	{
 		mobileControls = new MobileControls();
-		camControls = new FlxCamera(0, 0, FlxG.width, FlxG.height); //版本太低我整不了全屏
+
+		var stage = Lib.current.stage;
+		var scale:Float = Math.min((stage.stageWidth / FlxG.width), (stage.stageHeight / FlxG.height));
+		var newWidth:Int = Std.int(stage.stageWidth / scale);
+		var newHeight:Int = Std.int(stage.stageHeight / scale);
+
+		camControls = new FlxCamera(0, 0, newWidth, newHeight);
+
+		camControls.x = (FlxG.width - newWidth) / 2;
+		camControls.y = (FlxG.height - newHeight) / 2;
 		camControls.bgColor.alpha = 0;
 		FlxG.cameras.add(camControls, DefaultDrawTarget);
 
@@ -104,17 +90,6 @@ class FunkinState extends FlxState {
 		}
 	}
 
-	public function overlapCheck(x1:Float, y1:Float, x2:Float, y2:Float):Bool {
-		if (FlxG.mouse.justPressed)
-			return (x1 <= FlxG.mouse.x && FlxG.mouse.x <= x2 && y1 <= FlxG.mouse.y && FlxG.mouse.y <= y2);
-		return false;
-	}
-
-	public function stepHit(step:Int):Void {}
-
-	public function beatHit(beat:Int):Void {}
-	public function measureHit(measure:Int):Void {}
-
 	override function destroy()
 	{
 		super.destroy();
@@ -130,5 +105,10 @@ class FunkinState extends FlxState {
 			mobileControls = FlxDestroyUtil.destroy(mobileControls);
 			mobileControls = null;
 		}
+	}
+
+	override function close() {
+		super.close();
+		Controls.isInSubstate = false;
 	}
 }

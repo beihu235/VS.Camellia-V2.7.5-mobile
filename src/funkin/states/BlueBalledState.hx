@@ -1,7 +1,7 @@
 package funkin.states;
 import flixel.math.FlxPoint;
 
-class BlueBalledState extends flixel.FlxSubState {
+class BlueBalledState extends FunkinSubstate {
     var char:funkin.objects.Character;
     var song:String;
 
@@ -62,12 +62,12 @@ class BlueBalledState extends flixel.FlxSubState {
                                    FlxMath.lerp(camPointer.y, camPos.y, t * 60 * 0.85));
         }
 
-        if (Controls.justPressed('accept')){
+        if (Controls.justPressed('accept') #if mobile || FlxG.mouse.justPressed #end){
             Conductor.stop();
             FlxG.sound.play(Paths.audio("menu_confirm", "sfx"));
             char.playAnim('confirm');
             ending();
-        } else if (Controls.justPressed('back')) {
+        } else if (Controls.justPressed('back') || androidBack()) {
             Conductor.stop();
             FlxG.sound.play(Paths.audio("byebye", "sfx"));
             char.playAnim('missUP');

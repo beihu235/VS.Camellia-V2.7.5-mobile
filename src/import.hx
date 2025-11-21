@@ -53,9 +53,9 @@ import android.Tools as AndroidTools;
 
 // Mobile Controls
 import funkin.mobile.objects.MobileControls;
-import funkin.mobile.flixel.FlxHitbox;
-import funkin.mobile.flixel.FlxVirtualPad;
-import funkin.mobile.flixel.input.FlxMobileInputID;
+import funkin.mobile.ui.FlxHitbox;
+import funkin.mobile.ui.FlxVirtualPad;
+import funkin.mobile.ui.input.FlxMobileInputID;
 import funkin.mobile.backend.Data;
 import funkin.mobile.backend.SUtil;
 

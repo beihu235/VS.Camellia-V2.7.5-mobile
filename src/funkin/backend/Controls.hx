@@ -57,21 +57,47 @@ class Controls {
 	];
 	public static var gamepad_binds:Map<String, Array<FlxGamepadInputID>> = default_gamepad_binds;
 
+	public static final default_mobile_Binds:Map<String, Array<FlxMobileInputID>> = [
+		'note_up' => [noteUP, UP2],
+		'note_left' => [noteLEFT, LEFT2],
+		'note_down' => [noteDOWN, DOWN2],
+		'note_right' => [noteRIGHT, RIGHT2],
+
+		'ui_up' => [UP, noteUP],
+		'ui_left' => [LEFT, noteLEFT],
+		'ui_down' => [DOWN, noteDOWN],
+		'ui_right' => [RIGHT, noteRIGHT],
+
+		'accept' => [A],
+		'back' => [B],
+		'pause' => [#if android NONE #else P #end],
+		'reset' => [NONE]
+	];
+	public static var mobileBinds:Map<String, Array<FlxMobileInputID>> = default_mobile_Binds;
+
 	static var _save:FlxSave;
 
 	public static function justPressed(name:String):Bool {
 		var k = _getKeyStatus(name, JUST_PRESSED);
-		return k;
+		//trace(name);
+
+		return k
+			|| mobileCJustPressed(mobileBinds[name]) == true
+			|| virtualPadJustPressed(mobileBinds[name]) == true;
 	}
 
 	public static function pressed(name:String):Bool {
 		var k = _getKeyStatus(name, PRESSED);
-		return k;
+		return k
+			|| mobileCPressed(mobileBinds[name]) == true
+			|| virtualPadPressed(mobileBinds[name]) == true;
 	}
 
 	public static function released(name:String):Bool {
 		var k = _getKeyStatus(name, JUST_RELEASED);
-		return k;
+		return k
+			|| mobileCReleased(mobileBinds[name]) == true
+			|| virtualPadReleased(mobileBinds[name]) == true;	
 	}
 
 	// backend functions to reduce repetitive code
@@ -125,6 +151,100 @@ class Controls {
         Reflect.callMethod(gamepad, Reflect.field(gamepad, "rumble"), [intensity, intensity, duration]);
     }
     #end
+	}
+
+	static public var isInSubstate:Bool = false; // don't worry about this it becomes true and false on it's own in FunkinSubstate
+	static public var requested(get, default):Dynamic; // is set to FunkinState or FunkinSubstate when the constructor is called
+	static public var gameplayRequest(get, default):Dynamic; // for PlayState and EditorPlayState (hitbox and virtualPad)
+
+	static function virtualPadPressed(keys:Array<FlxMobileInputID>):Bool
+	{
+		if (keys != null && requested.virtualPad != null)
+		{
+			if (requested.virtualPad.anyPressed(keys) == true)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	static function virtualPadJustPressed(keys:Array<FlxMobileInputID>):Bool
+	{
+		if (keys != null && requested.virtualPad != null)
+		{
+			if (requested.virtualPad.anyJustPressed(keys) == true)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	static function virtualPadReleased(keys:Array<FlxMobileInputID>):Bool
+	{
+		if (keys != null && requested.virtualPad != null)
+		{
+			if (requested.virtualPad.anyJustReleased(keys) == true)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	static function mobileCPressed(keys:Array<FlxMobileInputID>):Bool
+	{
+		if (keys != null && requested.mobileControls != null && gameplayRequest != null)
+		{
+			if (gameplayRequest.anyPressed(keys))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	static function mobileCJustPressed(keys:Array<FlxMobileInputID>):Bool
+	{
+		if (keys != null && requested.mobileControls != null && gameplayRequest != null)
+		{
+			if (gameplayRequest.anyJustPressed(keys))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	static function mobileCReleased(keys:Array<FlxMobileInputID>):Bool
+	{
+		if (keys != null && requested.mobileControls != null && gameplayRequest != null)
+		{
+			if (gameplayRequest.anyJustReleased(keys))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@:noCompletion
+	private static function get_requested():Dynamic
+	{
+		if (isInSubstate)
+			return FunkinSubstate.instance;
+		else
+			return FunkinState.instance;
+	}
+
+	@:noCompletion
+	private static function get_gameplayRequest():Dynamic
+	{
+		if (isInSubstate)
+			return FunkinSubstate.instance.mobileControls.current.target;
+		else
+			return FunkinState.instance.mobileControls.current.target;
 	}
 
 	public static function save() {

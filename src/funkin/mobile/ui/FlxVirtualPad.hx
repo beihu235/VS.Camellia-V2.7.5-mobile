@@ -1,8 +1,8 @@
-package funkin.mobile.flixel;
+package funkin.mobile.ui;
 
 import flixel.graphics.frames.FlxTileFrames;
-import funkin.mobile.flixel.input.FlxMobileInputManager;
-import funkin.mobile.flixel.FlxButton;
+import funkin.mobile.ui.input.FlxMobileInputManager;
+import funkin.mobile.ui.FlxButton;
 import flixel.math.FlxPoint;
 
 /**

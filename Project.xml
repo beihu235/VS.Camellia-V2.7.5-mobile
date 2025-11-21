@@ -2,9 +2,10 @@
 <project>
 
 	<!-- application stuff -->
-	<app title="Friday Night Funkin': Vs. Camellia" file="VS.Camellia V2.7.5" packageName="com.VS.Camellia" package="com.VS.Camellia" main="Main" version="3.0.0" company="Camellia"/>
+	<app title="Friday Night Funkin': Vs. Camellia" file="VS.Camellia V2.7.5" packageName="com.VS.Camellia2.7.5" package="com.VS.Camellia2.7.5" main="Main" version="3.0.0" company="Camellia"/>
 
 	<window width="1280" height="720" fps="120" background="#000000" hardware="true" vsync="false" />
+	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true" vsync="false" />
 	<window orientation="landscape" fullscreen="false" resizable="true"/>
 	<window antialiasing="0" allow-high-dpi="true"/>
 
@@ -66,22 +67,20 @@
 
 	<!-- miscellaneous -->
 
-	 <certificate path="key.keystore" password="novaFlare" alias="psychport" alias-password="novaFlare" if="android" unless="debug" />
-
-
 	<!--define name="FLX_NO_TOUCH" unless="mobile" /-->
 	<!--<define name="FLX_NO_GAMEPAD"/>-->
 	<define name="FLX_NO_DEBUG" unless="debug" />
 
-	<define name="HXCPP_GC_BIG_BLOCKS"/>
+	<define name="HXCPP_CHECK_POINTER" />
+	<define name="HXCPP_STACK_LINE" />
+	<define name="HXCPP_STACK_TRACE" />
+	<define name="HXCPP_CATCH_SEGV" />
 
-	<haxedef name="HXCPP_CHECK_POINTER" />
-	<haxedef name="HXCPP_STACK_LINE" />
-	<haxedef name="HXCPP_STACK_TRACE" />
-
-	<haxedef name="HXCPP_GC_DYNAMIC_SIZE" />
-	<haxedef name="HXCPP_ALIGN_ALLOC"/>
-	<haxedef name="HXCPP_GC_GENERATIONAL" />
+	<define name="HXCPP_GC_DISABLE" />
+	<define name="HXCPP_GC_DYNAMIC_SIZE" />
+	<define name="HXCPP_ALIGN_ALLOC"/>
+	<define name="HXCPP_GC_GENERATIONAL" />
+	<!--define name="HXCPP_GC_BIG_BLOCKS"/-->
 
 	<haxedef name="lime_threads" if="cpp || hl || neko || java || cs || nodejs" />
 
@@ -108,7 +107,7 @@
 	<haxeflag name="--macro" value="allowPackage('flash')" />
 
 
-	<architecture name="arm64" exclude="armv7" if="android" />
+	<!--architecture name="arm64" exclude="armv7" if="android" /-->
 
 	<config>
 		<android gradle-version="8.7" />

@@ -7,13 +7,13 @@ import flixel.addons.util.FlxAsyncLoop;
 import openfl.utils.ByteArray;
 import openfl.system.System;
 import funkin.states.TitleState;
-import InitState;
+import Main.InitState;
 import haxe.io.Path;
 #if (target.threaded)
 import sys.thread.Thread;
 #end
 
-class CopyState extends MusicBeatState
+class CopyState extends FlxState
 {
 	public static var locatedFiles:Array<String> = [];
 	public static var maxLoopTimes:Int = 0;
@@ -90,8 +90,8 @@ class CopyState extends MusicBeatState
 		else
 		{
 			InitState.ignoreCopy = true;
-			FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new InitState());
+			//FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
+			flixel.FlxG.switchState(new InitState());
 		}
 
 		super.create();
@@ -127,7 +127,7 @@ class CopyState extends MusicBeatState
 				}
 
 				canUpdate = false;
-				FlxG.sound.play(Paths.sound('confirmMenu'));
+				FlxG.sound.play(Paths.audio('menu_finish', 'sfx'));
 				var black = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 				black.alpha = 0;
 				add(black);
@@ -136,8 +136,8 @@ class CopyState extends MusicBeatState
 					{
 						System.gc();
 						InitState.ignoreCopy = true;
-						FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
-						MusicBeatState.switchState(new InitState());
+						//FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
+						flixel.FlxG.switchState(new InitState());
 					},
 					ease: FlxEase.linear,
 					startDelay: 0.4
@@ -186,7 +186,7 @@ class CopyState extends MusicBeatState
 	{
 		switch (Path.extension(file))
 		{
-			case 'otf' | 'ttf':
+			case 'otf' | 'ttf'| 'TTF':
 				return ByteArray.fromFile(file);
 			default:
 				return OpenflAssets.getBytes(file);
@@ -227,8 +227,8 @@ class CopyState extends MusicBeatState
 	{
 		locatedFiles = OpenflAssets.list();
 		// removes unwanted assets
-		var assets = locatedFiles.filter(folder -> folder.startsWith('assets/') && !folder.contains('assets/shared/images/menuExtendHide/'));
-		var mods = locatedFiles.filter(folder -> folder.startsWith('mods/'));
+		var assets = locatedFiles.filter(folder -> folder.startsWith('assets/'));
+		var mods = locatedFiles.filter(folder -> folder.startsWith('addons/'));
 		locatedFiles = assets.concat(mods);
 
 		var filesToRemove:Array<String> = [];
@@ -256,8 +256,8 @@ class CopyState extends MusicBeatState
 		#if !ios
 		locatedFiles = OpenflAssets.list();
 		// removes unwanted assets
-		var assets = locatedFiles.filter(folder -> folder.startsWith('assets/') && !folder.contains('assets/shared/images/menuExtendHide/'));
-		var mods = locatedFiles.filter(folder -> folder.startsWith('mods/'));
+		var assets = locatedFiles.filter(folder -> folder.startsWith('assets/'));
+		var mods = locatedFiles.filter(folder -> folder.startsWith('addons/'));
 		locatedFiles = assets.concat(mods);
 
 		var filesToRemove:Array<String> = [];

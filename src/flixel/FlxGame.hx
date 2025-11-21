@@ -366,6 +366,7 @@ class FlxGame extends Sprite
 			FlxG.log.warn("FlxG.updateFramerate: The update framerate shouldn't be smaller" + " than the draw framerate, since it can slow down your game.");
 
 		// Finally, set up an event for the actual game loop stuff.
+		stage.addEventListener(Event.ENTER_UPDATE, onEnterUpdate);
 		stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 
 		// We need to listen for resize event which means new context
@@ -500,6 +501,25 @@ class FlxGame extends Sprite
 	 */
 	function onEnterFrame(_):Void
 	{
+		#if FLX_DEBUG
+		FlxBasic.visibleCount = 0;
+		#end
+
+		// Render only
+		draw();
+
+		#if FLX_DEBUG
+		debugger.stats.visibleObjects(FlxBasic.visibleCount);
+		debugger.update();
+		#end
+	}
+
+	/**
+	 * Dedicated update handler extracted from `onEnterFrame`.
+	 * Responsible for ticking timers, handling input, and advancing game logic.
+	 */
+	function onEnterUpdate(_):Void
+	{
 		ticks = getTicks();
 		_elapsedMS = ticks - _total;
 		_total = ticks;
@@ -511,28 +531,6 @@ class FlxGame extends Sprite
 
 		if (!_lostFocus || !FlxG.autoPause)
 		{
-			if (FlxG.vcr.paused)
-			{
-				if (FlxG.vcr.stepRequested)
-				{
-					FlxG.vcr.stepRequested = false;
-				}
-				else if (_state == _requestedState) // don't pause a state switch request
-				{
-					#if FLX_DEBUG
-					debugger.update();
-					// If the interactive debug is active, the screen must
-					// be rendered because the user might be doing changes
-					// to game objects (e.g. moving things around).
-					if (debugger.interaction.isActive())
-					{
-						draw();
-					}
-					#end
-					return;
-				}
-			}
-
 			if (FlxG.fixedTimestep)
 			{
 				_accumulator += _elapsedMS;
@@ -548,17 +546,6 @@ class FlxGame extends Sprite
 			{
 				step();
 			}
-
-			#if FLX_DEBUG
-			FlxBasic.visibleCount = 0;
-			#end
-
-			draw();
-
-			#if FLX_DEBUG
-			debugger.stats.visibleObjects(FlxBasic.visibleCount);
-			debugger.update();
-			#end
 		}
 	}
 

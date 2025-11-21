@@ -123,6 +123,8 @@ class CalibrateOffsetState extends FunkinState {
 		
 		FlxTween.tween(introBG, {alpha: 0}, 0.5);
 		FlxTween.tween(introText, {alpha: 0}, 0.5);
+
+		addMobileControls();
 	}
 
 	override function update(delta:Float):Void {
@@ -133,10 +135,10 @@ class CalibrateOffsetState extends FunkinState {
 			FlxG.switchState(new OptionsState());
 		}
 
-		if (Controls.justPressed('back')) {
+		if (Controls.justPressed('back') || androidBack()) {
 			if (finished) FlxG.switchState(new CalibrateOffsetState(true));
 			else FlxG.switchState(new OptionsState());
-		} else if (!Conductor.playing && !finished && Controls.justPressed('accept')) start();
+		} else if (!Conductor.playing && !finished && (Controls.justPressed('accept') || FlxG.mouse.justPressed)) start();
 	}
 
 	function noteHit(_, note:Note):Void {

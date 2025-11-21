@@ -307,6 +307,8 @@ class PlayState extends FunkinState {
 
 		loadHUD();
 
+		addMobileControls(false);
+
 		Conductor.syncBeats();
 		ScriptHandler.call('create');
 
@@ -483,7 +485,7 @@ class PlayState extends FunkinState {
 			death();
 		}
 
-		if (Controls.justPressed('pause')) {
+		if (Controls.justPressed('pause') || androidBack()) {
 			final substate:PauseMenu = new PauseMenu();
 			substate.cameras = [camOther];
 			paused = true;
@@ -1017,7 +1019,9 @@ class PlayState extends FunkinState {
 		ScriptHandler.call('destroy');
 		Judgement.resetHits();
 		ScriptHandler.clear();
+		#if !mobile
 		FlxG.mouse.visible = true;
+		#end
 		self = null;
 		Conductor.vocals = null;
 		super.destroy();

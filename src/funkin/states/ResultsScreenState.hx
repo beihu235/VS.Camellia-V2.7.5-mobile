@@ -12,7 +12,7 @@ import funkin.shaders.TileLine;
 	public var make:Float->FlxSpriteGroup->Float;
 }
 
-class ResultsScreenState extends flixel.FlxSubState {
+class ResultsScreenState extends FunkinSubstate {
 	public static var lastPlay:PlayData;
 	
 	var accepted:Bool = false;
@@ -586,7 +586,7 @@ class ResultsScreenState extends flixel.FlxSubState {
 		if (!Settings.data.reducedQuality)
 			lineShader.time.value[0] = lineShader.time.value[0] + (delta / 64);
 
-		if (!accepted && (Controls.justPressed('accept') || FlxG.mouse.justPressed)) {
+		if (!accepted && (Controls.justPressed('accept') || FlxG.mouse.justPressedRight || androidBack())) {
 			accepted = true;
 			Conductor.stop();
 			FlxG.sound.play(Paths.audio("menu_confirm", "sfx"));

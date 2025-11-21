@@ -1,4 +1,4 @@
-package funkin.mobile.flixel;
+package funkin.mobile.ui;
 
 import flixel.graphics.frames.FlxFramesCollection;
 import flixel.graphics.atlas.FlxAtlas;

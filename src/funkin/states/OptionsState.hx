@@ -9,10 +9,14 @@ import funkin.objects.FunkinSprite;
 import funkin.objects.ui.CategoryList;
 import flixel.input.keyboard.FlxKey;
 
+import lime.system.System as LimeSystem;
+
+import funkin.mobile.substates.MobileControlSelectSubState;
+
 class OptionsState extends FunkinState {
 	public static var self:OptionsState;
 
-	final categoryList:Array<String> = ["Keybinds", "Gameplay", "HUD", "Visuals", "Performance", "Misc."];
+	final categoryList:Array<String> = ["Keybinds", "Gameplay", "HUD", "Visuals", "Performance", "Misc.", "Mobile"];
 	final optionsList:Map<String, Array<Option>> = [
 		"Keybinds" => [
 			new Option("left_note", "left_note_desc", "note_left", KeyOption),
@@ -159,6 +163,21 @@ class OptionsState extends FunkinState {
 				};
 				opt;
 			},
+			//code from NovaFlare Engine --beihu235(北狐丶望舒)
+			{
+				var opt = new Option("drawFramerate", "drawFramerate_desc", "drawFramerate", IntOption(15, 360, 1));
+				opt.onChange = function(v) {
+					FlxG.stage.application.window.drawFrameRate = v;
+				};
+				opt;
+			},
+			{
+				var opt = new Option("split Update", "splitUpdate_desc", "splitUpdate", BoolOption);
+				opt.onChange = function(v) {
+					FlxG.stage.application.window.splitUpdate = v;
+				}
+				opt;
+			},
 			{
 				var opt = new Option("antialiasing", "antialiasing_desc", "antialiasing", BoolOption);
 				opt.onChange = function(v) {
@@ -210,6 +229,7 @@ class OptionsState extends FunkinState {
 				};
 				opt;
 			},
+			#if !mobile
 			{
 				var opt = new Option("fullscreen", "fullscreen_desc", "fullscreen", BoolOption);
 				opt.onChange = function(v) {
@@ -217,6 +237,7 @@ class OptionsState extends FunkinState {
 				};
 				opt;
 			}, 
+			#end
 			{
 				var opt = new Option("discord_rpc", "discord_rpc_desc", "discordRPC", BoolOption);
 				opt.onChange = function(_) DiscordClient.check();
@@ -282,7 +303,41 @@ class OptionsState extends FunkinState {
 				opt.sound = 'popup_appear';
 				opt;
 			}
+		], 
+		//#if mobile
+		"Mobile" => [
+			{
+				var opt = new Option("controlSelect", "controlSelect_desc", "", ButtonOption);
+				opt.onChange = function(_) {
+					self.persistentUpdate = false;
+					self.openSubState(new MobileControlSelectSubState());
+				}
+				opt;
+			},
+			{
+				var opt = new Option("controls Alpha", "controlsAlpha_desc", "controlsAlpha", FloatOption(0.0, 1.0, 0.1));
+				opt.formatText = function(_) {
+					return (opt.value * 100) + "%";
+				};
+				opt;
+			},
+			{
+				var opt = new Option("playControls Alpha", "playControlsAlpha_desc", "playControlsAlpha", FloatOption(0.0, 1.0, 0.1));
+				opt.formatText = function(_) {
+					return (opt.value * 100) + "%";
+				};
+				opt;
+			},
+			new Option('dynamicColors', 'dynamicColors_desc', 'dynamicColors', BoolOption),
+			{
+				var opt = new Option("screensaver", "screensaver_desc", "screensaver", BoolOption);
+				opt.onChange = function(v) {
+					LimeSystem.allowScreenTimeout = v;
+				};
+				opt;
+			}
 		]
+		//#end
 	];
 
 	public static var inPlayState:Bool = false;
@@ -392,8 +447,10 @@ class OptionsState extends FunkinState {
 		if (waitingForKey && !listGrp.enterHit) {
 			final opt = curOptList[curSelected];
 			final keys:Array<FlxKey> = cast opt.value;
-			if (FlxG.keys.justPressed.ESCAPE) {
+			if (FlxG.keys.justPressed.ESCAPE || androidBack()) {
 				waitingForKey = false;
+				listGrp.useMouse = listGrp.useInputs = true;
+
 				FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
 
 				optValTxt.members[curSelected].text = opt.formatText(true);
@@ -427,7 +484,7 @@ class OptionsState extends FunkinState {
 		} else if (selCategory > -2 && !listGrp.enterHit) {
 			if (selCategory >= 0) 
 				optInputs(delta);
-			else if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+			else if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 				descTxt.text = "";
 				selCategory = -2;
 				listGrp.useMouse = listGrp.useInputs = false;
@@ -576,7 +633,10 @@ class OptionsState extends FunkinState {
 	}
 
 	function retargetOpt(target:Int) {
-		if (target == curSelected) return;
+		if (target == curSelected) {
+			if (FlxG.mouse.justPressed) firstPress = true;
+			return;
+		}
 
 		optTxt.members[curSelected].color = 0xFFFFFFFF;
 		optTxt.members[curSelected].font = Paths.font("Rockford-NTLG Light.ttf");
@@ -601,8 +661,11 @@ class OptionsState extends FunkinState {
 
 		bg.speed = 5;
 		FlxG.sound.play(Paths.audio("menu_move", 'sfx'));
+
+		firstPress = false;
 	}
 
+	private var firstPress:Bool = false;
 	function optInputs(delta:Float) {
 		if (FlxG.mouse.x >= optSel.x && FlxG.mouse.x <= optSel.x + optSel.width) {
 			for (i in 0...optTxt.length) {
@@ -611,8 +674,9 @@ class OptionsState extends FunkinState {
 				
 				var top = txt.y + (txt.height - height) * 0.5;
 				if (FlxG.mouse.y >= top && FlxG.mouse.y <= top + height) {
-					retargetOpt(listGrp.mouseMoved ? i : curSelected);
-					if (FlxG.mouse.justPressed) {
+					retargetOpt(listGrp.mouseMoved ? i : curSelected);		
+					
+					if (FlxG.mouse.justPressed && firstPress) {
 						if (curOptList[curSelected].type == ButtonOption) {
 							curOptList[curSelected].change(false);
 							FlxG.sound.play(Paths.audio(curOptList[curSelected].sound, 'sfx'));
@@ -622,6 +686,7 @@ class OptionsState extends FunkinState {
 							optValTxt.members[curSelected].text = curOptList[curSelected].formatText(true);
 						} else if (curOptList[curSelected].type == KeyOption) {
 							waitingForKey = true;
+							listGrp.useMouse = false;
 							descTxt.text = _formatT("sel_key_desc", [","]);
 							FlxG.sound.play(Paths.audio("popup_appear", 'sfx'));
 							optValTxt.members[curSelected].text = "Setting...";
@@ -643,8 +708,10 @@ class OptionsState extends FunkinState {
 		final downJustPressed:Bool = Controls.justPressed('ui_down');
 		final leftJustPressed:Bool = Controls.justPressed('ui_left');
 
-		if (downJustPressed || Controls.justPressed('ui_up'))
+		if (downJustPressed || Controls.justPressed('ui_up')) {
 			retargetOpt(FlxMath.wrap(curSelected + (downJustPressed ? 1 : -1), 0, curOptList.length - 1));
+			firstPress = true;
+		}
 
 		final curOption = curOptList[curSelected];
 		if ((leftJustPressed || Controls.justPressed('ui_right')) && curOption.type != ButtonOption) {
@@ -687,7 +754,7 @@ class OptionsState extends FunkinState {
 			}
 		}
 
-		if (Controls.justPressed("back") || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed("back") || FlxG.mouse.justPressedRight || androidBack()) {
 			selCategory = -1;
 			listGrp.useInputs = true;
 			FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));

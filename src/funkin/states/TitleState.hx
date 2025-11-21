@@ -371,8 +371,9 @@ class TitleState extends FunkinState {
 			FlxG.camera.zoom = 1.2;
 			FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.quadOut});
 		}
-
+		#if !mobile
 		FlxG.mouse.visible = true;
+		#end
 
 		if (Conductor.inst.time < 17160 - 300) Conductor.inst.time = 17160;
 	}

@@ -2,7 +2,7 @@ package funkin.states;
 
 import funkin.shaders.TileLine;
 
-class WarningSubstate extends FlxSubState {
+class WarningSubstate extends FunkinSubstate {
 	var optionArr:Array<String> = ["danger_confirm1", "danger_cancel"];
 
 	var curSelected:Int = 1;
@@ -97,6 +97,8 @@ class WarningSubstate extends FlxSubState {
 			item.alpha = 0;
 			FlxTween.tween(item, {alpha: 1}, 0.5, {ease: FlxEase.cubeOut});
 		}
+
+		addVirtualPad(UP_DOWN, A);
 	}
 
 	override function update(delta:Float) {

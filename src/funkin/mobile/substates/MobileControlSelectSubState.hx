@@ -1,16 +1,16 @@
 package funkin.mobile.substates;
 
 import openfl.sensors.Accelerometer;
-import funkin.mobile.flixel.FlxButton;
+import funkin.mobile.ui.FlxButton;
+import funkin.mobile.ui.FlxVirtualPad;
+import funkin.mobile.ui.FlxHitbox;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.util.FlxSave;
 import flixel.input.touch.FlxTouch;
 import openfl.utils.Assets;
 import flixel.ui.FlxButton as UIButton;
-import funkin.mobile.flixel.FlxVirtualPad;
-import funkin.mobile.flixel.FlxHitbox;
 
-class MobileControlSelectSubState extends MusicBeatSubstate
+class MobileControlSelectSubState extends FunkinSubstate
 {
 	public var controlsItems:Array<String> = ['Pad-Right', 'Pad-Left', 'Pad-Custom', 'Pad-Duo', 'Hitbox', 'Keyboard'];
 
@@ -20,10 +20,6 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 	var downPozition:FlxText;
 	var leftPozition:FlxText;
 	var rightPozition:FlxText;
-	var extra1Pozition:FlxText;
-	var extra2Pozition:FlxText;
-	var extra3Pozition:FlxText;
-	var extra4Pozition:FlxText;
 	var inputvari:FlxText;
 	var funitext:FlxText;
 	var leftArrow:FlxSprite;
@@ -33,26 +29,17 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 	var bindButton:FlxButton;
 	var resetButton:UIButton;
 	var daFunny:FlxText;
-	var buttonLeftColor:Array<FlxColor>;
-	var buttonDownColor:Array<FlxColor>;
-	var buttonUpColor:Array<FlxColor>;
-	var buttonRightColor:Array<FlxColor>;
+	var buttonColor:Array<FlxColor>;
 
 	override function create()
 	{
 		if (Settings.data.dynamicColors)
 		{
-			buttonLeftColor = Settings.data.customColumns[0];
-			buttonDownColor = Settings.data.customColumns[1];
-			buttonUpColor = Settings.data.customColumns[2];
-			buttonRightColor = Settings.data.customColumns[3];
+			buttonColor = Settings.data.customColumns;
 		}
 		else
 		{
-			buttonLeftColor = Settings.default_data.customColumns[0];
-			buttonDownColor = Settings.default_data.customColumns[1];
-			buttonUpColor = Settings.default_data.customColumns[2];
-			buttonRightColor = Settings.default_data.customColumns[3];
+			buttonColor = Settings.default_data.customColumns;
 		}
 
 		curSelected = MobileControls.get_mode();
@@ -72,10 +59,7 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 			if (virtualPadd.visible == true)
 				MobileControls.setExtraCustomMode(virtualPadd);
 
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			FlxTransitionableState.skipNextTransIn = true;
-			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new options.OptionsState());
+			close();
 		});
 		exit.color = FlxColor.LIME;
 		exit.setGraphicSize(Std.int(exit.width) * 3);
@@ -101,26 +85,6 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 					virtualPadd.buttonRight.y = FlxG.height - 309;
 					virtualPadd.buttonLeft.x = FlxG.width - 384;
 					virtualPadd.buttonLeft.y = FlxG.height - 309;
-
-					virtualPadd.buttonExtra1.x = FlxG.width * 0.5 - 86 * 3;
-					virtualPadd.buttonExtra1.y = FlxG.height * 0.5 - 127 * 0.5;
-					virtualPadd.buttonExtra2.x = FlxG.width * 0.5 - 44 * 3;
-					virtualPadd.buttonExtra2.y = FlxG.height * 0.5 - 127 * 0.5;
-					virtualPadd.buttonExtra3.x = FlxG.width * 0.5;
-					virtualPadd.buttonExtra3.y = FlxG.height * 0.5 - 127 * 0.5;
-					virtualPadd.buttonExtra4.x = FlxG.width * 0.5 + 44 * 3;
-					virtualPadd.buttonExtra4.y = FlxG.height * 0.5 - 127 * 0.5;
-				}
-				else
-				{
-					virtualPadd.buttonExtra1.x = FlxG.width * 0.5 - 86 * 3;
-					virtualPadd.buttonExtra1.y = FlxG.height * 0.5 - 127 * 0.5;
-					virtualPadd.buttonExtra2.x = FlxG.width * 0.5 - 44 * 3;
-					virtualPadd.buttonExtra2.y = FlxG.height * 0.5 - 127 * 0.5;
-					virtualPadd.buttonExtra3.x = FlxG.width * 0.5;
-					virtualPadd.buttonExtra3.y = FlxG.height * 0.5 - 127 * 0.5;
-					virtualPadd.buttonExtra4.x = FlxG.width * 0.5 + 44 * 3;
-					virtualPadd.buttonExtra4.y = FlxG.height * 0.5 - 127 * 0.5;
 				}
 			}
 		});
@@ -157,14 +121,14 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 		add(inputvari);
 
 		leftArrow = new FlxSprite(inputvari.x - 60, inputvari.y - 25);
-		leftArrow.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+		leftArrow.frames = Paths.sparrowAtlas('campaign_menu_UI_assets');
 		leftArrow.animation.addByPrefix('idle', 'arrow left');
 		leftArrow.animation.addByPrefix('press', "arrow push left");
 		leftArrow.animation.play('idle');
 		add(leftArrow);
 
 		rightArrow = new FlxSprite(inputvari.x + inputvari.width + 10, inputvari.y - 25);
-		rightArrow.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+		rightArrow.frames = Paths.sparrowAtlas('campaign_menu_UI_assets');
 		rightArrow.animation.addByPrefix('idle', 'arrow right');
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
@@ -189,26 +153,6 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 		upPozition.setFormat('VCR OSD Mono', 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		upPozition.borderSize = 2.4;
 		add(upPozition);
-
-		extra1Pozition = new FlxText(10, FlxG.height - 184, 0, '', 16);
-		extra1Pozition.setFormat('VCR OSD Mono', 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		extra1Pozition.borderSize = 2.4;
-		add(extra3Pozition);
-
-		extra2Pozition = new FlxText(10, FlxG.height - 164, 0, '', 16);
-		extra2Pozition.setFormat('VCR OSD Mono', 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		extra2Pozition.borderSize = 2.4;
-		add(extra2Pozition);
-
-		extra3Pozition = new FlxText(10, FlxG.height - 144, 0, '', 16);
-		extra3Pozition.setFormat('VCR OSD Mono', 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		extra3Pozition.borderSize = 2.4;
-		add(extra3Pozition);
-
-		extra4Pozition = new FlxText(10, FlxG.height - 124, 0, '', 16);
-		extra4Pozition.setFormat('VCR OSD Mono', 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		extra4Pozition.borderSize = 2.4;
-		add(extra4Pozition);
 
 		daFunny = new FlxText(0, 75, 0, 'Pad-Extras is not a control mode\nPlease selecte a valid mode such as hitbox, Pad-Left...', 35);
 		daFunny.setFormat('VCR OSD Mono', 35, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -292,28 +236,6 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 					else
 						moveButton(touch, bindButton);
 				}
-				else
-				{
-					if (virtualPadd.buttonExtra1.justPressed)
-					{
-						moveButton(touch, virtualPadd.buttonExtra1);
-					}
-
-					if (virtualPadd.buttonExtra2.justPressed)
-					{
-						moveButton(touch, virtualPadd.buttonExtra2);
-					}
-
-					if (virtualPadd.buttonExtra3.justPressed)
-					{
-						moveButton(touch, virtualPadd.buttonExtra3);
-					}
-
-					if (virtualPadd.buttonExtra4.justPressed)
-					{
-						moveButton(touch, virtualPadd.buttonExtra4);
-					}
-				}
 			}
 		}
 
@@ -330,18 +252,6 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 
 			if (virtualPadd.buttonRight != null)
 				rightPozition.text = 'Button Right X:' + virtualPadd.buttonRight.x + ' Y:' + virtualPadd.buttonRight.y;
-
-			if (virtualPadd.buttonExtra1 != null)
-				extra1Pozition.text = 'Button Extra1 X:' + virtualPadd.buttonExtra1.x + ' Y:' + virtualPadd.buttonExtra1.y;
-
-			if (virtualPadd.buttonExtra2 != null)
-				extra2Pozition.text = 'Button Extra1 X:' + virtualPadd.buttonExtra2.x + ' Y:' + virtualPadd.buttonExtra2.y;
-
-			if (virtualPadd.buttonExtra3 != null)
-				extra3Pozition.text = 'Button Extra1 X:' + virtualPadd.buttonExtra3.x + ' Y:' + virtualPadd.buttonExtra3.y;
-
-			if (virtualPadd.buttonExtra4 != null)
-				extra4Pozition.text = 'Button Extra1 X:' + virtualPadd.buttonExtra4.x + ' Y:' + virtualPadd.buttonExtra4.y;
 		}
 	}
 
@@ -373,10 +283,10 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 				virtualPadd = MobileControls.getExtraCustomMode(virtualPadd);
 				virtualPadd.alpha = Settings.data.playControlsAlpha;
 				add(virtualPadd);
-				virtualPadd.buttonLeft.color = buttonLeftColor[0];
-				virtualPadd.buttonDown.color = buttonDownColor[0];
-				virtualPadd.buttonUp.color = buttonUpColor[0];
-				virtualPadd.buttonRight.color = buttonRightColor[0];
+				virtualPadd.buttonLeft.color = buttonColor[0];
+				virtualPadd.buttonDown.color = buttonColor[1];
+				virtualPadd.buttonUp.color = buttonColor[2];
+				virtualPadd.buttonRight.color = buttonColor[3];
 			case 'Pad-Left':
 				hitbox.visible = false;
 
@@ -385,10 +295,10 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 				virtualPadd = MobileControls.getExtraCustomMode(virtualPadd);
 				virtualPadd.alpha = Settings.data.playControlsAlpha;
 				add(virtualPadd);
-				virtualPadd.buttonLeft.color = buttonLeftColor[0];
-				virtualPadd.buttonDown.color = buttonDownColor[0];
-				virtualPadd.buttonUp.color = buttonUpColor[0];
-				virtualPadd.buttonRight.color = buttonRightColor[0];
+				virtualPadd.buttonLeft.color = buttonColor[0];
+				virtualPadd.buttonDown.color = buttonColor[1];
+				virtualPadd.buttonUp.color = buttonColor[2];
+				virtualPadd.buttonRight.color = buttonColor[3];
 			case 'Pad-Custom':
 				hitbox.visible = false;
 
@@ -397,10 +307,10 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 				virtualPadd = MobileControls.getExtraCustomMode(virtualPadd);
 				virtualPadd.alpha = Settings.data.playControlsAlpha;
 				add(virtualPadd);
-				virtualPadd.buttonLeft.color = buttonLeftColor[0];
-				virtualPadd.buttonDown.color = buttonDownColor[0];
-				virtualPadd.buttonUp.color = buttonUpColor[0];
-				virtualPadd.buttonRight.color = buttonRightColor[0];
+				virtualPadd.buttonLeft.color = buttonColor[0];
+				virtualPadd.buttonDown.color = buttonColor[1];
+				virtualPadd.buttonUp.color = buttonColor[2];
+				virtualPadd.buttonRight.color = buttonColor[3];
 			case 'Pad-Duo':
 				hitbox.visible = false;
 
@@ -409,14 +319,14 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 				virtualPadd = MobileControls.getExtraCustomMode(virtualPadd);
 				virtualPadd.alpha = Settings.data.playControlsAlpha;
 				add(virtualPadd);
-				virtualPadd.buttonLeft.color = buttonLeftColor[0];
-				virtualPadd.buttonDown.color = buttonDownColor[0];
-				virtualPadd.buttonUp.color = buttonUpColor[0];
-				virtualPadd.buttonRight.color = buttonRightColor[0];
-				virtualPadd.buttonLeft2.color = buttonLeftColor[0];
-				virtualPadd.buttonDown2.color = buttonDownColor[0];
-				virtualPadd.buttonUp2.color = buttonUpColor[0];
-				virtualPadd.buttonRight2.color = buttonRightColor[0];
+				virtualPadd.buttonLeft.color = buttonColor[0];
+				virtualPadd.buttonDown.color = buttonColor[1];
+				virtualPadd.buttonUp.color = buttonColor[2];
+				virtualPadd.buttonRight.color = buttonColor[3];
+				virtualPadd.buttonLeft2.color = buttonColor[0];
+				virtualPadd.buttonDown2.color = buttonColor[1];
+				virtualPadd.buttonUp2.color = buttonColor[2];
+				virtualPadd.buttonRight2.color = buttonColor[3];
 
 			case 'Hitbox':
 				hitbox.visible = true;
@@ -438,21 +348,6 @@ class MobileControlSelectSubState extends MusicBeatSubstate
 		downPozition.visible = daChoice == 'Pad-Custom';
 		leftPozition.visible = daChoice == 'Pad-Custom';
 		rightPozition.visible = daChoice == 'Pad-Custom';
-
-		if (virtualPadd.visible == true)
-		{
-			extra1Pozition.visible = true;
-			extra2Pozition.visible = true;
-			extra3Pozition.visible = true;
-			extra4Pozition.visible = true;
-		}
-		else
-		{
-			extra1Pozition.visible = false;
-			extra2Pozition.visible = false;
-			extra3Pozition.visible = false;
-			extra4Pozition.visible = false;
-		}
 	}
 
 	function moveButton(touch:FlxTouch, button:FlxButton):Void

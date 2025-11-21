@@ -19,6 +19,9 @@ class AddonsState extends FunkinState {
 	var theresNothin:FunkinSprite;
 	var tmr:Float = 0.0;
 
+	var rButton:FunkinSprite;
+	var reloadTxt:FlxText;
+
 	var icons:FlxTypedGroup<FunkinSprite>;
 	var coloUrs:FlxTypedGroup<FunkinSprite>; // dont worry about the capital U
 	var titles:FlxTypedGroup<FlxText>;
@@ -110,7 +113,7 @@ class AddonsState extends FunkinState {
 		changePackTxt.scrollFactor.set(0, 1);
 		add(changePackTxt);
 
-		var rButton = new FunkinSprite(changePackTxt.x + changePackTxt.width + 50, buttonY, Paths.image('menus/keyIndicator'));
+		rButton = new FunkinSprite(changePackTxt.x + changePackTxt.width + 50, buttonY, Paths.image('menus/keyIndicator'));
 		rButton.setColorTransform(0, 0, 0, 1, 255, 255, 255, 0);
 		rButton.scrollFactor.set(0, 1);
 		add(rButton);
@@ -122,7 +125,7 @@ class AddonsState extends FunkinState {
 		rTxt.scrollFactor.set(0, 1);
 		add(rTxt);
 
-		var reloadTxt = new FlxText((rButton.x + rButton.width) + 5, rButton.y, 0, _t("reload"), 16);
+		reloadTxt = new FlxText((rButton.x + rButton.width) + 5, rButton.y, 0, _t("reload"), 16);
 		reloadTxt.font = Paths.font('LineSeed.ttf');
 		reloadTxt.scrollFactor.set(0, 1);
 		add(reloadTxt);
@@ -139,7 +142,7 @@ class AddonsState extends FunkinState {
 
 		if (curSelected < 0) return;
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			Settings.data.addonsOff = [];
 			for (addon in Addons.list) {
 				if (addon.disabled)
@@ -155,7 +158,7 @@ class AddonsState extends FunkinState {
 				FlxG.switchState(new funkin.states.ExtrasState());
 			});
 			return;
-		} else if (FlxG.keys.justPressed.R) {
+		} else if (FlxG.keys.justPressed.R || overlapCheck(rButton.x, rButton.y, reloadTxt.x + reloadTxt.width, reloadTxt.y + reloadTxt.height)) {
 			while (icons.length > 0) {
 				final icon = icons.members[0];
 				final color = coloUrs.members[0];
@@ -341,4 +344,6 @@ class AddonsState extends FunkinState {
 			}
 		}
 	}
+
+	
 }

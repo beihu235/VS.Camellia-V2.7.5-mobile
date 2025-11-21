@@ -128,9 +128,9 @@ class Dialogue extends FlxSubState {
 
 		if (finished || paused) return;
 
-		if (Controls.justPressed('skip_dialogue') && !textFinished) curText.skip();
+		if (Controls.justPressed('skip_dialogue') && !textFinished #if android || FlxG.android.justReleased.BACK #end) curText.skip();
 
-		if (Controls.justPressed('next_dialogue') && textFinished) {
+		if (Controls.justPressed('next_dialogue') && textFinished #if mobile || FlxG.mouse.justPressed #end) {
 			_index++;
 			updateLine();
 		}

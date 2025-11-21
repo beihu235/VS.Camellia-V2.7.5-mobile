@@ -10,7 +10,7 @@ import funkin.backend.Meta.MetaFile;
 import flixel.addons.display.FlxBackdrop;
 import funkin.objects.Countdown;
 
-class PauseMenu extends flixel.FlxSubState {
+class PauseMenu extends FunkinSubstate {
 	public static final optionArr:Array<String> = ['Resume', 'Restart', 'Options', 'Back to Songlist'];
 
 	var extraSpaceForTheTriangleRotatingThingie:Float = 30;
@@ -193,6 +193,12 @@ class PauseMenu extends flixel.FlxSubState {
 			if (!exists) return;
 			PlayState.self.camHUD.alpha = cacheAlpha * (1 - num);
 			PlayState.self.camHUD.zoom = cacheZoom + 0.15 * num;
+
+			if (PlayState.self.camControls != null) {
+				PlayState.self.camControls.alpha = PlayState.self.camHUD.alpha;
+				PlayState.self.camControls.zoom = PlayState.self.camHUD.zoom;
+			}
+
 			music.volume = num;
 			
 			final daAlpha = PlayState.self.camHUD.bgColor.alphaFloat * PlayState.self.camHUD.alpha;
@@ -214,10 +220,15 @@ class PauseMenu extends flixel.FlxSubState {
 
 			tile.alpha = num;
 		});
+
+		addVirtualPad(UP_DOWN, A_B);
+		addVirtualPadCamera(false);
 	}
 
 	override function update(delta:Float):Void {
 		super.update(delta);
+
+		androidInput();
 
 		optionBG.scale.x = FlxMath.lerp(optionBG.scale.x, longestWidth + 20 + extraSpaceForTheTriangleRotatingThingie, delta * 15);
 		selectTriangle.x = FlxMath.lerp(selectTriangle.x, optionBG.x + 5, delta * 15);
@@ -225,6 +236,61 @@ class PauseMenu extends flixel.FlxSubState {
 		if (!Settings.data.reducedQuality) {
 			lineShader.time.value[0] = lineShader.time.value[0] + (delta / 64);
 			selectTriangle.angle += delta * 160;
+		}
+	}
+
+	function androidInput():Void {
+		if (virtualPad == null) return;
+
+		if (virtualPad.buttonDown.justPressed) {
+			if (countdown.active) return;
+			changeSelection(1);
+			FlxG.sound.play(Paths.audio("menu_move", "sfx"));
+		}
+
+		if (virtualPad.buttonUp.justPressed) {
+			if (countdown.active) return;
+			changeSelection(-1);
+			FlxG.sound.play(Paths.audio("menu_move", "sfx"));
+		}
+
+		if (virtualPad.buttonB.justPressed) {
+			if (countdown.active) {
+				countdown.stop();
+				return;
+			}
+			unpause();
+		}
+
+		if (virtualPad.buttonA.justPressed) {
+			if (countdown.active) {
+				countdown.stop();
+				return;
+			}
+
+			switch (optionArr[curSelected]) {
+				case 'Resume':
+					unpause();
+				case 'Restart':
+					removeInputs();
+					Util.cancelAllTimers();
+					Util.cancelAllTweens();
+					add(new BasicBorderTransition(TOP, false, 0.5, 0.5, function() {
+						FlxG.resetState();
+					}));
+				case 'Options':
+					removeInputs();
+					OptionsState.inPlayState = true;
+					add(new BasicBorderTransition(BOTTOM, false, 0.5, 0.5, function() {
+						FlxG.switchState(new OptionsState());
+					}));
+				case 'Back to Songlist':
+					leaving = true;
+					removeInputs();
+					close();
+					Conductor.stop();
+					PlayState.self.endSong(true);
+			}
 		}
 	}
 
@@ -278,6 +344,7 @@ class PauseMenu extends flixel.FlxSubState {
 	}
 
 	inline function removeInputs() {
+		if (vpadCam != null) vpadCam.visible = false; //666没法删
 		Application.current.window.onKeyDown.remove(input);
 		Application.current.window.onKeyUp.remove(release);
 	}
@@ -302,6 +369,8 @@ class PauseMenu extends flixel.FlxSubState {
 	}
 
 	function unpause() {
+		if (vpadCam != null) vpadCam.visible = false; //666没法删
+
 		var percent = fadeTwn.scale;
 		fadeTwn.cancel();
 		var curScaleX = optionBG.scale.x;
@@ -321,6 +390,11 @@ class PauseMenu extends flixel.FlxSubState {
 		}}, function(num) {
 			PlayState.self.camHUD.alpha = cacheAlpha * (1 - num);
 			PlayState.self.camHUD.zoom = cacheZoom + 0.15 * num;
+
+			if (PlayState.self.camControls != null) {
+				PlayState.self.camControls.alpha = PlayState.self.camHUD.alpha;
+				PlayState.self.camControls.zoom = PlayState.self.camHUD.zoom;
+			}
 			music.volume = num;
 
 			final daAlpha = PlayState.self.camHUD.bgColor.alphaFloat * PlayState.self.camHUD.alpha;

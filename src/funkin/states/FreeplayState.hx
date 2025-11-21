@@ -25,6 +25,7 @@ typedef FreeplaySongData = {
 	var meta:MetaFile;
 	var icons:Array<String>;
 	var folder:String;
+	var weekIndex:Int;
 
 	var slot:FreeplaySongSlot;
 }
@@ -71,9 +72,10 @@ class FreeplayState extends FunkinState {
 	var iconP2:CharIcon;
 
 	static var curSort:Int = 0;
+	var eButton:FunkinSprite;
 	var sortTxt:FlxText;
 	var sorts:Array<FreeplaySortMethod> = [
-		{name: "Week", method: (a, b) -> {return 1;}, sensitive: false},
+		{name: "Week", method: (a, b) -> { return a.weekIndex < b.weekIndex ? -1 : (a.weekIndex > b.weekIndex ? 1 : 0); }, sensitive: false},
 		{name: "A-Z", method: (a, b) -> {return (a.meta.songName.toLowerCase() < b.meta.songName.toLowerCase()) ? -1 : 1;}, sensitive: false},
 		{name: "Diff", method: function(a, b) {
 			final diff = (Settings.data.gameplayModifiers["playingSide"] == "Dancer") ? "Camellia" : Difficulty.list[self.curDiffSelected];
@@ -113,6 +115,8 @@ class FreeplayState extends FunkinState {
 	var modBG:FunkinSprite;
 	var modDarken:FunkinSprite;
 	var simpleModBG:FunkinSprite;
+	var mButton:FunkinSprite;
+	var modifiersTxt:FlxText;
 	var modTxt:FlxText;
 	var modTriangles:Array<FunkinSprite> = [];
 	var modSlots:FlxTypedGroup<FreeplaySongSlot>;
@@ -309,18 +313,18 @@ class FreeplayState extends FunkinState {
 		changeDiffTxt.scrollFactor.set(0, 1);
 		borderBot.add(changeDiffTxt);
 
-		var mButton = new FunkinSprite(changeDiffTxt.x + changeDiffTxt.width + 50, buttonY, Paths.image('menus/M button'));
+		mButton = new FunkinSprite(changeDiffTxt.x + changeDiffTxt.width + 50, buttonY, Paths.image('menus/M button'));
 		mButton.scale.set(0.5, 0.5);
 		mButton.updateHitbox();
 		mButton.scrollFactor.set(0, 1);
 		borderBot.add(mButton);
 
-		var modifiersTxt = new FlxText((mButton.x + mButton.width) + 5, mButton.y, 0, _t("modifiers"), 16);
+		modifiersTxt = new FlxText((mButton.x + mButton.width) + 5, mButton.y, 0, _t("modifiers"), 16);
 		modifiersTxt.font = Paths.font('LineSeed.ttf');
 		modifiersTxt.scrollFactor.set(0, 1);
 		borderBot.add(modifiersTxt);
 
-		var eButton = new FunkinSprite(modifiersTxt.x + modifiersTxt.width + 50, buttonY, Paths.image('menus/E button'));
+		eButton = new FunkinSprite(modifiersTxt.x + modifiersTxt.width + 50, buttonY, Paths.image('menus/E button'));
 		eButton.scale.set(0.5, 0.5);
 		eButton.updateHitbox();
 		eButton.scrollFactor.set(0, 1);
@@ -503,7 +507,7 @@ class FreeplayState extends FunkinState {
 			if (!inMods)
 				updateMeta();
 			FlxG.sound.play(Paths.audio(inMods ? "popup_appear" : "popup_select", "sfx"));
-		} else if (FlxG.keys.justPressed.E) {
+		} else if (FlxG.keys.justPressed.E || overlapCheck(eButton.x, eButton.y, sortTxt.x + sortTxt.width, sortTxt.y + sortTxt.height)) {
 			curSort = FlxMath.wrap(curSort + 1, 0, sorts.length - 1);
 			sortSongs(sorts[curSort].method);
 		}
@@ -524,7 +528,7 @@ class FreeplayState extends FunkinState {
 			clearType.text = Ranking.clearTypeList[debugClear];
 		}*/
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			Addons.current = '';
 			exiting = true;
 			FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
@@ -879,25 +883,26 @@ class FreeplayState extends FunkinState {
 		WeekData.reload();
 
 		songList.resize(0);
-		for (week in WeekData.list) {
-			for (song in week.songs) {
-				var pauseMusic:String = week.pauseMusic;
-				if (song.pauseMusic.length != 0) pauseMusic = song.pauseMusic;
-			
-				final song:FreeplaySongData = {
-					id: song.id,
-					weekDiffs: week.diffs,
-					colours: song.colors,
-					pauseMusic: pauseMusic,
-					meta: Meta.load(song.id),
-					icons: song.icons,
-					folder: week.folder,
+	for (i => week in WeekData.list) {
+		for (song in week.songs) {
+			var pauseMusic:String = week.pauseMusic;
+			if (song.pauseMusic.length != 0) pauseMusic = song.pauseMusic;
+		
+            final song:FreeplaySongData = {
+                id: song.id,
+                weekDiffs: week.diffs,
+                colours: song.colors,
+                pauseMusic: pauseMusic,
+                meta: Meta.load(song.id),
+                icons: song.icons,
+                folder: week.folder,
+                weekIndex: (Std.parseInt(week.weekNum) != null ? Std.parseInt(week.weekNum) : i),
 
-					slot: null
-				};
-				songList.push(song);
-			}	
+                slot: null
+            };
+			songList.push(song);
 		}
+	}
 
 		for (i => song in songList) {
 			var slot = new FreeplaySongSlot(i - curSelected, (FlxG.random.bool(song.meta.rngChance) ? song.meta.randomName : song.meta.songName), song.meta.subtitle);

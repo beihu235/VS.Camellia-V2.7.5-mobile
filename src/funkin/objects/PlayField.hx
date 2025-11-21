@@ -277,6 +277,40 @@ class PlayField extends flixel.group.FlxSpriteGroup {
 		}
 	}
 
+	function mobileInput() {
+		if (botplay) return;
+		var pressArray:Array<Bool> = [];
+		var releaseArray:Array<Bool> = [];
+		for (key in keys)
+		{
+			pressArray.push(Controls.justPressed(key));
+			releaseArray.push(Controls.released(key));
+		}
+
+		for (i in 0...pressArray.length) {
+			if (!pressArray[i]) continue;
+
+			held[i] = true;
+
+			attemptNoteInput(i, playerID);
+			for(id in mirrorStrumlines)attemptNoteInput(i, id);
+		}
+
+		for (i in 0...releaseArray.length) {
+			if (!releaseArray[i]) continue;
+
+			held[i] = false;
+			currentPlayer.members[i].playAnim('default');
+			currentPlayer.members[i].isHolding = false;
+			for(id in mirrorStrumlines){
+				if (id < strumlines.length) {
+					strumlines.members[id].members[i].playAnim('default');
+					strumlines.members[id].members[i].isHolding = false;
+				}
+			}
+		}
+	}
+
 	function addNote<T:Note>(data:NoteData, group:FlxTypedSpriteGroup<T>, cls:Class<T>):T {
 		var strumline:Strumline = strumlines.members[data.player];
 
@@ -290,6 +324,9 @@ class PlayField extends flixel.group.FlxSpriteGroup {
 
 	override function update(delta:Float):Void {
 		super.update(delta);
+
+		mobileInput();
+
 		if (modchart != null)
 			modchart.update();
 

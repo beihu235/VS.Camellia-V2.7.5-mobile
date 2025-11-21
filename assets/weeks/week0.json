@@ -13,5 +13,6 @@
 		}
 	],
   	name: 'Tutorial',
+	weekNum: '0',
   	hideStory: true
 }

@@ -564,7 +564,7 @@ class StoryMenuState extends FunkinState {
 	function scrollInputs() {
 		final downJustPressed:Bool = Controls.justPressed('ui_down');
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			exiting = true;
 			FlxG.sound.play(Paths.audio("menu_cancel", 'sfx'));
 			borderTop.transitionTween(false, 0, 0.25, function() {
@@ -753,7 +753,7 @@ class StoryMenuState extends FunkinState {
 	function weekInputs() {
 		final leftJustPressed:Bool = Controls.justPressed('ui_left');
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || androidBack()) {
 			if (graphTwn != null) {
 				graphTwn.cancel();
 				graphTwn = null;
@@ -869,7 +869,7 @@ class StoryMenuState extends FunkinState {
 		} else if (leftJustPressed || Controls.justPressed('ui_right')) {
 			changeDifficulty(leftJustPressed ? -1 : 1);
 			FlxG.sound.play(Paths.audio("menu_setting_tick", 'sfx'));
-		} else if (FlxG.keys.justPressed.M) {
+		} else if (FlxG.keys.justPressed.M || overlapCheck(mButton.x, mButton.y, modifiersTxt.x + modifiersTxt.width, modifiersTxt.y + modifiersTxt.height)) {
 			FlxG.sound.play(Paths.audio("popup_appear", "sfx"));
 			curModRow = modKeyRow;
 			inMods = true;
@@ -971,7 +971,7 @@ class StoryMenuState extends FunkinState {
 			curModRow = modKeyRow;
 		}
 
-		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || FlxG.keys.justPressed.M) {
+		if (Controls.justPressed('back') || FlxG.mouse.justPressedRight || FlxG.keys.justPressed.M || androidBack() || overlapCheck(mButton.x, mButton.y, modifiersTxt.x + modifiersTxt.width, modifiersTxt.y + modifiersTxt.height)) {
 			FlxG.sound.play(Paths.audio("menu_cancel", "sfx"));
 			curModRow = FreeplayState.modList.length + 1;
 			inMods = false;
@@ -1054,4 +1054,6 @@ class StoryMenuState extends FunkinState {
 		add(modDesc = new FlxText(modDescBG.x + 5, modDescBG.y + 5, modDescBG.width - 5, FreeplayState.modList[curMod].desc));
 		modDesc.setFormat(Paths.font("menus/GOTHIC.TTF"), 18, 0xFFFFFFFF, LEFT);
 	}
+
+	
 }

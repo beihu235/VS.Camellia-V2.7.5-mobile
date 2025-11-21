@@ -195,8 +195,7 @@ class PauseMenu extends FunkinSubstate {
 			PlayState.self.camHUD.zoom = cacheZoom + 0.15 * num;
 
 			if (PlayState.self.camControls != null) {
-				PlayState.self.camControls.alpha = PlayState.self.camHUD.alpha;
-				PlayState.self.camControls.zoom = PlayState.self.camHUD.zoom;
+				PlayState.self.camControls.visible = false;
 			}
 
 			music.volume = num;
@@ -344,7 +343,7 @@ class PauseMenu extends FunkinSubstate {
 	}
 
 	inline function removeInputs() {
-		if (vpadCam != null) vpadCam.visible = false; //666没法删
+		if (vpadCam != null) vpadCam.y = 1440; //666没法删
 		Application.current.window.onKeyDown.remove(input);
 		Application.current.window.onKeyUp.remove(release);
 	}
@@ -369,7 +368,7 @@ class PauseMenu extends FunkinSubstate {
 	}
 
 	function unpause() {
-		if (vpadCam != null) vpadCam.visible = false; //666没法删
+		if (vpadCam != null) vpadCam.y = 1440; //666没法删
 
 		var percent = fadeTwn.scale;
 		fadeTwn.cancel();
@@ -392,8 +391,7 @@ class PauseMenu extends FunkinSubstate {
 			PlayState.self.camHUD.zoom = cacheZoom + 0.15 * num;
 
 			if (PlayState.self.camControls != null) {
-				PlayState.self.camControls.alpha = PlayState.self.camHUD.alpha;
-				PlayState.self.camControls.zoom = PlayState.self.camHUD.zoom;
+				PlayState.self.camControls.visible = true;
 			}
 			music.volume = num;
 

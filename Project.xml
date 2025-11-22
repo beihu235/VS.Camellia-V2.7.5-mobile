@@ -80,7 +80,7 @@
 	<define name="HXCPP_GC_DYNAMIC_SIZE" />
 	<define name="HXCPP_ALIGN_ALLOC"/>
 	<define name="HXCPP_GC_GENERATIONAL" />
-	<!--define name="HXCPP_GC_BIG_BLOCKS"/-->
+	<define name="HXCPP_GC_BIG_BLOCKS"/>
 
 	<haxedef name="lime_threads" if="cpp || hl || neko || java || cs || nodejs" />
 

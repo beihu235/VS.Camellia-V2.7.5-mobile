@@ -290,8 +290,8 @@ class AddonsState extends FunkinState {
 		var backupIcon = Paths.image("menus/Addons/backupIcon");
 		for (i => file in Addons.list) {
 			if (FileSystem.exists('addons/${file.id}/icon.png')) {
-				final bitmapO = funkin.backend.OptimizedBitmapData.fromFile('addons/${file.id}/icon.png');
-				final graph:FlxGraphic = FlxGraphic.fromBitmapData(bitmapO, false, 'addons/${file.id}/icon.png');
+				final bitmapO = funkin.backend.OptimizedBitmapData.fromFile(#if mobile Sys.getCwd() + #end 'addons/${file.id}/icon.png');
+				final graph:FlxGraphic = FlxGraphic.fromBitmapData(bitmapO, false, #if mobile Sys.getCwd() + #end 'addons/${file.id}/icon.png');//那我问你，为什么不用Paths.get()
 				graph.persist = true;
 				graph.destroyOnNoUse = false;
 				iconGraphics.push(graph);

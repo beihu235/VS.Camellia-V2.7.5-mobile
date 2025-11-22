@@ -246,10 +246,6 @@ class InitState extends flixel.FlxState {
 		FlxG.game.soundTray.updateWithSettings();
 		#end
 
-		#if !debug
-			cpp.NativeGc.enterGCFreeZone();
-		#end
-
 		openfl.Lib.application.window.onClose.add(function () {
 			Main.isClosing = true;
 			Main.keyboardInputs = false;

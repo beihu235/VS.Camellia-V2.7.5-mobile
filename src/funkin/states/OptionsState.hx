@@ -216,7 +216,7 @@ class OptionsState extends FunkinState {
 				opt.onChange = function(v) {
 					Controls.save();
 					Settings.save();
-					FlxG.resetGame();
+					Sys.exit(1); //666我算是懂为啥不用reset了
 				}
 				opt;
 			}

@@ -105,8 +105,6 @@
 	<icon path="icons/iconOG.png" />
 
 	<haxeflag name="--macro" value="allowPackage('flash')" />
-
-	<architecture name="arm64" exclude="armv7" if="android" />
 	
 	<certificate path="key.keystore" password="novaFlare" alias="psychport" alias-password="novaFlare" if="android" unless="debug" />
 

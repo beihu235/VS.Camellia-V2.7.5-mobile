@@ -45,15 +45,7 @@ class Main extends Sprite {
 		SUtil.doPermissionsShit();
 		#end
 
-		funkin.mobile.backend.CrashHandler.init();
-
-		#if mobile
-		#if android
-		if (!FileSystem.exists(AndroidEnvironment.getExternalStorageDirectory() + '/.' + Application.current.meta.get('file')))
-			FileSystem.createDirectory(AndroidEnvironment.getExternalStorageDirectory() + '/.' + Application.current.meta.get('file'));
-		#end
-		Sys.setCwd(SUtil.getStorageDirectory());
-		#end
+		PermissData.mobileInit();
 
 		//Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 
@@ -137,6 +129,8 @@ class InitState extends flixel.FlxState {
 
 		cpp.vm.Gc.enable(true);
 		cpp.vm.Gc.run(true);  
+
+		PermissData.mobileInit();
 
 		#if mobile
 		FlxG.mouse.visible = false;
@@ -286,5 +280,24 @@ class InitState extends flixel.FlxState {
 		FlxG.signals.preStateSwitch.add(Main.clearExceptWindow);
 
 		FlxG.plugins.add(new funkin.backend.Conductor());
+	}
+}
+
+
+class PermissData {
+	static var alreadyInit:Bool = false;
+	public static function mobileInit() {
+		if (alreadyInit) return;
+		alreadyInit = true;
+
+		#if mobile
+		#if android
+		if (!FileSystem.exists(AndroidEnvironment.getExternalStorageDirectory() + '/.' + Application.current.meta.get('file')))
+			FileSystem.createDirectory(AndroidEnvironment.getExternalStorageDirectory() + '/.' + Application.current.meta.get('file'));
+		#end
+		Sys.setCwd(SUtil.getStorageDirectory());
+		#end
+
+		funkin.mobile.backend.CrashHandler.init();
 	}
 }

@@ -544,6 +544,8 @@ class CreditsState extends FunkinState {
 				],
 				pronouns: 'he/they',
 				portrait: 'beihu',
+				pixelSize: 550,
+				pixelSizeMatches: HEIGHT,
 				offsetX: -20,
 
 				color1: 0xFF96B5FF,

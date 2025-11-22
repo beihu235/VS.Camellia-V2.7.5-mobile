@@ -543,10 +543,8 @@ class CreditsState extends FunkinState {
 					GITHUB => 'https://github.com/beihu235'
 				],
 				pronouns: 'he/they',
-				//portrait: 'rudy',
-				//pixelSize: 500,
-				//pixelSizeMatches: HEIGHT,
-				//offsetX: 7,
+				portrait: 'beihu',
+				offsetX: -20,
 
 				color1: 0xFF96B5FF,
 				color2: 0xFFFF90DC
